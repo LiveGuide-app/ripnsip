@@ -43,6 +43,8 @@ CRITERIA = {
 
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
 MAX_MARKDOWN_CHARS = 150_000  # Safety cap per page
+PRICE_MIN_EUR = 400_000
+PRICE_MAX_EUR = 900_000
 
 MEDOC_COMMUNES = [
     "lesparre", "gaillan", "vertheuil", "vensac", "bégadan", "begadan",
@@ -65,7 +67,9 @@ Ordonnac, Couquèques, Saint-Yzans-de-Médoc, Saint-Christoly-Médoc,
 Saint-Germain-d'Esteuil, Cissac-Médoc, Listrac-Médoc, Moulis-en-Médoc,
 Castelnau-de-Médoc.
 
-Price band of interest: €400k–€900k.
+Price range: €400,000 – €900,000. Skip listings clearly priced above €900k
+or below €400k — do not emit them. If price is not stated on the page, keep
+the listing (unknown price is fine).
 
 Rules:
 - Emit one object per distinct listing.
@@ -167,6 +171,9 @@ def main() -> int:
             if not listing_url or not listing_url.startswith("http"):
                 continue
             if not _is_medoc(l):
+                continue
+            price = l.get("price_eur")
+            if isinstance(price, int) and not (PRICE_MIN_EUR <= price <= PRICE_MAX_EUR):
                 continue
             l["id"] = "auto-" + hashlib.sha1(listing_url.encode()).hexdigest()[:10]
             l["source"] = "auto"
