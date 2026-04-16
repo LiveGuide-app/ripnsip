@@ -1,0 +1,152 @@
+{
+  "updated_at": "2026-03-01T00:00:00Z",
+  "criteria": {
+    "region": "Médoc, Gironde (France)",
+    "price_min_eur": 450000,
+    "price_max_eur": 650000,
+    "must_have": ["pool", "outbuildings or land for glamping", "capacity for ~12 rooms"],
+    "notes": "Property monitor widens the price band to €400–900k to catch stretch candidates"
+  },
+  "listings": [
+    {
+      "id": "manual-01",
+      "source": "manual",
+      "site": "green-acres.fr",
+      "title": "Lesparre-Médoc (Grand)",
+      "location": "Lesparre-Médoc, Gironde",
+      "price_eur": 899000,
+      "price": "€899,000",
+      "bedrooms": 9,
+      "features": ["pool", "wine cellar"],
+      "status": "active",
+      "notes": "On market since 2024 — above target budget",
+      "url": "https://www.green-acres.fr/property-for-sale/lesparre-medoc"
+    },
+    {
+      "id": "manual-02",
+      "source": "manual",
+      "site": "frenchestateagents.com",
+      "title": "Blaignan-Prignac",
+      "location": "Blaignan-Prignac, Gironde",
+      "price_eur": null,
+      "price": "Price on request",
+      "status": "active",
+      "notes": "Leggett reference A31008GM33",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A31008GM33/house-for-sale-blaignan-prignac-gironde-aquitaine-france"
+    },
+    {
+      "id": "manual-03",
+      "source": "manual",
+      "site": "unknown",
+      "title": "Bégadan",
+      "location": "Bégadan, Gironde",
+      "price_eur": null,
+      "price": "Price on request",
+      "status": "unknown",
+      "notes": "No direct URL captured — re-research needed",
+      "url": null
+    },
+    {
+      "id": "manual-04",
+      "source": "manual",
+      "site": "bellesdemeures.com",
+      "title": "Gaillan (character)",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "price_eur": 550000,
+      "price": "~€550,000",
+      "features": ["pool", "1900 era"],
+      "status": "sold",
+      "notes": "Off the market",
+      "url": "https://www.bellesdemeures.com/en/sale/france/aquitaine/gironde/gaillan-en-medoc/property-luxury/tt-2-tb-2-pl-14063/"
+    },
+    {
+      "id": "manual-05",
+      "source": "manual",
+      "site": "frenchestateagents.com",
+      "title": "Gaillan (wine estate)",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "price_eur": 729000,
+      "price": "€729,000",
+      "area_m2": 1000,
+      "status": "active",
+      "notes": "Huge potential, Leggett reference A32772GM33",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A32772GM33/-for-sale-in-gaillan-en-m%C3%A9doc-gironde-aquitaine-france"
+    },
+    {
+      "id": "manual-06",
+      "source": "manual",
+      "site": "unknown",
+      "title": "Vensac",
+      "location": "Vensac, Gironde",
+      "price_eur": 783000,
+      "price": "€783,000",
+      "features": ["435m² barn", "10,000m² land"],
+      "status": "unknown",
+      "notes": "Direct URL not captured — re-research needed",
+      "url": null
+    },
+    {
+      "id": "manual-07",
+      "source": "manual",
+      "site": "bellesdemeures.com",
+      "title": "Gaillan (maison de maître)",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "price_eur": 745000,
+      "price": "€745,000",
+      "features": ["pool", "outbuildings", "caretaker's house"],
+      "status": "unknown",
+      "notes": "URL points to a Belles Demeures category page — needs re-verification",
+      "url": "https://www.bellesdemeures.com/vente/france/aquitaine/gironde/lesparre-medoc/maison-luxe/tt-2-tb-2-pl-14126/"
+    },
+    {
+      "id": "manual-08",
+      "source": "manual",
+      "site": "bellesdemeures.com",
+      "title": "Lesparre (village)",
+      "location": "Lesparre-Médoc, Gironde",
+      "price_eur": null,
+      "price": "Price on request",
+      "status": "unknown",
+      "notes": "URL looks like a category page — needs re-verification",
+      "url": null
+    },
+    {
+      "id": "manual-09",
+      "source": "manual",
+      "site": "paruvendu",
+      "title": "Vertheuil",
+      "location": "Vertheuil, Gironde",
+      "price_eur": 499000,
+      "price": "€499,000",
+      "features": ["650m² outbuildings"],
+      "status": "active",
+      "notes": "Best value per m² in the set",
+      "url": null
+    },
+    {
+      "id": "manual-10",
+      "source": "manual",
+      "site": "lesiteimmo.com",
+      "title": "Lesparre (1850 demeure)",
+      "location": "Lesparre-Médoc 33340, Gironde",
+      "price_eur": 509000,
+      "price": "€509,000",
+      "features": ["marketed for B&B use", "150m² attic"],
+      "status": "active",
+      "notes": "Marketed as B&B-ready",
+      "url": "https://www.lesiteimmo.com/acheter/maison-9pieces/lesparre-medoc-33340/32782658"
+    },
+    {
+      "id": "manual-11",
+      "source": "manual",
+      "site": "proprietes.lefigaro.fr",
+      "title": "Gaillan (vast estate)",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "price_eur": null,
+      "price": "Price on request",
+      "status": "active",
+      "notes": "Le Figaro listing 91829747",
+      "url": "https://proprietes.lefigaro.fr/annonces/maison-gironde-aquitaine-france/91829747/"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties — Rip & Sip</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header-inner">
+      <a href="../" class="back">← Back to Rip &amp; Sip</a>
+      <h1>Property Monitor</h1>
+      <p>Médoc listings matching our criteria. Refreshed weekly by an automated scrape.</p>
+    </div>
+  </header>
+
+  <p class="meta" id="meta">Loading…</p>
+
+  <div class="filters" id="filters">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="active">Active</button>
+    <button data-filter="sold">Sold</button>
+    <button data-filter="unknown">Unknown</button>
+  </div>
+
+  <section class="listings" id="listings">
+    <div class="empty">Loading listings…</div>
+  </section>
+
+  <footer class="footer">
+    <p>Data refreshed automatically by GitHub Actions · <a href="data/listings.json">raw JSON</a></p>
+  </footer>
+
+  <script>
+    (async () => {
+      const meta = document.getElementById('meta');
+      const grid = document.getElementById('listings');
+      const filters = document.getElementById('filters');
+      let currentFilter = 'all';
+      let allListings = [];
+
+      try {
+        const res = await fetch('data/listings.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+
+        const updated = data.updated_at
+          ? new Date(data.updated_at).toLocaleDateString()
+          : 'never';
+        allListings = data.listings || [];
+        const count = allListings.length;
+
+        const crit = data.criteria || {};
+        const critLine = crit.price_min_eur && crit.price_max_eur
+          ? ` · target €${(crit.price_min_eur/1000).toFixed(0)}k–€${(crit.price_max_eur/1000).toFixed(0)}k in ${crit.region || '—'}`
+          : '';
+        meta.textContent = `${count} listing${count === 1 ? '' : 's'}${critLine} · last updated ${updated}`;
+
+        render();
+      } catch (err) {
+        meta.textContent = '';
+        grid.innerHTML = `<div class="empty">Could not load listings (${escapeHtml(err.message)}).</div>`;
+        return;
+      }
+
+      filters.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'BUTTON') return;
+        currentFilter = e.target.dataset.filter;
+        [...filters.children].forEach(b => b.classList.toggle('active', b === e.target));
+        render();
+      });
+
+      function render() {
+        const list = currentFilter === 'all'
+          ? allListings
+          : allListings.filter(l => (l.status || 'unknown') === currentFilter);
+
+        if (!list.length) {
+          grid.innerHTML = '<div class="empty">No listings match this filter.</div>';
+          return;
+        }
+
+        grid.innerHTML = '';
+        for (const l of list) {
+          const card = document.createElement('article');
+          card.className = `listing status-${l.status || 'unknown'}`;
+
+          const priceDisplay = l.price || (l.price_eur ? `€${l.price_eur.toLocaleString()}` : 'Price on request');
+          const features = (l.features || []).map(f => `<span class="tag">${escapeHtml(f)}</span>`).join('');
+          const badge = `<span class="badge badge-${l.status || 'unknown'}">${escapeHtml((l.status || 'unknown').toUpperCase())}</span>`;
+          const sourceLabel = l.source === 'manual' ? 'Manual' : `Auto · ${escapeHtml(l.site || 'unknown')}`;
+
+          card.innerHTML = `
+            <div class="row-top">
+              <div class="price">${escapeHtml(priceDisplay)}</div>
+              ${badge}
+            </div>
+            <h3>${escapeHtml(l.title || 'Untitled listing')}</h3>
+            <div class="location">${escapeHtml(l.location || '')}</div>
+            <div class="stats">
+              ${l.bedrooms ? `<span>${escapeHtml(String(l.bedrooms))} bed</span>` : ''}
+              ${l.area_m2 ? `<span>${escapeHtml(String(l.area_m2))} m²</span>` : ''}
+              ${l.land_m2 ? `<span>${escapeHtml(String(l.land_m2))} m² land</span>` : ''}
+            </div>
+            ${features ? `<div class="tags">${features}</div>` : ''}
+            ${l.notes ? `<p class="notes">${escapeHtml(l.notes)}</p>` : ''}
+            <div class="row-bottom">
+              <span class="source">${sourceLabel}</span>
+              ${l.url ? `<a class="view" href="${escapeAttr(l.url)}" target="_blank" rel="noopener">View →</a>` : '<span class="no-url">No link</span>'}
+            </div>
+          `;
+          grid.appendChild(card);
+        }
+      }
+
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, c => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        }[c]));
+      }
+      function escapeAttr(s) { return escapeHtml(s); }
+    })();
+  </script>
+</body>
+</html>
