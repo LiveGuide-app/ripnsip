@@ -1,2 +1,2 @@
-tavily-python==0.5.1
-anthropic==0.39.0
+tavily-python>=0.5.1,<1.0.0
+anthropic>=0.50.0,<1.0.0
