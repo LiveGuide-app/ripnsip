@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-16T20:07:18Z",
+  "updated_at": "2026-04-16T20:10:13Z",
   "criteria": {
     "region": "Médoc, Gironde (France)",
     "price_min_eur": 450000,
@@ -14,28 +14,5 @@
   "errors": [
     "tavily:https://www.bellesdemeures.com/en/sale/france/aquitaine/gironde/: 404 page not found"
   ],
-  "listings": [
-    {
-      "title": "Propriété avec piscine et jardin Lesparre-Médoc (33)",
-      "location": "Lesparre-Médoc, Gironde",
-      "url": "https://proprietes.lefigaro.fr/annonces/propriete-gironde-aquitaine-france/101365745/",
-      "price_eur": 1500000,
-      "area_m2": 460,
-      "bedrooms": 7,
-      "land_m2": 145900,
-      "features": [
-        "14.6 hectares",
-        "Maison de maître XVIII siècle",
-        "Gîte indépendant",
-        "Chai d'environ 200m2",
-        "Grange 150m2",
-        "Puits et forage"
-      ],
-      "status": "active",
-      "id": "auto-3d87c77acf",
-      "source": "auto",
-      "site": "proprietes.lefigaro.fr",
-      "price": "€1,500,000"
-    }
-  ]
+  "listings": []
 }
