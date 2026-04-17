@@ -1,14 +1,22 @@
-"""Search URLs to monitor, one per real-estate site.
+"""Sources for the property monitor.
 
-Each URL is a search-results page scoped to Gironde (département 33).
-Price, room-count and location filters are enforced downstream by the
-LLM + a numeric post-filter, so it's fine if a site doesn't support them
-in the URL.
+Two strategies:
 
-To add a site: append a dict below. To pause a site: comment it out.
+- EXTRACT_SOURCES: Tavily /extract on a search-results URL. Best when the
+  site renders listing summaries server-side. One API call → many listings.
+
+- SEARCH_SOURCES: Tavily /search restricted to a domain. Returns individual
+  listing URLs along with their markdown content. Used for sites whose
+  search pages are JS-only or bot-blocked, but whose individual listing
+  pages render OK.
+
+The search query is shared across SEARCH_SOURCES to keep things simple.
 """
 
-SEARCH_URLS: list[dict[str, str]] = [
+SEARCH_QUERY = "propriété maison médoc piscine 9 pièces 6 chambres"
+SEARCH_MAX_RESULTS = 8
+
+EXTRACT_SOURCES: list[dict[str, str]] = [
     {
         "site": "green-acres.fr",
         "url": "https://www.green-acres.fr/property-for-sale/gironde",
@@ -16,10 +24,6 @@ SEARCH_URLS: list[dict[str, str]] = [
     {
         "site": "frenchestateagents.com",
         "url": "https://www.frenchestateagents.com/french-property-for-sale/department/gironde/33",
-    },
-    {
-        "site": "lesiteimmo.com",
-        "url": "https://www.lesiteimmo.com/acheter/maison/gironde-33",
     },
     {
         "site": "proprietes.lefigaro.fr",
@@ -33,16 +37,11 @@ SEARCH_URLS: list[dict[str, str]] = [
         "site": "paruvendu.fr",
         "url": "https://www.paruvendu.fr/immobilier/vente/maison/gironde-33/",
     },
-    {
-        "site": "leboncoin.fr",
-        "url": "https://www.leboncoin.fr/recherche?category=9&locations=d_33&real_estate_type=1",
-    },
-    {
-        "site": "seloger.com",
-        "url": "https://www.seloger.com/immobilier/achat/immo-gironde/",
-    },
-    {
-        "site": "bienici.com",
-        "url": "https://www.bienici.com/recherche/achat/gironde-33",
-    },
+]
+
+SEARCH_SOURCES: list[dict[str, str]] = [
+    {"site": "leboncoin.fr", "domain": "leboncoin.fr"},
+    {"site": "seloger.com", "domain": "seloger.com"},
+    {"site": "bienici.com", "domain": "bienici.com"},
+    {"site": "lesiteimmo.com", "domain": "lesiteimmo.com"},
 ]

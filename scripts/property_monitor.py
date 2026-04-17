@@ -28,7 +28,12 @@ from urllib.parse import urlparse
 from anthropic import Anthropic
 from tavily import TavilyClient
 
-from sources import SEARCH_URLS
+from sources import (
+    EXTRACT_SOURCES,
+    SEARCH_MAX_RESULTS,
+    SEARCH_QUERY,
+    SEARCH_SOURCES,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LISTINGS_PATH = REPO_ROOT / "properties" / "data" / "listings.json"
@@ -143,67 +148,73 @@ def main() -> int:
     tavily = TavilyClient(api_key=tavily_key)
     claude = Anthropic(api_key=anthropic_key)
 
-    urls = [s["url"] for s in SEARCH_URLS]
-    site_by_url = {s["url"]: s["site"] for s in SEARCH_URLS}
-
     errors: list[str] = []
-
-    # Step 1: batch-scrape all search pages
-    try:
-        extract_response = tavily.extract(
-            urls=urls,
-            extract_depth="advanced",
-            format="markdown",
-            timeout=90,
-        )
-    except Exception as e:  # noqa: BLE001
-        print(f"[fatal] tavily.extract failed: {e}", file=sys.stderr)
-        return 1
-
-    for failed in extract_response.get("failed_results", []) or []:
-        errors.append(f"tavily:{failed.get('url', '?')}: {failed.get('error', 'unknown')}")
-
-    # Step 2: extract structured listings from each page via Haiku
     all_listings: list[dict] = []
-    for result in extract_response.get("results", []):
-        url = result.get("url", "")
-        content = result.get("raw_content") or ""
-        site = site_by_url.get(url, urlparse(url).netloc)
 
-        if not content.strip():
-            errors.append(f"tavily:{url}: empty content")
-            continue
-
-        if len(content) > MAX_MARKDOWN_CHARS:
-            content = content[:MAX_MARKDOWN_CHARS]
+    # ─── Strategy 1: direct extract on search-results URLs ────────────────
+    if EXTRACT_SOURCES:
+        urls = [s["url"] for s in EXTRACT_SOURCES]
+        site_by_url = {s["url"]: s["site"] for s in EXTRACT_SOURCES}
 
         try:
-            listings = _extract_with_claude(claude, url, content)
+            extract_response = tavily.extract(
+                urls=urls,
+                extract_depth="advanced",
+                format="markdown",
+                timeout=90,
+            )
         except Exception as e:  # noqa: BLE001
-            errors.append(f"claude:{url}: {e}")
-            print(f"[warn] extraction failed for {url}: {e}", file=sys.stderr)
+            print(f"[fatal] tavily.extract failed: {e}", file=sys.stderr)
+            return 1
+
+        for failed in extract_response.get("failed_results", []) or []:
+            errors.append(f"tavily:{failed.get('url', '?')}: {failed.get('error', 'unknown')}")
+
+        for result in extract_response.get("results", []):
+            url = result.get("url", "")
+            content = result.get("raw_content") or ""
+            site = site_by_url.get(url, urlparse(url).netloc)
+
+            if not content.strip():
+                errors.append(f"tavily:{url}: empty content")
+                continue
+
+            valid = _extract_and_filter(claude, url, content, site, errors)
+            all_listings.extend(valid)
+            print(f"[extract] {site}: {len(valid)} kept")
+
+    # ─── Strategy 2: search → individual listing pages ────────────────────
+    for source in SEARCH_SOURCES:
+        site = source["site"]
+        domain = source["domain"]
+
+        try:
+            search_response = tavily.search(
+                query=SEARCH_QUERY,
+                include_domains=[domain],
+                max_results=SEARCH_MAX_RESULTS,
+                search_depth="advanced",
+                include_raw_content="markdown",
+                timeout=60,
+            )
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"tavily-search:{site}: {e}")
+            print(f"[warn] search failed for {site}: {e}", file=sys.stderr)
             continue
 
-        for l in listings:
-            listing_url = (l.get("url") or "").strip()
-            if not listing_url or not listing_url.startswith("http"):
+        results = search_response.get("results", []) or []
+        kept = 0
+        for result in results:
+            url = (result.get("url") or "").strip()
+            content = result.get("raw_content") or result.get("content") or ""
+            if not url or not content.strip():
                 continue
-            if not _is_coastal_medoc(l):
-                continue
-            price = l.get("price_eur")
-            if isinstance(price, int) and not (PRICE_MIN_EUR <= price <= PRICE_MAX_EUR):
-                continue
-            l["id"] = "auto-" + hashlib.sha1(listing_url.encode()).hexdigest()[:10]
-            l["source"] = "auto"
-            l["site"] = site
-            l.setdefault("status", "active")
-            if l.get("price_eur") and not l.get("price"):
-                l["price"] = f"€{int(l['price_eur']):,}"
-            all_listings.append(l)
+            valid = _extract_and_filter(claude, url, content, site, errors)
+            all_listings.extend(valid)
+            kept += len(valid)
+        print(f"[search]  {site}: {len(results)} candidate URLs → {kept} kept")
 
-        print(f"[ok] {site}: {len(listings)} raw → {sum(1 for l in listings if _is_coastal_medoc(l))} after coastal-Médoc filter")
-
-    # Dedupe by listing URL
+    # ─── Dedupe by listing URL ────────────────────────────────────────────
     seen: set[str] = set()
     deduped: list[dict] = []
     for l in all_listings:
@@ -224,6 +235,40 @@ def main() -> int:
     )
     print(f"[done] {len(deduped)} listings, {len(errors)} error(s) → {LISTINGS_PATH.relative_to(REPO_ROOT)}")
     return 0
+
+
+def _extract_and_filter(
+    claude: Anthropic, source_url: str, content: str, site: str, errors: list[str]
+) -> list[dict]:
+    """Run Claude extraction on one page's markdown and return valid listings."""
+    if len(content) > MAX_MARKDOWN_CHARS:
+        content = content[:MAX_MARKDOWN_CHARS]
+
+    try:
+        raw_listings = _extract_with_claude(claude, source_url, content)
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"claude:{source_url}: {e}")
+        print(f"[warn] claude extraction failed for {source_url}: {e}", file=sys.stderr)
+        return []
+
+    valid: list[dict] = []
+    for l in raw_listings:
+        listing_url = (l.get("url") or "").strip()
+        if not listing_url or not listing_url.startswith("http"):
+            continue
+        if not _is_coastal_medoc(l):
+            continue
+        price = l.get("price_eur")
+        if isinstance(price, int) and not (PRICE_MIN_EUR <= price <= PRICE_MAX_EUR):
+            continue
+        l["id"] = "auto-" + hashlib.sha1(listing_url.encode()).hexdigest()[:10]
+        l["source"] = "auto"
+        l["site"] = site
+        l.setdefault("status", "active")
+        if l.get("price_eur") and not l.get("price"):
+            l["price"] = f"€{int(l['price_eur']):,}"
+        valid.append(l)
+    return valid
 
 
 def _extract_with_claude(claude: Anthropic, url: str, markdown: str) -> list[dict]:
