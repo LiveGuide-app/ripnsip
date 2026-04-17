@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-17T07:24:15Z",
+  "updated_at": "2026-04-17T07:32:06Z",
   "criteria": {
     "region": "Coastal Médoc, Gironde (within ~20 min of the Atlantic)",
     "price_min_eur": 450000,
@@ -13,89 +13,263 @@
     ],
     "notes": "Monitor widens price band to €400–900k to catch stretch candidates"
   },
-  "errors": [
-    "tavily:https://www.leboncoin.fr/recherche?category=9&locations=d_33&real_estate_type=1: Failed to fetch url"
-  ],
+  "errors": [],
   "listings": [
     {
-      "title": "Villa 170 m² Vensac (33)",
-      "location": "Vensac, Gironde",
-      "url": "https://www.paruvendu.fr/immobilier/vente/villa/1289740253A1KIVHVI000",
-      "price_eur": 410000,
-      "bedrooms": 5,
-      "area_m2": 170,
-      "land_m2": 1800,
-      "features": [
-        "5 chambres",
-        "piscine",
-        "9 km de la plage"
-      ],
-      "id": "auto-314ff2375d",
-      "source": "auto",
-      "site": "paruvendu.fr",
-      "status": "active",
-      "price": "€410,000"
-    },
-    {
-      "title": "Beautiful stone house 226 m2 completely renovated on a 6000 m2 plot",
+      "title": "Beautiful Stone House 226 m2 Completely Renovated",
       "location": "Gaillan-en-Médoc, Gironde",
       "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A30116PR33/house-for-sale-gaillan-en-m%C3%A9doc-gironde-aquitaine-france",
-      "price_eur": 649000,
       "bedrooms": 6,
       "area_m2": 226,
       "land_m2": 6123,
-      "features": [
-        "pool",
-        "3 independent living areas",
-        "character property",
-        "6 bedrooms"
-      ],
+      "price_eur": 649000,
       "status": "active",
+      "features": [
+        "Pool",
+        "3 independent living areas",
+        "6 bedrooms",
+        "Renovated"
+      ],
       "id": "auto-8ce0806af4",
       "source": "auto",
       "site": "frenchestateagents.com",
       "price": "€649,000"
     },
     {
-      "title": "19th-century bourgeois house with 9 rooms",
+      "title": "Beautiful Provençal-style House on Large Plot",
+      "location": "Hourtin, Gironde",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A43998NF33/house-for-sale-hourtin-gironde-aquitaine-france",
+      "bedrooms": 3,
+      "area_m2": 183,
+      "land_m2": 3000,
+      "price_eur": 899000,
+      "status": "active",
+      "features": [
+        "Pool",
+        "3 bedrooms",
+        "Lake proximity",
+        "3000 m² garden"
+      ],
+      "id": "auto-419e6e2bd4",
+      "source": "auto",
+      "site": "frenchestateagents.com",
+      "price": "€899,000"
+    },
+    {
+      "title": "19th-Century Bourgeois House with 9 Rooms",
       "location": "Lesparre-Médoc, Gironde",
       "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-m%C3%A9doc-gironde-aquitaine-france",
-      "price_eur": 515000,
       "bedrooms": 6,
       "area_m2": 343,
       "land_m2": 5000,
-      "features": [
-        "9 rooms",
-        "6 bedrooms",
-        "2 living rooms",
-        "near ocean beaches",
-        "character property"
-      ],
+      "price_eur": 515000,
       "status": "active",
+      "features": [
+        "6 bedrooms",
+        "9 rooms",
+        "Beach proximity",
+        "5000 m² wooded grounds"
+      ],
       "id": "auto-e9036d48a2",
       "source": "auto",
       "site": "frenchestateagents.com",
       "price": "€515,000"
     },
     {
-      "title": "Beautiful Provençal-style house on a large plot of land bordering a forest",
-      "location": "Hourtin, Gironde",
-      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A43998NF33/house-for-sale-hourtin-gironde-aquitaine-france",
-      "price_eur": 899000,
-      "bedrooms": 3,
-      "area_m2": 183,
-      "land_m2": 3000,
+      "title": "Luxury villa 4 Rooms • 72 m²",
+      "location": "Lacanau, Gironde",
+      "price_eur": 885000,
+      "bedrooms": 2,
+      "area_m2": 72,
+      "land_m2": 600,
       "features": [
-        "pool",
-        "large plot",
-        "lake proximity",
-        "3 bedrooms"
+        "2 bedrooms",
+        "terrace",
+        "garage",
+        "fireplace"
+      ],
+      "url": "https://www.bellesdemeures.com/en/sale/france/aquitaine/gironde/lacanau-ocean/tt-2-tb-0-pl-14436/",
+      "status": "active",
+      "id": "auto-b78567c8ad",
+      "source": "auto",
+      "site": "bellesdemeures.com",
+      "price": "€885,000"
+    },
+    {
+      "title": "Villa 170 m² Vensac",
+      "location": "Vensac, Gironde",
+      "url": "https://www.paruvendu.fr/immobilier/vente/villa/1289740253A1KIVHVI000",
+      "price_eur": 410000,
+      "bedrooms": 5,
+      "area_m2": 170,
+      "land_m2": 1800,
+      "status": "active",
+      "features": [
+        "5 bedrooms",
+        "7 pièces",
+        "Pool",
+        "9 km from beach"
+      ],
+      "id": "auto-314ff2375d",
+      "source": "auto",
+      "site": "paruvendu.fr",
+      "price": "€410,000"
+    },
+    {
+      "title": "Maison 9 pièces avec piscine à Gaillan-en-Médoc",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_gaillan-en-m%C3%A9dic_33340/p-2",
+      "area_m2": 225,
+      "land_m2": 6163,
+      "features": [
+        "9 pièces",
+        "Piscine",
+        "6163 m² de terrain"
+      ],
+      "status": "unknown",
+      "id": "auto-e7fb0c430c",
+      "source": "auto",
+      "site": "leboncoin.fr"
+    },
+    {
+      "title": "Maison à vendre",
+      "location": "Lesparre-Médoc, Gironde",
+      "url": "https://www.seloger.com/recherche/achat/maison/piscine/nouvelle-aquitaine/lesparre-medoc-33340/ad08fr13275",
+      "price_eur": 649000,
+      "bedrooms": 6,
+      "area_m2": 250,
+      "land_m2": 6163,
+      "features": [
+        "9 pièces",
+        "6 chambres",
+        "piscine"
       ],
       "status": "active",
-      "id": "auto-419e6e2bd4",
+      "id": "auto-4e7117d020",
       "source": "auto",
-      "site": "frenchestateagents.com",
-      "price": "€899,000"
+      "site": "seloger.com",
+      "price": "€649,000"
+    },
+    {
+      "title": "Terrain avec maison neuve à vendre",
+      "location": "Saint-Laurent-Médoc, Gironde",
+      "url": "https://www.seloger.com/recherche/achat/maison/piscine/nouvelle-aquitaine/saint-laurent-medoc-33112/ad08fr13453",
+      "price_eur": 409521,
+      "bedrooms": 4,
+      "area_m2": 148,
+      "land_m2": 816,
+      "status": "active",
+      "features": [
+        "4 chambres",
+        "maison neuve",
+        "terrain"
+      ],
+      "id": "auto-56fd6fe119",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€409,521"
+    },
+    {
+      "title": "Maison 11 pièces 240 m²",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "url": "https://www.bienici.com/recherche/achat/gaillan-en-medoc-33340/maisonvilla?piscine=oui",
+      "price_eur": 580000,
+      "area_m2": 240,
+      "features": [
+        "11 pièces",
+        "piscine"
+      ],
+      "status": "unknown",
+      "id": "auto-7c5ae88a2c",
+      "source": "auto",
+      "site": "bienici.com",
+      "price": "€580,000"
+    },
+    {
+      "title": "Vente maison 9 pièces 343 m² à Lesparre-Médoc (33340)",
+      "location": "Lesparre-Médoc, Gironde",
+      "url": "https://www.lesiteimmo.com/acheter/maison-9pieces/lesparre-medoc-33340/32782658",
+      "price_eur": 509360,
+      "bedrooms": 6,
+      "area_m2": 343,
+      "land_m2": 5000,
+      "status": "active",
+      "features": [
+        "6 chambres",
+        "150m² combles aménageables",
+        "Maison indépendante 60m²",
+        "Parc 5000m²",
+        "18km océan",
+        "Jardin et allée de charmilles"
+      ],
+      "notes": "Propriété de caractère 1850, fort potentiel hôtelier, dépendances, garage, parking, cheminée",
+      "id": "auto-2f96048eb4",
+      "source": "auto",
+      "site": "lesiteimmo.com",
+      "price": "€509,360"
+    },
+    {
+      "title": "Maison 13 pièces 398 m² Gaillan-en-Médoc",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "price_eur": 525000,
+      "bedrooms": 4,
+      "area_m2": 398,
+      "land_m2": 60000,
+      "features": [
+        "13 pièces",
+        "6 hectares",
+        "Grange 260m²",
+        "Garage",
+        "4 logements"
+      ],
+      "url": "https://www.lesiteimmo.com/acheter/maison-13pieces/gaillan-en-medoc-33340/32532115",
+      "status": "active",
+      "id": "auto-465c98d154",
+      "source": "auto",
+      "site": "lesiteimmo.com",
+      "price": "€525,000"
+    },
+    {
+      "title": "Maison 11 pièces 240 m² à Gaillan-en-Médoc",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "url": "https://www.lesiteimmo.com/acheter/maison-11pieces/gaillan-en-medoc-33340/32294484",
+      "price_eur": 580000,
+      "bedrooms": 5,
+      "area_m2": 240,
+      "land_m2": 1850,
+      "status": "active",
+      "features": [
+        "5 bedrooms",
+        "Independent gîte",
+        "Piscine",
+        "Cuisine d'été",
+        "Solar panels"
+      ],
+      "id": "auto-825978142f",
+      "source": "auto",
+      "site": "lesiteimmo.com",
+      "price": "€580,000"
+    },
+    {
+      "title": "Maison 15 pièces 540 m² à Lesparre-Médoc",
+      "location": "Lesparre-Médoc, Gironde",
+      "url": "https://www.lesiteimmo.com/acheter/maison-15pieces/lesparre-medoc-33340/31711099",
+      "price_eur": 899500,
+      "bedrooms": 8,
+      "area_m2": 540,
+      "land_m2": 6362,
+      "status": "active",
+      "features": [
+        "8 bedrooms",
+        "Piscine 12x5",
+        "Wine cave",
+        "6.3 hectares",
+        "Sauna"
+      ],
+      "id": "auto-0ab1f8ce0c",
+      "source": "auto",
+      "site": "lesiteimmo.com",
+      "price": "€899,500"
     }
   ]
 }
