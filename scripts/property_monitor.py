@@ -18,6 +18,7 @@ Run locally:
 from __future__ import annotations
 
 import hashlib
+import html
 import json
 import os
 import sys
@@ -25,6 +26,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
+import requests
 from anthropic import Anthropic
 from tavily import TavilyClient
 
@@ -58,6 +60,8 @@ CLAUDE_MODEL = "claude-haiku-4-5-20251001"
 MAX_MARKDOWN_CHARS = 150_000  # Safety cap per page
 PRICE_MIN_EUR = 400_000
 PRICE_MAX_EUR = 900_000
+SITE_URL = "https://liveguide-app.github.io/ripnsip/properties/"
+TELEGRAM_MAX_LISTINGS_IN_MESSAGE = 5
 
 # Allowed communes — within ~20 min drive of the Atlantic. Match is on
 # the LLM's `commune` field (exact, case-insensitive), so spurious hits
@@ -174,6 +178,7 @@ def main() -> int:
     tavily = TavilyClient(api_key=tavily_key)
     claude = Anthropic(api_key=anthropic_key)
 
+    previous_urls = _load_previous_urls()
     errors: list[str] = []
     all_listings: list[dict] = []
 
@@ -273,7 +278,71 @@ def main() -> int:
         json.dumps(output, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
     print(f"[done] {len(deduped)} listings, {len(errors)} error(s) → {LISTINGS_PATH.relative_to(REPO_ROOT)}")
+
+    # Notify Telegram about any genuinely-new URLs
+    new_listings = [l for l in deduped if l.get("url") and l["url"] not in previous_urls]
+    if new_listings:
+        _notify_telegram(new_listings, total=len(deduped))
+    else:
+        print("[telegram] no new listings this run — skipping notification")
+
     return 0
+
+
+def _load_previous_urls() -> set[str]:
+    """URLs from the existing listings.json, before this run overwrites it."""
+    if not LISTINGS_PATH.exists():
+        return set()
+    try:
+        data = json.loads(LISTINGS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return set()
+    return {l.get("url") for l in data.get("listings", []) if l.get("url")}
+
+
+def _notify_telegram(new_listings: list[dict], total: int) -> None:
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    if not token or not chat_id:
+        print("[telegram] TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set — skipping")
+        return
+
+    n = len(new_listings)
+    parts: list[str] = [f"🏠 <b>{n} new Médoc listing{'s' if n != 1 else ''}</b>"]
+    for l in new_listings[:TELEGRAM_MAX_LISTINGS_IN_MESSAGE]:
+        score = l.get("score", "?")
+        commune = html.escape(str(l.get("commune") or "?"))
+        price = html.escape(str(l.get("price") or "Price on request"))
+        verdict = html.escape((l.get("fit_verdict") or "")[:180])
+        url = l.get("url") or ""
+        line = f"\n<b>Score {score}</b> · {commune} · {price}"
+        if verdict:
+            line += f"\n<i>{verdict}</i>"
+        if url:
+            line += f"\n<a href=\"{html.escape(url)}\">View listing →</a>"
+        parts.append(line)
+
+    if n > TELEGRAM_MAX_LISTINGS_IN_MESSAGE:
+        parts.append(f"\n…and {n - TELEGRAM_MAX_LISTINGS_IN_MESSAGE} more new listing(s).")
+    parts.append(f"\n<a href=\"{SITE_URL}\">See all {total} →</a>")
+
+    payload = {
+        "chat_id": chat_id,
+        "text": "\n".join(parts),
+        "parse_mode": "HTML",
+        "disable_web_page_preview": True,
+    }
+    try:
+        resp = requests.post(
+            f"https://api.telegram.org/bot{token}/sendMessage",
+            json=payload,
+            timeout=15,
+        )
+        resp.raise_for_status()
+        print(f"[telegram] notified about {n} new listing(s)")
+    except requests.RequestException as e:
+        body = getattr(e.response, "text", "")[:200] if hasattr(e, "response") and e.response else ""
+        print(f"[telegram] send failed: {e} {body}", file=sys.stderr)
 
 
 def _extract_and_filter(

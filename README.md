@@ -47,6 +47,19 @@ The monitor uses **Tavily** (web scrape) + **Claude Haiku** (structured extracti
    Settings → Actions → General → Workflow permissions → **Read and write**.
 4. **First run:** Actions tab → *Property Monitor* → *Run workflow*.
 
+### Telegram notifications (optional)
+
+Get a message when genuinely-new listings appear (listings whose URL wasn't in the previous snapshot). If the bot token isn't set, the monitor just skips the notification step.
+
+1. **Create a bot:** open Telegram → message [@BotFather](https://t.me/BotFather) → `/newbot` → follow prompts → copy the token.
+2. **Start a chat with your bot** (search its username, send any message).
+3. **Get your chat ID:** message [@userinfobot](https://t.me/userinfobot) → it replies with your numeric user ID (that's your `chat_id` for personal messages). For a group or channel, add the bot to it and use `@raw_data_bot` to find the chat ID.
+4. **Add two GitHub Secrets:**
+   - `TELEGRAM_BOT_TOKEN`
+   - `TELEGRAM_CHAT_ID`
+
+First run after setup: you'll get one digest listing the top 5 new properties (i.e. everything currently in the list, since the bot hasn't seen any of them yet). After that, only deltas.
+
 ### Schedule
 
 - **Cron:** Monday at 07:00 UTC (`0 7 * * 1`) — edit in `.github/workflows/property-monitor.yml`.
