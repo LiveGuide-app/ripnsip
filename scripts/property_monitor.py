@@ -34,10 +34,16 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 LISTINGS_PATH = REPO_ROOT / "properties" / "data" / "listings.json"
 
 CRITERIA = {
-    "region": "Médoc, Gironde (France)",
+    "region": "Coastal Médoc, Gironde (within ~20 min of the Atlantic)",
     "price_min_eur": 450_000,
     "price_max_eur": 650_000,
-    "must_have": ["pool", "outbuildings or land for glamping", "capacity for ~12 rooms"],
+    "min_rooms": 9,
+    "must_have": [
+        "at least 9 rooms (pièces) — ideally space for 12 bedrooms",
+        "within 20 min drive of the Atlantic coast",
+        "pool",
+        "outbuildings or land for glamping",
+    ],
     "notes": "Monitor widens price band to €400–900k to catch stretch candidates",
 }
 
@@ -46,30 +52,40 @@ MAX_MARKDOWN_CHARS = 150_000  # Safety cap per page
 PRICE_MIN_EUR = 400_000
 PRICE_MAX_EUR = 900_000
 
-MEDOC_COMMUNES = [
-    "lesparre", "gaillan", "vertheuil", "vensac", "bégadan", "begadan",
-    "blaignan", "prignac", "pauillac", "saint-estèphe", "saint-estephe",
-    "saint-seurin", "margaux", "soulac", "hourtin", "carcans", "lacanau",
-    "saint-laurent-médoc", "saint-laurent-medoc", "vendays", "montalivet",
-    "grayan", "queyrac", "naujac", "saint-vivien", "jau-dignac", "valeyrac",
-    "ordonnac", "couquèques", "couqueques", "saint-yzans", "saint-christoly",
-    "saint-germain-d'esteuil", "cissac", "listrac", "moulis", "castelnau",
+# Communes within ~20 min drive of the Atlantic coast.
+# Estuary-side wine villages (Pauillac, Margaux, Saint-Estèphe, Moulis,
+# Listrac, Cissac, Bégadan, Blaignan, Prignac, Vertheuil, etc.) are
+# intentionally excluded — they're 25–40 min from the ocean.
+COASTAL_MEDOC_COMMUNES = [
+    # Direct coast
+    "soulac", "grayan", "vendays", "montalivet", "naujac",
+    "hourtin", "carcans", "lacanau",
+    # Central Médoc, within ~20 min of the coast
+    "lesparre", "gaillan", "saint-vivien", "queyrac", "vensac",
+    "jau-dignac", "saint-laurent-médoc", "saint-laurent-medoc",
 ]
 
-SYSTEM_PROMPT = """You extract French real-estate listings from scraped search-page markdown.
+SYSTEM_PROMPT = """You extract French real-estate listings from scraped search-page markdown for a boutique surf & wine retreat in the coastal Médoc, SW France.
 
-Target region: Médoc, Gironde (SW France). Keep a listing only if its location
-mentions a Médoc commune: Lesparre-Médoc, Gaillan-en-Médoc, Vertheuil, Vensac,
-Bégadan, Blaignan, Prignac-en-Médoc, Pauillac, Saint-Estèphe, Margaux, Soulac-sur-Mer,
-Hourtin, Carcans, Lacanau, Saint-Laurent-Médoc, Vendays-Montalivet, Grayan-et-l'Hôpital,
-Queyrac, Naujac-sur-Mer, Saint-Vivien-de-Médoc, Jau-Dignac-et-Loirac, Valeyrac,
-Ordonnac, Couquèques, Saint-Yzans-de-Médoc, Saint-Christoly-Médoc,
-Saint-Germain-d'Esteuil, Cissac-Médoc, Listrac-Médoc, Moulis-en-Médoc,
-Castelnau-de-Médoc.
+LOCATION — keep only listings within ~20 min drive of the Atlantic coast.
+In practice that means these Médoc communes:
+- Direct coast: Soulac-sur-Mer, Grayan-et-l'Hôpital, Vendays-Montalivet,
+  Naujac-sur-Mer, Hourtin, Carcans, Lacanau.
+- Central Médoc (~20 min to coast): Lesparre-Médoc, Gaillan-en-Médoc,
+  Saint-Vivien-de-Médoc, Queyrac, Vensac, Jau-Dignac-et-Loirac,
+  Saint-Laurent-Médoc.
+Exclude estuary-side Médoc wine villages (Pauillac, Margaux, Saint-Estèphe,
+Moulis, Listrac, Cissac, Bégadan, Blaignan, Prignac, Vertheuil) — they are
+25–40 min from the ocean. Also exclude anywhere else in Gironde (Bordeaux,
+Cap Ferret, Arcachon, Bassin d'Arcachon, Libourne, Saint-Émilion, etc.).
 
-Price range: €400,000 – €900,000. Skip listings clearly priced above €900k
-or below €400k — do not emit them. If price is not stated on the page, keep
-the listing (unknown price is fine).
+PRICE — €400,000 – €900,000. Skip listings clearly priced above €900k or
+below €400k. If price is not stated, keep the listing (unknown is fine).
+
+SIZE — we need capacity for ~12 bedrooms. Prefer listings with 9+ rooms
+("pièces") or 6+ bedrooms ("chambres"). If the listing is clearly tiny
+(e.g. 2-4 rooms, studio, apartment, flat), skip it. If size isn't stated,
+keep the listing.
 
 Rules:
 - Emit one object per distinct listing.
@@ -77,10 +93,12 @@ Rules:
   search, category or filter page. If the only URL you can find is a search
   page, skip the listing.
 - If a numeric field isn't stated, omit it. Do not guess.
-- `features` is a short list of salient selling points (pool, wine cellar,
-  outbuildings, gîte, barn, hectares of land, etc.) — at most 6 items.
-- If a listing is marked sold/under offer, set `status` to "sold".
-- If nothing on the page matches the region or price band, return an empty list.
+- `features` — at most 6 items highlighting: pool, outbuildings, gîte,
+  barn, hectares of land, proximity to beach/sea, room/bedroom counts.
+- If a listing is marked sold / under offer / sous compromis, set `status`
+  to "sold".
+- If nothing on the page matches all three criteria (region + price + size),
+  return an empty list.
 
 Return everything via the save_listings tool."""
 
@@ -170,7 +188,7 @@ def main() -> int:
             listing_url = (l.get("url") or "").strip()
             if not listing_url or not listing_url.startswith("http"):
                 continue
-            if not _is_medoc(l):
+            if not _is_coastal_medoc(l):
                 continue
             price = l.get("price_eur")
             if isinstance(price, int) and not (PRICE_MIN_EUR <= price <= PRICE_MAX_EUR):
@@ -183,7 +201,7 @@ def main() -> int:
                 l["price"] = f"€{int(l['price_eur']):,}"
             all_listings.append(l)
 
-        print(f"[ok] {site}: {len(listings)} raw → {sum(1 for l in listings if _is_medoc(l))} after Médoc filter")
+        print(f"[ok] {site}: {len(listings)} raw → {sum(1 for l in listings if _is_coastal_medoc(l))} after coastal-Médoc filter")
 
     # Dedupe by listing URL
     seen: set[str] = set()
@@ -235,13 +253,13 @@ def _extract_with_claude(claude: Anthropic, url: str, markdown: str) -> list[dic
     return []
 
 
-def _is_medoc(listing: dict) -> bool:
+def _is_coastal_medoc(listing: dict) -> bool:
     haystack = " ".join([
         str(listing.get("location") or ""),
         str(listing.get("title") or ""),
         str(listing.get("notes") or ""),
     ]).lower()
-    return any(c in haystack for c in MEDOC_COMMUNES)
+    return any(c in haystack for c in COASTAL_MEDOC_COMMUNES)
 
 
 if __name__ == "__main__":
