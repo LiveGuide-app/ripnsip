@@ -40,16 +40,18 @@ LISTINGS_PATH = REPO_ROOT / "properties" / "data" / "listings.json"
 
 CRITERIA = {
     "region": "Coastal Médoc, Gironde (within ~20 min of the Atlantic)",
-    "price_min_eur": 450_000,
-    "price_max_eur": 650_000,
-    "min_rooms": 9,
-    "must_have": [
-        "at least 9 rooms (pièces) — ideally space for 12 bedrooms",
-        "within 20 min drive of the Atlantic coast",
-        "pool",
-        "outbuildings or land for glamping",
-    ],
-    "notes": "Monitor widens price band to €400–900k to catch stretch candidates",
+    "price_min_eur": 400_000,
+    "price_max_eur": 900_000,
+    "scoring_max": 100,
+    "scoring_components": {
+        "size_potential": 25,
+        "pool": 15,
+        "glamping_land": 15,
+        "coast_proximity": 15,
+        "character": 15,
+        "renovation_state": 15,
+    },
+    "notes": "Hard filters: coastal Médoc + €400-900k. Everything else is scored 0-100 by Claude Haiku.",
 }
 
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
@@ -70,46 +72,42 @@ COASTAL_MEDOC_COMMUNES = [
     "jau-dignac", "saint-laurent-médoc", "saint-laurent-medoc",
 ]
 
-SYSTEM_PROMPT = """You extract French real-estate listings from scraped search-page markdown for a boutique surf & wine retreat in the coastal Médoc, SW France.
+SYSTEM_PROMPT = """You extract French real-estate listings from scraped pages for a boutique surf & wine retreat in coastal Médoc, then SCORE each kept listing's fit.
 
-LOCATION — keep only listings within ~20 min drive of the Atlantic coast.
-In practice that means these Médoc communes:
-- Direct coast: Soulac-sur-Mer, Grayan-et-l'Hôpital, Vendays-Montalivet,
-  Naujac-sur-Mer, Hourtin, Carcans, Lacanau.
-- Central Médoc (~20 min to coast): Lesparre-Médoc, Gaillan-en-Médoc,
-  Saint-Vivien-de-Médoc, Queyrac, Vensac, Jau-Dignac-et-Loirac,
-  Saint-Laurent-Médoc.
-Exclude estuary-side Médoc wine villages (Pauillac, Margaux, Saint-Estèphe,
-Moulis, Listrac, Cissac, Bégadan, Blaignan, Prignac, Vertheuil) — they are
-25–40 min from the ocean. Also exclude anywhere else in Gironde (Bordeaux,
-Cap Ferret, Arcachon, Bassin d'Arcachon, Libourne, Saint-Émilion, etc.).
+LOCATION (hard filter) — keep only listings within ~20 min drive of the Atlantic coast:
+- Direct coast: Soulac-sur-Mer, Grayan-et-l'Hôpital, Vendays-Montalivet, Naujac-sur-Mer, Hourtin, Carcans, Lacanau.
+- Central Médoc (~20 min to coast): Lesparre-Médoc, Gaillan-en-Médoc, Saint-Vivien-de-Médoc, Queyrac, Vensac, Jau-Dignac-et-Loirac, Saint-Laurent-Médoc.
+Exclude estuary-side wine villages (Pauillac, Margaux, Saint-Estèphe, Moulis, Listrac, Cissac, Bégadan, Blaignan, Prignac, Vertheuil) and the rest of Gironde (Bordeaux, Cap Ferret, Arcachon, Libourne, Saint-Émilion, etc.).
 
-PRICE — €400,000 – €900,000. Skip listings clearly priced above €900k or
-below €400k. If price is not stated, keep the listing (unknown is fine).
+PRICE (hard filter) — €400,000 to €900,000. Skip outside this range. If price isn't stated, keep.
 
-SIZE — we need capacity for ~12 bedrooms. Prefer listings with 9+ rooms
-("pièces") or 6+ bedrooms ("chambres"). If the listing is clearly tiny
-(e.g. 2-4 rooms, studio, apartment, flat), skip it. If size isn't stated,
-keep the listing.
+SCORING — for each kept listing, score 0–100 by summing six components (max points bracketed):
 
-Rules:
+- size_potential [25] — closeness to a 12-bedroom retreat.
+    25 = ≥10 bed already; 20 = 6-8 bed + obvious conversion potential (attic, gîte, large outbuildings); 12 = 4-5 bed + some expansion; 5 = small/limited; 0 = impossible.
+- pool [15] — 15 = existing pool; 8 = land suitable to add one; 0 = no pool, hard to add.
+- glamping_land [15] — 15 = ≥1 ha with character/seclusion; 10 = ~5000 m²; 5 = small garden; 0 = no land.
+- coast_proximity [15] — 15 = ≤5 km to ocean beach; 10 = ≤10 km; 7 = 10-20 km; 4 = 20+ km.
+- character [15] — stone/beams/period features, light, layout. 15 = exceptional; 8 = decent; 3 = bland modern; 0 = charmless.
+- renovation_state [15] — 15 = move-in ready; 10 = cosmetic only; 5 = significant works; 0 = gut renovation.
+
+Add a one-line `fit_verdict` (≤120 chars) capturing the headline strength + biggest weakness.
+
+Be honest. Don't inflate scores to please. Calibrate so a hypothetical perfect listing scores ~95; a typical decent match should land 55-75.
+
+Other rules:
 - Emit one object per distinct listing.
-- `url` must be the absolute URL of the individual listing page — never a
-  search, category or filter page. If the only URL you can find is a search
-  page, skip the listing.
+- `url` must be the absolute URL of the individual listing page — never a search/category/filter page.
 - If a numeric field isn't stated, omit it. Do not guess.
-- `features` — at most 6 items highlighting: pool, outbuildings, gîte,
-  barn, hectares of land, proximity to beach/sea, room/bedroom counts.
-- If a listing is marked sold / under offer / sous compromis, set `status`
-  to "sold".
-- If nothing on the page matches all three criteria (region + price + size),
-  return an empty list.
+- `features` — at most 6 items.
+- Mark sold/under-offer listings with `status: "sold"`.
+- `image_url` — pick the single best representative image of the property from the image list provided. Prefer the hero/cover shot over thumbnails, logos, agent photos, or floor plans. If no usable image is in the list, omit the field.
 
 Return everything via the save_listings tool."""
 
 EXTRACTION_TOOL = {
     "name": "save_listings",
-    "description": "Save the Médoc property listings extracted from the page.",
+    "description": "Save the coastal-Médoc property listings extracted from the page, with fit scores.",
     "input_schema": {
         "type": "object",
         "properties": {
@@ -119,7 +117,7 @@ EXTRACTION_TOOL = {
                     "type": "object",
                     "properties": {
                         "title": {"type": "string"},
-                        "location": {"type": "string", "description": "Commune name, ideally with 'Gironde' suffix"},
+                        "location": {"type": "string", "description": "Commune, ideally with 'Gironde' suffix"},
                         "price_eur": {"type": ["integer", "null"]},
                         "bedrooms": {"type": ["integer", "null"]},
                         "area_m2": {"type": ["integer", "null"], "description": "Building area"},
@@ -127,9 +125,27 @@ EXTRACTION_TOOL = {
                         "features": {"type": "array", "items": {"type": "string"}, "maxItems": 6},
                         "status": {"type": "string", "enum": ["active", "sold", "unknown"]},
                         "url": {"type": "string", "description": "Absolute URL of the individual listing page"},
+                        "image_url": {"type": "string", "description": "Best representative image URL from the page; omit if none usable"},
+                        "score": {"type": "integer", "minimum": 0, "maximum": 100, "description": "Sum of the six component scores"},
+                        "score_breakdown": {
+                            "type": "object",
+                            "properties": {
+                                "size_potential": {"type": "integer", "minimum": 0, "maximum": 25},
+                                "pool": {"type": "integer", "minimum": 0, "maximum": 15},
+                                "glamping_land": {"type": "integer", "minimum": 0, "maximum": 15},
+                                "coast_proximity": {"type": "integer", "minimum": 0, "maximum": 15},
+                                "character": {"type": "integer", "minimum": 0, "maximum": 15},
+                                "renovation_state": {"type": "integer", "minimum": 0, "maximum": 15},
+                            },
+                            "required": [
+                                "size_potential", "pool", "glamping_land",
+                                "coast_proximity", "character", "renovation_state",
+                            ],
+                        },
+                        "fit_verdict": {"type": "string", "maxLength": 200},
                         "notes": {"type": "string"},
                     },
-                    "required": ["title", "location", "url"],
+                    "required": ["title", "location", "url", "score", "score_breakdown", "fit_verdict"],
                 },
             }
         },
@@ -161,6 +177,7 @@ def main() -> int:
                 urls=urls,
                 extract_depth="advanced",
                 format="markdown",
+                include_images=True,
                 timeout=90,
             )
         except Exception as e:  # noqa: BLE001
@@ -173,13 +190,14 @@ def main() -> int:
         for result in extract_response.get("results", []):
             url = result.get("url", "")
             content = result.get("raw_content") or ""
+            images = result.get("images") or []
             site = site_by_url.get(url, urlparse(url).netloc)
 
             if not content.strip():
                 errors.append(f"tavily:{url}: empty content")
                 continue
 
-            valid = _extract_and_filter(claude, url, content, site, errors)
+            valid = _extract_and_filter(claude, url, content, images, site, errors)
             all_listings.extend(valid)
             print(f"[extract] {site}: {len(valid)} kept")
 
@@ -195,6 +213,7 @@ def main() -> int:
                 max_results=SEARCH_MAX_RESULTS,
                 search_depth="advanced",
                 include_raw_content="markdown",
+                include_images=True,
                 timeout=60,
             )
         except Exception as e:  # noqa: BLE001
@@ -203,25 +222,26 @@ def main() -> int:
             continue
 
         results = search_response.get("results", []) or []
+        # Tavily /search returns images at the top level, not per-result.
+        page_images = search_response.get("images") or []
         kept = 0
         for result in results:
             url = (result.get("url") or "").strip()
             content = result.get("raw_content") or result.get("content") or ""
             if not url or not content.strip():
                 continue
-            valid = _extract_and_filter(claude, url, content, site, errors)
+            valid = _extract_and_filter(claude, url, content, page_images, site, errors)
             all_listings.extend(valid)
             kept += len(valid)
         print(f"[search]  {site}: {len(results)} candidate URLs → {kept} kept")
 
-    # ─── Dedupe by listing URL ────────────────────────────────────────────
-    seen: set[str] = set()
-    deduped: list[dict] = []
+    # ─── Dedupe by listing URL, keep highest-scored variant ───────────────
+    by_url: dict[str, dict] = {}
     for l in all_listings:
-        if l["url"] in seen:
-            continue
-        seen.add(l["url"])
-        deduped.append(l)
+        existing = by_url.get(l["url"])
+        if existing is None or (l.get("score") or 0) > (existing.get("score") or 0):
+            by_url[l["url"]] = l
+    deduped = sorted(by_url.values(), key=lambda x: x.get("score") or 0, reverse=True)
 
     output = {
         "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
@@ -238,14 +258,19 @@ def main() -> int:
 
 
 def _extract_and_filter(
-    claude: Anthropic, source_url: str, content: str, site: str, errors: list[str]
+    claude: Anthropic,
+    source_url: str,
+    content: str,
+    images: list[str],
+    site: str,
+    errors: list[str],
 ) -> list[dict]:
     """Run Claude extraction on one page's markdown and return valid listings."""
     if len(content) > MAX_MARKDOWN_CHARS:
         content = content[:MAX_MARKDOWN_CHARS]
 
     try:
-        raw_listings = _extract_with_claude(claude, source_url, content)
+        raw_listings = _extract_with_claude(claude, source_url, content, images)
     except Exception as e:  # noqa: BLE001
         errors.append(f"claude:{source_url}: {e}")
         print(f"[warn] claude extraction failed for {source_url}: {e}", file=sys.stderr)
@@ -271,7 +296,19 @@ def _extract_and_filter(
     return valid
 
 
-def _extract_with_claude(claude: Anthropic, url: str, markdown: str) -> list[dict]:
+def _extract_with_claude(
+    claude: Anthropic, url: str, markdown: str, images: list[str]
+) -> list[dict]:
+    image_block = (
+        "\n".join(f"- {u}" for u in images[:25]) if images else "(none)"
+    )
+    user_message = (
+        f"Source URL: {url}\n\n"
+        f"--- candidate image URLs (pick the best hero shot per listing) ---\n"
+        f"{image_block}\n\n"
+        f"--- page markdown ---\n{markdown}"
+    )
+
     response = claude.messages.create(
         model=CLAUDE_MODEL,
         max_tokens=4096,
@@ -284,12 +321,7 @@ def _extract_with_claude(claude: Anthropic, url: str, markdown: str) -> list[dic
         ],
         tools=[EXTRACTION_TOOL],
         tool_choice={"type": "tool", "name": "save_listings"},
-        messages=[
-            {
-                "role": "user",
-                "content": f"Source URL: {url}\n\n--- page markdown ---\n{markdown}",
-            }
-        ],
+        messages=[{"role": "user", "content": user_message}],
     )
 
     for block in response.content:

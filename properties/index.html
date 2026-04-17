@@ -5,23 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Properties — Rip & Sip</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 <body>
   <header class="page-header">
     <div class="page-header-inner">
       <a href="../" class="back">← Back to Rip &amp; Sip</a>
       <h1>Property Monitor</h1>
-      <p>Médoc listings matching our criteria. Refreshed weekly by an automated scrape.</p>
+      <p>Coastal Médoc listings, scored 0–100 against our retreat criteria. Refreshed weekly.</p>
     </div>
   </header>
 
   <p class="meta" id="meta">Loading…</p>
 
+  <div id="map" class="map" aria-label="Map of listings"></div>
+
   <div class="filters" id="filters">
     <button data-filter="all" class="active">All</button>
+    <button data-filter="great">Score ≥ 70</button>
+    <button data-filter="good">Score ≥ 50</button>
     <button data-filter="active">Active</button>
     <button data-filter="sold">Sold</button>
-    <button data-filter="unknown">Unknown</button>
   </div>
 
   <section class="listings" id="listings">
@@ -32,31 +36,46 @@
     <p>Data refreshed automatically by GitHub Actions · <a href="data/listings.json">raw JSON</a></p>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
+    // Approximate town-centre coordinates for the coastal Médoc communes
+    // we monitor. Used to place markers — the property is somewhere in
+    // the commune, not literally at this point.
+    const COMMUNE_COORDS = {
+      "soulac-sur-mer":         [45.5117, -1.1264],
+      "grayan-et-l'hôpital":    [45.4642, -1.1614],
+      "vendays-montalivet":     [45.3878, -1.1175],
+      "naujac-sur-mer":         [45.2939, -1.1239],
+      "hourtin":                [45.1928, -1.0617],
+      "carcans":                [45.0789, -1.0392],
+      "lacanau":                [44.9667, -1.0833],
+      "lesparre-médoc":         [45.3061, -0.9389],
+      "gaillan-en-médoc":       [45.3261, -0.9750],
+      "saint-vivien-de-médoc":  [45.4392, -1.0606],
+      "queyrac":                [45.4050, -1.0364],
+      "vensac":                 [45.3892, -1.0594],
+      "jau-dignac-et-loirac":   [45.4497, -1.0494],
+      "saint-laurent-médoc":    [45.1606, -0.8267],
+    };
+
     (async () => {
       const meta = document.getElementById('meta');
       const grid = document.getElementById('listings');
       const filters = document.getElementById('filters');
       let currentFilter = 'all';
       let allListings = [];
+      let map, markerLayer;
 
       try {
         const res = await fetch('data/listings.json', { cache: 'no-store' });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 
-        const updated = data.updated_at
-          ? new Date(data.updated_at).toLocaleDateString()
-          : 'never';
+        const updated = data.updated_at ? new Date(data.updated_at).toLocaleDateString() : 'never';
         allListings = data.listings || [];
-        const count = allListings.length;
+        meta.textContent = `${allListings.length} listing${allListings.length === 1 ? '' : 's'} · last updated ${updated}`;
 
-        const crit = data.criteria || {};
-        const critLine = crit.price_min_eur && crit.price_max_eur
-          ? ` · target €${(crit.price_min_eur/1000).toFixed(0)}k–€${(crit.price_max_eur/1000).toFixed(0)}k in ${crit.region || '—'}`
-          : '';
-        meta.textContent = `${count} listing${count === 1 ? '' : 's'}${critLine} · last updated ${updated}`;
-
+        initMap();
         render();
       } catch (err) {
         meta.textContent = '';
@@ -71,11 +90,73 @@
         render();
       });
 
-      function render() {
-        const list = currentFilter === 'all'
-          ? allListings
-          : allListings.filter(l => (l.status || 'unknown') === currentFilter);
+      function initMap() {
+        map = L.map('map', { scrollWheelZoom: false }).setView([45.30, -1.00], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+          maxZoom: 18,
+        }).addTo(map);
+        markerLayer = L.layerGroup().addTo(map);
+      }
 
+      function filteredListings() {
+        return allListings.filter(l => {
+          const status = l.status || 'unknown';
+          const score = l.score ?? 0;
+          if (currentFilter === 'all') return true;
+          if (currentFilter === 'great') return score >= 70;
+          if (currentFilter === 'good') return score >= 50;
+          if (currentFilter === 'active') return status === 'active';
+          if (currentFilter === 'sold') return status === 'sold';
+          return true;
+        });
+      }
+
+      function render() {
+        const list = filteredListings();
+        renderMap(list);
+        renderGrid(list);
+      }
+
+      function renderMap(list) {
+        markerLayer.clearLayers();
+        const bounds = [];
+        for (const l of list) {
+          const coords = communeCoords(l.location);
+          if (!coords) continue;
+          // Jitter within ~1km so multiple markers in the same commune don't stack
+          const jitter = jitterFor(l.id || l.url || l.title);
+          const lat = coords[0] + jitter[0];
+          const lng = coords[1] + jitter[1];
+          const colour = scoreColour(l.score);
+          const marker = L.circleMarker([lat, lng], {
+            radius: 10,
+            fillColor: colour,
+            color: '#1f2a30',
+            weight: 1.5,
+            opacity: 1,
+            fillOpacity: 0.85,
+          });
+          marker.bindPopup(popupHtml(l));
+          marker.addTo(markerLayer);
+          bounds.push([lat, lng]);
+        }
+        if (bounds.length) map.fitBounds(bounds, { padding: [40, 40], maxZoom: 12 });
+      }
+
+      function popupHtml(l) {
+        const price = l.price || (l.price_eur ? `€${l.price_eur.toLocaleString()}` : 'Price on request');
+        return `
+          <div class="popup">
+            <strong>${escapeHtml(l.title || 'Listing')}</strong><br>
+            <span class="popup-meta">${escapeHtml(l.location || '')} · ${escapeHtml(price)}</span><br>
+            <span class="popup-score" style="color:${scoreColour(l.score)}">Score ${l.score ?? '?'} / 100</span><br>
+            ${l.url ? `<a href="${escapeAttr(l.url)}" target="_blank" rel="noopener">View listing →</a>` : ''}
+          </div>
+        `;
+      }
+
+      function renderGrid(list) {
         if (!list.length) {
           grid.innerHTML = '<div class="empty">No listings match this filter.</div>';
           return;
@@ -88,23 +169,31 @@
 
           const priceDisplay = l.price || (l.price_eur ? `€${l.price_eur.toLocaleString()}` : 'Price on request');
           const features = (l.features || []).map(f => `<span class="tag">${escapeHtml(f)}</span>`).join('');
-          const badge = `<span class="badge badge-${l.status || 'unknown'}">${escapeHtml((l.status || 'unknown').toUpperCase())}</span>`;
+          const score = l.score ?? null;
+          const scoreBadge = score !== null
+            ? `<span class="score-badge" style="background:${scoreColour(score)}">${score}</span>`
+            : '';
+          const breakdown = l.score_breakdown
+            ? Object.entries(l.score_breakdown).map(([k, v]) => `<li><span>${escapeHtml(k.replace(/_/g, ' '))}</span><strong>${v}</strong></li>`).join('')
+            : '';
           const sourceLabel = l.source === 'manual' ? 'Manual' : `Auto · ${escapeHtml(l.site || 'unknown')}`;
 
           card.innerHTML = `
+            ${l.image_url ? `<div class="thumb"><img src="${escapeAttr(l.image_url)}" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fail')"></div>` : '<div class="thumb thumb-empty">no image</div>'}
             <div class="row-top">
+              ${scoreBadge}
               <div class="price">${escapeHtml(priceDisplay)}</div>
-              ${badge}
             </div>
             <h3>${escapeHtml(l.title || 'Untitled listing')}</h3>
             <div class="location">${escapeHtml(l.location || '')}</div>
+            ${l.fit_verdict ? `<p class="verdict">${escapeHtml(l.fit_verdict)}</p>` : ''}
             <div class="stats">
               ${l.bedrooms ? `<span>${escapeHtml(String(l.bedrooms))} bed</span>` : ''}
               ${l.area_m2 ? `<span>${escapeHtml(String(l.area_m2))} m²</span>` : ''}
               ${l.land_m2 ? `<span>${escapeHtml(String(l.land_m2))} m² land</span>` : ''}
             </div>
             ${features ? `<div class="tags">${features}</div>` : ''}
-            ${l.notes ? `<p class="notes">${escapeHtml(l.notes)}</p>` : ''}
+            ${breakdown ? `<details class="breakdown"><summary>Score breakdown</summary><ul>${breakdown}</ul></details>` : ''}
             <div class="row-bottom">
               <span class="source">${sourceLabel}</span>
               ${l.url ? `<a class="view" href="${escapeAttr(l.url)}" target="_blank" rel="noopener">View →</a>` : '<span class="no-url">No link</span>'}
@@ -112,6 +201,35 @@
           `;
           grid.appendChild(card);
         }
+      }
+
+      function communeCoords(location) {
+        if (!location) return null;
+        const norm = location.toLowerCase().split(',')[0].trim();
+        if (COMMUNE_COORDS[norm]) return COMMUNE_COORDS[norm];
+        // Loose match: any commune key contained in the location string
+        for (const [key, coords] of Object.entries(COMMUNE_COORDS)) {
+          if (norm.includes(key) || key.includes(norm)) return coords;
+        }
+        return null;
+      }
+
+      function scoreColour(score) {
+        if (score == null) return '#9aa5a8';
+        if (score >= 80) return '#2b6a3d';
+        if (score >= 65) return '#5a8c41';
+        if (score >= 50) return '#c08a2e';
+        if (score >= 35) return '#c46b3a';
+        return '#a8392a';
+      }
+
+      function jitterFor(seed) {
+        // Stable pseudo-random offset of ±0.005 degrees from the commune centre.
+        let h = 2166136261;
+        for (let i = 0; i < seed.length; i++) h = ((h ^ seed.charCodeAt(i)) * 16777619) >>> 0;
+        const lat = ((h & 0xffff) / 0xffff - 0.5) * 0.01;
+        const lng = (((h >> 16) & 0xffff) / 0xffff - 0.5) * 0.01;
+        return [lat, lng];
       }
 
       function escapeHtml(s) {
