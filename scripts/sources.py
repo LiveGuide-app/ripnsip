@@ -14,8 +14,25 @@ Two strategies:
 The search query is shared across SEARCH_SOURCES.
 """
 
-SEARCH_QUERY = "vente maison propriété médoc piscine 9 pièces 6 chambres"
 SEARCH_MAX_RESULTS = 8
+
+# Multiple queries per source — different angles surface different niches
+# (a wine estate, a maison de maître, a large family compound). URLs are
+# deduped across queries before being sent to Claude.
+SEARCH_QUERIES: list[dict[str, str]] = [
+    {
+        "label": "general",
+        "query": "vente maison propriété médoc piscine 9 pièces 6 chambres",
+    },
+    {
+        "label": "wine-estate",
+        "query": "domaine viticole médoc gironde vente dépendances chai",
+    },
+    {
+        "label": "character",
+        "query": "maison de maître médoc atlantique vente grand terrain caractère",
+    },
+]
 
 EXTRACT_SOURCES: list[dict[str, str]] = [
     {
@@ -38,6 +55,12 @@ EXTRACT_SOURCES: list[dict[str, str]] = [
         "site": "paruvendu.fr",
         "url": "https://www.paruvendu.fr/immobilier/vente/maison/gironde-33/",
     },
+    # Goldwelling: Joomla site, no usable GET filter — extract the unfiltered
+    # all-listings index and rely on the Médoc commune filter downstream.
+    {
+        "site": "goldwelling.com",
+        "url": "https://www.goldwelling.com/index.php/en/all-listing",
+    },
 ]
 
 SEARCH_SOURCES: list[dict[str, str]] = [
@@ -45,7 +68,6 @@ SEARCH_SOURCES: list[dict[str, str]] = [
     {"site": "seloger.com", "domain": "seloger.com"},
     {"site": "bienici.com", "domain": "bienici.com"},
     {"site": "lesiteimmo.com", "domain": "lesiteimmo.com"},
-    {"site": "goldwelling.com", "domain": "goldwelling.com"},
     # Also crawl Leggett via search to catch listings beyond search-page 1.
     {"site": "frenchestateagents.com (deep)", "domain": "frenchestateagents.com"},
 ]

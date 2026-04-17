@@ -31,7 +31,7 @@ from tavily import TavilyClient
 from sources import (
     EXTRACT_SOURCES,
     SEARCH_MAX_RESULTS,
-    SEARCH_QUERY,
+    SEARCH_QUERIES,
     SEARCH_SOURCES,
 )
 
@@ -216,37 +216,43 @@ def main() -> int:
         site = source["site"]
         domain = source["domain"]
 
-        try:
-            search_response = tavily.search(
-                query=SEARCH_QUERY,
-                include_domains=[domain],
-                max_results=SEARCH_MAX_RESULTS,
-                search_depth="advanced",
-                include_raw_content="markdown",
-                include_images=True,
-                timeout=60,
-            )
-        except Exception as e:  # noqa: BLE001
-            errors.append(f"tavily-search:{site}: {e}")
-            print(f"[warn] search failed for {site}: {e}", file=sys.stderr)
-            continue
+        # Run every query, dedupe URLs across queries before sending to Claude
+        # — saves tokens on listings that match multiple search angles.
+        unique_results: dict[str, dict] = {}
+        for q in SEARCH_QUERIES:
+            try:
+                search_response = tavily.search(
+                    query=q["query"],
+                    include_domains=[domain],
+                    max_results=SEARCH_MAX_RESULTS,
+                    search_depth="advanced",
+                    include_raw_content="markdown",
+                    timeout=60,
+                )
+            except Exception as e:  # noqa: BLE001
+                errors.append(f"tavily-search:{site}:{q['label']}: {e}")
+                print(f"[warn] search '{q['label']}' failed for {site}: {e}", file=sys.stderr)
+                continue
 
-        results = search_response.get("results", []) or []
+            for result in search_response.get("results", []) or []:
+                url = (result.get("url") or "").strip()
+                if url and url not in unique_results:
+                    unique_results[url] = result
+
         # Tavily /search returns images at the top level (one shared list per
         # search), so they can't be safely attributed to any specific result —
         # pass [] and let Haiku pick from the per-result markdown instead.
         kept = 0
-        for result in results:
-            url = (result.get("url") or "").strip()
+        for url, result in unique_results.items():
             content = result.get("raw_content") or result.get("content") or ""
-            if not url or not content.strip():
+            if not content.strip():
                 continue
             if _is_rental_url(url):
                 continue
             valid = _extract_and_filter(claude, url, content, [], site, errors)
             all_listings.extend(valid)
             kept += len(valid)
-        print(f"[search]  {site}: {len(results)} candidate URLs → {kept} kept")
+        print(f"[search]  {site}: {len(unique_results)} unique URLs across {len(SEARCH_QUERIES)} queries → {kept} kept")
 
     # ─── Dedupe by listing URL, keep highest-scored variant ───────────────
     by_url: dict[str, dict] = {}
