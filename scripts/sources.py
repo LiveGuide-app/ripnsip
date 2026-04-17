@@ -8,12 +8,13 @@ Two strategies:
 - SEARCH_SOURCES: Tavily /search restricted to a domain. Returns individual
   listing URLs along with their markdown content. Used for sites whose
   search pages are JS-only or bot-blocked, but whose individual listing
-  pages render OK.
+  pages render OK. Also useful as a "pagination catch" for sites already in
+  EXTRACT_SOURCES — search surfaces listings beyond search-page 1.
 
-The search query is shared across SEARCH_SOURCES to keep things simple.
+The search query is shared across SEARCH_SOURCES.
 """
 
-SEARCH_QUERY = "propriété maison médoc piscine 9 pièces 6 chambres"
+SEARCH_QUERY = "vente maison propriété médoc piscine 9 pièces 6 chambres"
 SEARCH_MAX_RESULTS = 8
 
 EXTRACT_SOURCES: list[dict[str, str]] = [
@@ -44,4 +45,7 @@ SEARCH_SOURCES: list[dict[str, str]] = [
     {"site": "seloger.com", "domain": "seloger.com"},
     {"site": "bienici.com", "domain": "bienici.com"},
     {"site": "lesiteimmo.com", "domain": "lesiteimmo.com"},
+    {"site": "goldwelling.com", "domain": "goldwelling.com"},
+    # Also crawl Leggett via search to catch listings beyond search-page 1.
+    {"site": "frenchestateagents.com (deep)", "domain": "frenchestateagents.com"},
 ]

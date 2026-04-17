@@ -122,7 +122,7 @@
         markerLayer.clearLayers();
         const bounds = [];
         for (const l of list) {
-          const coords = communeCoords(l.location);
+          const coords = communeCoords(l);
           if (!coords) continue;
           // Jitter within ~1km so multiple markers in the same commune don't stack
           const jitter = jitterFor(l.id || l.url || l.title);
@@ -203,13 +203,17 @@
         }
       }
 
-      function communeCoords(location) {
-        if (!location) return null;
-        const norm = location.toLowerCase().split(',')[0].trim();
+      function communeCoords(listing) {
+        // Prefer the explicit commune field; fall back to first segment of location.
+        const raw = (listing.commune || listing.location || '').toLowerCase().split(',')[0].trim();
+        if (!raw) return null;
+        const norm = raw.normalize('NFC');
         if (COMMUNE_COORDS[norm]) return COMMUNE_COORDS[norm];
-        // Loose match: any commune key contained in the location string
+        // Try a normalised version without diacritics
+        const stripped = norm.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         for (const [key, coords] of Object.entries(COMMUNE_COORDS)) {
-          if (norm.includes(key) || key.includes(norm)) return coords;
+          const keyStripped = key.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+          if (keyStripped === stripped) return coords;
         }
         return null;
       }

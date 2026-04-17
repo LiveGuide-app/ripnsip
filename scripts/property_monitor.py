@@ -59,25 +59,34 @@ MAX_MARKDOWN_CHARS = 150_000  # Safety cap per page
 PRICE_MIN_EUR = 400_000
 PRICE_MAX_EUR = 900_000
 
-# Communes within ~20 min drive of the Atlantic coast.
-# Estuary-side wine villages (Pauillac, Margaux, Saint-Estèphe, Moulis,
-# Listrac, Cissac, Bégadan, Blaignan, Prignac, Vertheuil, etc.) are
-# intentionally excluded — they're 25–40 min from the ocean.
-COASTAL_MEDOC_COMMUNES = [
+# Allowed communes — within ~20 min drive of the Atlantic. Match is on
+# the LLM's `commune` field (exact, case-insensitive), so spurious hits
+# from other Médoc place-names (e.g. "Le Pian-Médoc" south of Bordeaux)
+# can no longer slip through via location/title substring.
+ALLOWED_COMMUNES = {
     # Direct coast
-    "soulac", "grayan", "vendays", "montalivet", "naujac",
-    "hourtin", "carcans", "lacanau",
-    # Central Médoc, within ~20 min of the coast
-    "lesparre", "gaillan", "saint-vivien", "queyrac", "vensac",
-    "jau-dignac", "saint-laurent-médoc", "saint-laurent-medoc",
-]
+    "soulac-sur-mer", "grayan-et-l'hôpital", "grayan-et-l'hopital",
+    "vendays-montalivet", "naujac-sur-mer", "hourtin", "carcans", "lacanau",
+    # Central Médoc, ~20 min to coast
+    "lesparre-médoc", "lesparre-medoc",
+    "gaillan-en-médoc", "gaillan-en-medoc",
+    "saint-vivien-de-médoc", "saint-vivien-de-medoc",
+    "queyrac", "vensac",
+    "jau-dignac-et-loirac",
+    "saint-laurent-médoc", "saint-laurent-medoc",
+}
 
 SYSTEM_PROMPT = """You extract French real-estate listings from scraped pages for a boutique surf & wine retreat in coastal Médoc, then SCORE each kept listing's fit.
 
-LOCATION (hard filter) — keep only listings within ~20 min drive of the Atlantic coast:
+LISTING TYPE — sales only (vente / for sale / à vendre). SKIP rentals: anything labelled "à louer", "location", "monthly rent", "/locations/" in the URL, or with a price like "€X / mois".
+
+LOCATION (hard filter) — accept ONLY these 14 communes and reject any other:
 - Direct coast: Soulac-sur-Mer, Grayan-et-l'Hôpital, Vendays-Montalivet, Naujac-sur-Mer, Hourtin, Carcans, Lacanau.
 - Central Médoc (~20 min to coast): Lesparre-Médoc, Gaillan-en-Médoc, Saint-Vivien-de-Médoc, Queyrac, Vensac, Jau-Dignac-et-Loirac, Saint-Laurent-Médoc.
-Exclude estuary-side wine villages (Pauillac, Margaux, Saint-Estèphe, Moulis, Listrac, Cissac, Bégadan, Blaignan, Prignac, Vertheuil) and the rest of Gironde (Bordeaux, Cap Ferret, Arcachon, Libourne, Saint-Émilion, etc.).
+
+EXPLICITLY REJECT (common confusables): Le Pian-Médoc (south of Bordeaux, NOT coastal), Castelnau-de-Médoc, Macau, Margaux, Pauillac, Saint-Estèphe, Saint-Seurin-de-Cadourne, Moulis-en-Médoc, Listrac-Médoc, Cissac-Médoc, Bégadan, Blaignan, Prignac-en-Médoc, Vertheuil, Saint-Germain-d'Esteuil, Saint-Yzans-de-Médoc, Couquèques, Ordonnac, Valeyrac, Saint-Christoly-Médoc — and the entire rest of Gironde (Bordeaux, Cap Ferret, Bassin d'Arcachon, Libourne, Saint-Émilion, etc.).
+
+Set the `commune` field to the exact commune name only (e.g. "Lesparre-Médoc", not "Lesparre-Médoc, Gironde"). If you cannot identify the exact commune from the listing, skip it — do not guess.
 
 PRICE (hard filter) — €400,000 to €900,000. Skip outside this range. If price isn't stated, keep.
 
@@ -101,7 +110,7 @@ Other rules:
 - If a numeric field isn't stated, omit it. Do not guess.
 - `features` — at most 6 items.
 - Mark sold/under-offer listings with `status: "sold"`.
-- `image_url` — pick the single best representative image of the property from the image list provided. Prefer the hero/cover shot over thumbnails, logos, agent photos, or floor plans. If no usable image is in the list, omit the field.
+- `image_url` — pick the single best representative image of the property. Look in the candidate image list AND in the page markdown itself (markdown image syntax `![alt](url)` or `<img src=...>` tags). Prefer the hero/cover shot of the listing being described. Skip thumbnails, logos, agent headshots, floor plans, generic agency images, and images that obviously belong to a different listing on the same page. Omit the field if nothing usable applies.
 
 Return everything via the save_listings tool."""
 
@@ -117,7 +126,8 @@ EXTRACTION_TOOL = {
                     "type": "object",
                     "properties": {
                         "title": {"type": "string"},
-                        "location": {"type": "string", "description": "Commune, ideally with 'Gironde' suffix"},
+                        "location": {"type": "string", "description": "Full location string as shown on the listing"},
+                        "commune": {"type": "string", "description": "Exact commune name only (e.g. 'Lesparre-Médoc'), used for map placement and the hard location filter"},
                         "price_eur": {"type": ["integer", "null"]},
                         "bedrooms": {"type": ["integer", "null"]},
                         "area_m2": {"type": ["integer", "null"], "description": "Building area"},
@@ -145,7 +155,7 @@ EXTRACTION_TOOL = {
                         "fit_verdict": {"type": "string", "maxLength": 200},
                         "notes": {"type": "string"},
                     },
-                    "required": ["title", "location", "url", "score", "score_breakdown", "fit_verdict"],
+                    "required": ["title", "location", "commune", "url", "score", "score_breakdown", "fit_verdict"],
                 },
             }
         },
@@ -222,15 +232,18 @@ def main() -> int:
             continue
 
         results = search_response.get("results", []) or []
-        # Tavily /search returns images at the top level, not per-result.
-        page_images = search_response.get("images") or []
+        # Tavily /search returns images at the top level (one shared list per
+        # search), so they can't be safely attributed to any specific result —
+        # pass [] and let Haiku pick from the per-result markdown instead.
         kept = 0
         for result in results:
             url = (result.get("url") or "").strip()
             content = result.get("raw_content") or result.get("content") or ""
             if not url or not content.strip():
                 continue
-            valid = _extract_and_filter(claude, url, content, page_images, site, errors)
+            if _is_rental_url(url):
+                continue
+            valid = _extract_and_filter(claude, url, content, [], site, errors)
             all_listings.extend(valid)
             kept += len(valid)
         print(f"[search]  {site}: {len(results)} candidate URLs → {kept} kept")
@@ -280,6 +293,8 @@ def _extract_and_filter(
     for l in raw_listings:
         listing_url = (l.get("url") or "").strip()
         if not listing_url or not listing_url.startswith("http"):
+            continue
+        if _is_rental_url(listing_url):
             continue
         if not _is_coastal_medoc(l):
             continue
@@ -331,12 +346,16 @@ def _extract_with_claude(
 
 
 def _is_coastal_medoc(listing: dict) -> bool:
-    haystack = " ".join([
-        str(listing.get("location") or ""),
-        str(listing.get("title") or ""),
-        str(listing.get("notes") or ""),
-    ]).lower()
-    return any(c in haystack for c in COASTAL_MEDOC_COMMUNES)
+    commune = (listing.get("commune") or "").lower().strip().rstrip(",")
+    return commune in ALLOWED_COMMUNES
+
+
+# URL patterns that indicate a rental (we want sales only).
+RENTAL_URL_FRAGMENTS = ("/locations/", "/location/", "/a-louer/", "/rental/", "/rent/")
+
+
+def _is_rental_url(url: str) -> bool:
+    return any(frag in url.lower() for frag in RENTAL_URL_FRAGMENTS)
 
 
 if __name__ == "__main__":
