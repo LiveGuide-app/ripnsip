@@ -366,6 +366,8 @@ def _extract_and_filter(
 
     valid: list[dict] = []
     for l in raw_listings:
+        if not isinstance(l, dict):
+            continue
         listing_url = (l.get("url") or "").strip()
         if not listing_url or not listing_url.startswith("http"):
             continue
