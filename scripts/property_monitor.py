@@ -57,7 +57,9 @@ CRITERIA = {
 }
 
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
-MAX_MARKDOWN_CHARS = 150_000  # Safety cap per page
+MAX_MARKDOWN_CHARS = 40_000  # Safety cap per page. Most listing pages are
+                             # <15K chars; this trims nav/footer/related-listings
+                             # bloat that costs tokens without adding signal.
 PRICE_MIN_EUR = 400_000
 PRICE_MAX_EUR = 900_000
 SITE_URL = "https://liveguide-app.github.io/ripnsip/properties/"
@@ -232,6 +234,7 @@ def main() -> int:
                     max_results=SEARCH_MAX_RESULTS,
                     search_depth="advanced",
                     include_raw_content="markdown",
+                    chunks_per_source=3,
                     timeout=60,
                 )
             except Exception as e:  # noqa: BLE001

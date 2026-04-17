@@ -14,7 +14,7 @@ Two strategies:
 The search query is shared across SEARCH_SOURCES.
 """
 
-SEARCH_MAX_RESULTS = 8
+SEARCH_MAX_RESULTS = 5
 
 # Multiple queries per source — different angles surface different niches
 # (a wine estate, a maison de maître, a large family compound). URLs are
