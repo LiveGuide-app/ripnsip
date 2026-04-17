@@ -338,11 +338,23 @@ def _notify_telegram(new_listings: list[dict], total: int) -> None:
             json=payload,
             timeout=15,
         )
-        resp.raise_for_status()
-        print(f"[telegram] notified about {n} new listing(s)")
     except requests.RequestException as e:
-        body = getattr(e.response, "text", "")[:200] if hasattr(e, "response") and e.response else ""
-        print(f"[telegram] send failed: {e} {body}", file=sys.stderr)
+        print(f"[telegram] network error: {e}", file=sys.stderr)
+        return
+
+    if resp.ok:
+        print(f"[telegram] notified about {n} new listing(s)")
+        return
+
+    # Log Telegram's error description so we can debug chat-id / parse issues
+    try:
+        err = resp.json()
+        desc = err.get("description", "(no description)")
+        code = err.get("error_code", resp.status_code)
+    except ValueError:
+        desc = resp.text[:500]
+        code = resp.status_code
+    print(f"[telegram] send failed: code={code} description={desc!r}", file=sys.stderr)
 
 
 def _extract_and_filter(
