@@ -41,9 +41,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 LISTINGS_PATH = REPO_ROOT / "properties" / "data" / "listings.json"
 
 CRITERIA = {
-    "region": "Coastal Médoc, Gironde (within ~20 min of the Atlantic)",
+    "region": "Atlantic-coast Gironde — Médoc plus the surf/kite belt south of it (Le Porge, Lège-Cap-Ferret, and inland Saumos/Sainte-Hélène). All within ~20 min of ocean surf or kite-friendly water.",
     "price_min_eur": 400_000,
-    "price_max_eur": 900_000,
+    "price_max_eur": 1_300_000,
     "scoring_max": 100,
     "scoring_components": {
         "size_potential": 25,
@@ -53,7 +53,7 @@ CRITERIA = {
         "character": 15,
         "renovation_state": 15,
     },
-    "notes": "Hard filters: coastal Médoc + €400-900k. Everything else is scored 0-100 by Claude Haiku.",
+    "notes": "Hard filters: 18 Atlantic-Gironde communes + €400k-1.3M. Everything else is scored 0-100 by Claude Haiku.",
 }
 
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
@@ -61,18 +61,21 @@ MAX_MARKDOWN_CHARS = 40_000  # Safety cap per page. Most listing pages are
                              # <15K chars; this trims nav/footer/related-listings
                              # bloat that costs tokens without adding signal.
 PRICE_MIN_EUR = 400_000
-PRICE_MAX_EUR = 900_000
+PRICE_MAX_EUR = 1_300_000
 SITE_URL = "https://liveguide-app.github.io/ripnsip/properties/"
 TELEGRAM_MAX_LISTINGS_IN_MESSAGE = 5
 
-# Allowed communes — within ~20 min drive of the Atlantic. Match is on
-# the LLM's `commune` field (exact, case-insensitive), so spurious hits
+# Allowed communes — within ~20 min drive of Atlantic surf or kite-friendly
+# water (ocean or the Carcans-Hourtin / Lacanau / Arcachon basins). Match is
+# on the LLM's `commune` field (exact, case-insensitive), so spurious hits
 # from other Médoc place-names (e.g. "Le Pian-Médoc" south of Bordeaux)
 # can no longer slip through via location/title substring.
 ALLOWED_COMMUNES = {
-    # Direct coast
+    # Direct coast / surf-kite zone
     "soulac-sur-mer", "grayan-et-l'hôpital", "grayan-et-l'hopital",
     "vendays-montalivet", "naujac-sur-mer", "hourtin", "carcans", "lacanau",
+    "le porge",
+    "lège-cap-ferret", "lege-cap-ferret",
     # Central Médoc, ~20 min to coast
     "lesparre-médoc", "lesparre-medoc",
     "gaillan-en-médoc", "gaillan-en-medoc",
@@ -80,21 +83,27 @@ ALLOWED_COMMUNES = {
     "queyrac", "vensac",
     "jau-dignac-et-loirac",
     "saint-laurent-médoc", "saint-laurent-medoc",
+    # Inland southern Gironde, ~20 min to surf coast (Le Porge / Lacanau)
+    "saumos",
+    "sainte-hélène", "sainte-helene",
 }
 
 SYSTEM_PROMPT = """You extract French real-estate listings from scraped pages for a boutique surf & wine retreat in coastal Médoc, then SCORE each kept listing's fit.
 
 LISTING TYPE — sales only (vente / for sale / à vendre). SKIP rentals: anything labelled "à louer", "location", "monthly rent", "/locations/" in the URL, or with a price like "€X / mois".
 
-LOCATION (hard filter) — accept ONLY these 14 communes and reject any other:
-- Direct coast: Soulac-sur-Mer, Grayan-et-l'Hôpital, Vendays-Montalivet, Naujac-sur-Mer, Hourtin, Carcans, Lacanau.
+LOCATION (hard filter) — accept ONLY these 18 communes and reject any other:
+- Direct coast / surf-kite zone: Soulac-sur-Mer, Grayan-et-l'Hôpital, Vendays-Montalivet, Naujac-sur-Mer, Hourtin, Carcans, Lacanau, Le Porge, Lège-Cap-Ferret.
 - Central Médoc (~20 min to coast): Lesparre-Médoc, Gaillan-en-Médoc, Saint-Vivien-de-Médoc, Queyrac, Vensac, Jau-Dignac-et-Loirac, Saint-Laurent-Médoc.
+- Inland southern Gironde (~20 min to surf coast): Saumos, Sainte-Hélène.
 
-EXPLICITLY REJECT (common confusables): Le Pian-Médoc (south of Bordeaux, NOT coastal), Castelnau-de-Médoc, Macau, Margaux, Pauillac, Saint-Estèphe, Saint-Seurin-de-Cadourne, Moulis-en-Médoc, Listrac-Médoc, Cissac-Médoc, Bégadan, Blaignan, Prignac-en-Médoc, Vertheuil, Saint-Germain-d'Esteuil, Saint-Yzans-de-Médoc, Couquèques, Ordonnac, Valeyrac, Saint-Christoly-Médoc — and the entire rest of Gironde (Bordeaux, Cap Ferret, Bassin d'Arcachon, Libourne, Saint-Émilion, etc.).
+Note on Lège-Cap-Ferret: the official commune covers the whole Cap Ferret peninsula. If a listing says "Cap Ferret", "Claouey", "Le Canon", "L'Herbe", "Piraillan", "Petit Piquey", "Grand Piquey", or "Lège", set `commune` to "Lège-Cap-Ferret".
+
+EXPLICITLY REJECT (common confusables): Le Pian-Médoc (south of Bordeaux, NOT coastal), Castelnau-de-Médoc, Macau, Margaux, Pauillac, Saint-Estèphe, Saint-Seurin-de-Cadourne, Moulis-en-Médoc, Listrac-Médoc, Cissac-Médoc, Bégadan, Blaignan, Prignac-en-Médoc, Vertheuil, Saint-Germain-d'Esteuil, Saint-Yzans-de-Médoc, Couquèques, Ordonnac, Valeyrac, Saint-Christoly-Médoc — and other Bassin d'Arcachon communes (Arès, Andernos-les-Bains, Lanton, Audenge, Biganos, Le Teich, Gujan-Mestras, La Teste-de-Buch, Arcachon) and the rest of Gironde (Bordeaux, Libourne, Saint-Émilion, etc.).
 
 Set the `commune` field to the exact commune name only (e.g. "Lesparre-Médoc", not "Lesparre-Médoc, Gironde"). If you cannot identify the exact commune from the listing, skip it — do not guess.
 
-PRICE (hard filter) — €400,000 to €900,000. Skip outside this range. If price isn't stated, keep.
+PRICE (hard filter) — €400,000 to €1,300,000. Skip outside this range. If price isn't stated, keep.
 
 SCORING — for each kept listing, score 0–100 by summing six components (max points bracketed):
 
