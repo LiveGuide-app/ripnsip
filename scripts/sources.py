@@ -32,9 +32,14 @@ SEARCH_QUERIES: list[dict[str, str]] = [
         "label": "character",
         "query": "maison de maître médoc atlantique vente grand terrain caractère",
     },
+    {
+        "label": "born-plateau",
+        "query": "vente maison biscarrosse parentis sanguinet lac océan surf grand terrain",
+    },
 ]
 
 EXTRACT_SOURCES: list[dict[str, str]] = [
+    # ─ Gironde (33) ─
     {
         "site": "green-acres.fr",
         "url": "https://www.green-acres.fr/property-for-sale/gironde",
@@ -60,6 +65,24 @@ EXTRACT_SOURCES: list[dict[str, str]] = [
     {
         "site": "goldwelling.com",
         "url": "https://www.goldwelling.com/index.php/en/all-listing",
+    },
+    # ─ Landes (40) — for the Born plateau (Biscarrosse, Sanguinet, Parentis,
+    # Gastes, Ychoux). The commune filter rejects everything else in Landes. ─
+    {
+        "site": "green-acres.fr (landes)",
+        "url": "https://www.green-acres.fr/property-for-sale/landes",
+    },
+    {
+        "site": "frenchestateagents.com (landes)",
+        "url": "https://www.frenchestateagents.com/french-property-for-sale/department/landes/40",
+    },
+    {
+        "site": "proprietes.lefigaro.fr (landes)",
+        "url": "https://proprietes.lefigaro.fr/annonces/maison-landes-aquitaine-france/",
+    },
+    {
+        "site": "paruvendu.fr (landes)",
+        "url": "https://www.paruvendu.fr/immobilier/vente/maison/landes-40/",
     },
 ]
 
