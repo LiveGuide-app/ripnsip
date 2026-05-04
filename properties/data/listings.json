@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T09:23:01Z",
+  "updated_at": "2026-05-04T09:21:33Z",
   "criteria": {
     "region": "Coastal Médoc, Gironde (within ~20 min of the Atlantic)",
     "price_min_eur": 400000,
@@ -51,6 +51,40 @@
       "source": "auto",
       "site": "lesiteimmo.com",
       "price": "€899,500"
+    },
+    {
+      "title": "Magnificent property in the Médoc near the Atlantic Ocean with pool",
+      "location": "Lesparre-Médoc, Gironde",
+      "commune": "Lesparre-Médoc",
+      "url": "https://frenchestateagents.com/french-property-for-sale/view/A30363KRH33/house-for-sale-lesparre-m%C3%A9doc-gironde-aquitaine-france",
+      "price_eur": 899600,
+      "bedrooms": 14,
+      "bathrooms": 6,
+      "area_m2": 535,
+      "land_m2": 6000,
+      "features": [
+        "Swimming pool",
+        "Guest house potential",
+        "Stone construction",
+        "Original features",
+        "Lovingly renovated"
+      ],
+      "image_url": "https://image.hestia.immo/89M3q3t8v4F2mhhHZmfv7xft4yo2g3IXleNODz9VwOY/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNS0wNi9ET0MyVlNSWFFOMzQuanBn.jpg",
+      "score": 88,
+      "score_breakdown": {
+        "size_potential": 25,
+        "pool": 15,
+        "glamping_land": 12,
+        "coast_proximity": 12,
+        "character": 13,
+        "renovation_state": 11
+      },
+      "fit_verdict": "Excellent: 14 bed, pool, renovated, wine-country. Size & land ideal; coastal proximity solid.",
+      "status": "active",
+      "id": "auto-90ea7b1e80",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€899,600"
     },
     {
       "title": "Magnificent property with pool – 14 bedrooms, guest house potential",
@@ -256,23 +290,43 @@
       "price": "€599,000"
     },
     {
-      "title": "Maison 13 pièces 398 m² Gaillan-en-Médoc",
-      "location": "Gaillan-en-Médoc, 33340",
+      "title": "Superbe propriété de plus de 19 hectares",
+      "location": "Lesparre-Médoc, Gironde",
+      "commune": "Lesparre-Médoc",
+      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/lesparre-medoc-33340/ad08fr13275",
+      "status": "unknown",
+      "score": 78,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 8,
+        "glamping_land": 15,
+        "coast_proximity": 10,
+        "character": 15,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Excellent: 19 ha + stone manor + outbuildings. Central Médoc location, conversion potential high. Price/pool unclear.",
+      "id": "auto-3a0694c9b7",
+      "source": "auto",
+      "site": "seloger.com"
+    },
+    {
+      "title": "Maison 13 pièces 398 m²",
+      "location": "Gaillan-en-Médoc (33340)",
       "commune": "Gaillan-en-Médoc",
       "url": "https://www.lesiteimmo.com/acheter/maison-13pieces/gaillan-en-medoc-33340/32532115",
-      "price_eur": 825000,
+      "price_eur": 525000,
       "area_m2": 398,
       "bedrooms": 13,
       "land_m2": 60000,
       "features": [
-        "Stone longère with multiple units",
-        "Main residence 172 m²",
-        "Apartment 56 m²",
-        "Lodge 144 m²",
-        "Garage and barn 260 m²",
-        "6 hectares of land"
+        "13-piece longère (stone)",
+        "Multiple dwellings on site",
+        "Grange 260m²",
+        "Garage",
+        "6 hectares",
+        "Extensive conversion potential"
       ],
-      "status": "active",
+      "image_url": "https://media.studio-net.fr/biens/32532115/x697935901fae8?w=320&h=192&q=60",
       "score": 78,
       "score_breakdown": {
         "size_potential": 25,
@@ -282,12 +336,12 @@
         "character": 12,
         "renovation_state": 5
       },
-      "fit_verdict": "Excellent multi-unit potential & vast land, but poor coast proximity (20+ km) and no pool or renovation works complete.",
-      "image_url": "https://media.studio-net.fr/biens/32532115/x697935901fae6?w=320&h=192&q=60",
+      "fit_verdict": "Excellent size/land with multiple dwellings; no pool and 10km to coast weaken appeal.",
+      "status": "active",
       "id": "auto-465c98d154",
       "source": "auto",
       "site": "lesiteimmo.com",
-      "price": "€825,000"
+      "price": "€525,000"
     },
     {
       "title": "Maison 7 pièces 182 m²",
@@ -390,40 +444,6 @@
       "sold_detected_at": "2026-04-27T09:23:01Z"
     },
     {
-      "title": "Beautiful stone house 226 m2 completely renovated on a 6000 m2 plot",
-      "location": "Gaillan-en-Médoc, Gironde",
-      "commune": "Gaillan-en-Médoc",
-      "url": "https://www.frenchestateagents.com/gironde/mill/arrival:year",
-      "price_eur": 649000,
-      "bedrooms": 6,
-      "area_m2": 226,
-      "land_m2": 6123,
-      "features": [
-        "Stone character property",
-        "3 independent living areas",
-        "Renovated",
-        "Swimming pool",
-        "6000 m² plot"
-      ],
-      "score": 78,
-      "score_breakdown": {
-        "size_potential": 20,
-        "pool": 15,
-        "glamping_land": 15,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 6
-      },
-      "fit_verdict": "Excellent coastal Médoc location with land & pool. Limited character charm despite renovation.",
-      "status": "sold",
-      "image_url": "https://image.hestia.immo/p08XEyEHTEahDKdkO25RA3AeqpcNQWtzpbYhKr4kyYk/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNC0wNi9ET0MzWEdWWjdZM1kuanBn.jpg",
-      "id": "auto-308b15ab62",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€649,000",
-      "sold_detected_at": "2026-04-20T09:15:19Z"
-    },
-    {
       "title": "Villa 170 m2 Vensac (33)",
       "location": "Vensac, Gironde",
       "commune": "Vensac",
@@ -455,6 +475,40 @@
       "source": "auto",
       "site": "paruvendu.fr",
       "price": "€410,000",
+      "sold_detected_at": "2026-04-20T09:15:19Z"
+    },
+    {
+      "title": "Beautiful stone house 226 m2 completely renovated on a 6000 m2 plot",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "commune": "Gaillan-en-Médoc",
+      "url": "https://www.frenchestateagents.com/gironde/mill/arrival:year",
+      "price_eur": 649000,
+      "bedrooms": 6,
+      "area_m2": 226,
+      "land_m2": 6123,
+      "features": [
+        "Stone character property",
+        "3 independent living areas",
+        "Renovated",
+        "Swimming pool",
+        "6000 m² plot"
+      ],
+      "score": 78,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 15,
+        "glamping_land": 15,
+        "coast_proximity": 10,
+        "character": 12,
+        "renovation_state": 6
+      },
+      "fit_verdict": "Excellent coastal Médoc location with land & pool. Limited character charm despite renovation.",
+      "status": "sold",
+      "image_url": "https://image.hestia.immo/p08XEyEHTEahDKdkO25RA3AeqpcNQWtzpbYhKr4kyYk/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNC0wNi9ET0MzWEdWWjdZM1kuanBn.jpg",
+      "id": "auto-308b15ab62",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€649,000",
       "sold_detected_at": "2026-04-20T09:15:19Z"
     },
     {
@@ -503,21 +557,23 @@
       "land_m2": 5400,
       "features": [
         "Former wine estate",
+        "Large floor area (1000m²)",
         "Swimming pool",
         "Business potential",
-        "Large footprint"
+        "Wine estate heritage"
       ],
+      "status": "active",
       "score": 75,
       "score_breakdown": {
         "size_potential": 20,
         "pool": 15,
-        "glamping_land": 15,
+        "glamping_land": 10,
         "coast_proximity": 10,
-        "character": 10,
-        "renovation_state": 10
+        "character": 15,
+        "renovation_state": 5
       },
-      "status": "active",
-      "fit_verdict": "Spacious wine estate with pool & ~5000m² land; 5-bed but 1000m² needs clarification. Central location ~20km to coast.",
+      "fit_verdict": "Spacious wine estate with pool and character; limited bedrooms and moderate interior renovation apparent.",
+      "image_url": "https://image.hestia.immo/_94ET3afP1OP8OFkBv2vzrNlz_0cCZkofE2BplJvco0/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNC0xMC9ET0MzN1pBSEFYRTMuanBn.jpg",
       "id": "auto-ad906e5ad0",
       "source": "auto",
       "site": "frenchestateagents.com (deep)",
@@ -557,91 +613,110 @@
       "price": "€649,000"
     },
     {
-      "title": "Maison 9 pièces, 6 chambres, 250 m² avec terrain à vendre",
-      "location": "Gaillan-en-Médoc",
-      "commune": "Gaillan-en-Médoc",
-      "url": "https://www.seloger.com/recherche/achat/maison/piscine/nouvelle-aquitaine/lesparre-medoc-33340/ad08fr13275",
-      "price_eur": 649000,
+      "title": "Maison 9 pièces 211 m²",
+      "location": "Lesparre-Médoc (33340)",
+      "commune": "Lesparre-Médoc",
+      "url": "https://www.lesiteimmo.com/acheter/maison-a-renover/lesparre-medoc-33340",
       "bedrooms": 6,
-      "area_m2": 250,
-      "land_m2": 6163,
+      "area_m2": 211,
+      "land_m2": 2192,
+      "price_eur": null,
       "features": [
-        "9 pièces",
-        "6 chambres",
-        "Terrain 6163 m²",
-        "Piscine potential"
+        "Pool to renovate",
+        "Summer kitchen",
+        "Garage 30 m²",
+        "Cave",
+        "Generous verdant land",
+        "Division potential"
       ],
       "score": 72,
       "score_breakdown": {
         "size_potential": 20,
         "pool": 8,
-        "glamping_land": 15,
+        "glamping_land": 12,
         "coast_proximity": 10,
         "character": 8,
-        "renovation_state": 11
+        "renovation_state": 14
       },
-      "fit_verdict": "Excellent land (6ha) & bedroom count for conversion. Unknown pool & condition status dampens score.",
       "status": "unknown",
-      "id": "auto-4e7117d020",
+      "fit_verdict": "Good size & land, existing pool + summer kitchen; needs complete reno (assainissement, électricité). ~20 min to coast.",
+      "image_url": "https://media.studio-net.fr/biens/32234955/x69b9b1074651a?w=320&h=192&q=60",
+      "notes": "6 bedrooms, not yet 10; can be split into two residences. Strong renovation requirement but solid potential. Price not stated.",
+      "id": "auto-1b42058618",
       "source": "auto",
-      "site": "seloger.com",
-      "price": "€649,000"
+      "site": "lesiteimmo.com"
     },
     {
-      "title": "Superbe propriété de plus de 19 hectares avec maison de maître et dépendances",
+      "title": "House in Lesparre-Médoc",
+      "location": "Lesparre-Médoc, Gironde, Aquitaine (Nouvelle-Aquitaine)",
+      "commune": "Lesparre-Médoc",
+      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-m%C3%A9doc-gironde-aquitaine-france",
+      "price_eur": 515000,
+      "bedrooms": 6,
+      "area_m2": 343,
+      "land_m2": 5000,
+      "features": [
+        "19th-century character property",
+        "Large attic suitable for conversion",
+        "Detached with wooded grounds",
+        "Separate 60m² dwelling (needs renovation)",
+        "80m² garage with former stable",
+        "2 living rooms, 2 bathrooms"
+      ],
+      "status": "unknown",
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 0,
+        "glamping_land": 15,
+        "coast_proximity": 10,
+        "character": 15,
+        "renovation_state": 12
+      },
+      "fit_verdict": "Strong character & conversion potential, 5ha grounds ideal for glamping. No pool; main house needs cosmetic work. Excellent bones.",
+      "notes": "Built 1860, excellent development potential with attic conversion + separate 60m² dwelling already on site. South-west facing, detached. Energy costs €6.7-9k/year (high). Within price band and all amenities nearby.",
+      "id": "auto-fcda2221fb",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€515,000"
+    },
+    {
+      "title": "19th-century bourgeois house with 9 rooms",
       "location": "Lesparre-Médoc, Gironde",
       "commune": "Lesparre-Médoc",
-      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/lesparre-medoc-33340/ad08fr13275",
-      "status": "unknown",
+      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33",
+      "price_eur": 515000,
+      "bedrooms": 6,
+      "area_m2": 343,
+      "land_m2": 5000,
+      "status": "active",
+      "image_url": "https://image.hestia.immo/CvmXr61Bb8Ps61ygJFAXXYZEuOQdjfHj7sM3nQXrUuc/w:800/h:600/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
+      "features": [
+        "19th-century character with stone/period features",
+        "Large entrance hall (20m²)",
+        "Two living rooms",
+        "Cellar (70m²)",
+        "Attic suitable for conversion",
+        "Separate 60m² dwelling + 80m² garage"
+      ],
       "score": 72,
       "score_breakdown": {
         "size_potential": 20,
-        "pool": 8,
-        "glamping_land": 15,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 7
-      },
-      "fit_verdict": "Exceptional 19ha land with character buildings; needs renovation clarity & full specs.",
-      "features": [
-        "19+ hectares",
-        "Main house on 2 levels",
-        "Stone manor",
-        "Outbuildings",
-        "Stables/barn",
-        "Ancillary dwellings"
-      ],
-      "notes": "Large estate with multiple buildings suggests excellent glamping/retreat development potential. Stone construction and mature grounds indicate character. Renovation state and exact bedroom count unclear from truncated listing. Pool status unknown. Central Médoc location ~20 km to coast.",
-      "id": "auto-3a0694c9b7",
-      "source": "auto",
-      "site": "seloger.com"
-    },
-    {
-      "title": "Maison 15 pièces 540 m²",
-      "location": "Lesparre-Médoc",
-      "commune": "Lesparre-Médoc",
-      "url": "https://www.bienici.com/recherche/achat/lesparre-medoc-33340/maisonvilla?piscine=oui",
-      "price_eur": 899500,
-      "area_m2": 540,
-      "bedrooms": 15,
-      "score": 72,
-      "score_breakdown": {
-        "size_potential": 25,
-        "pool": 15,
+        "pool": 0,
         "glamping_land": 10,
         "coast_proximity": 10,
-        "character": 8,
-        "renovation_state": 4
+        "character": 13,
+        "renovation_state": 9
       },
-      "fit_verdict": "15-bed flagship with pool & solid size, but unclear condition and interior details from search results.",
-      "id": "auto-a57e9a277d",
+      "fit_verdict": "Excellent size & character; good Médoc location & land. Missing pool, needs renovation; town-centre feel limits secluded glamping appeal.",
+      "notes": "Built 1860; detached; SW-facing; 5,000m² wooded grounds in town heart; separate dependency needs work; strong development potential but lacking pool; ~20 min to coast.",
+      "id": "auto-824f79ce2b",
       "source": "auto",
-      "site": "bienici.com",
-      "status": "active",
-      "price": "€899,500"
+      "site": "frenchestateagents.com (deep)",
+      "price": "€515,000"
     },
     {
-      "title": "Beautiful stone house 226 m² completely renovated",
+      "title": "Beautiful stone house 226 m2 completely renovated with 3 Independent Living Areas",
       "location": "Gaillan-en-Médoc, Gironde",
       "commune": "Gaillan-en-Médoc",
       "url": "https://frenchestateagents.com/french-property-for-sale/view/A30116PR33/house-for-sale-gaillan-en-m%C3%A9doc-gironde-aquitaine-france",
@@ -653,20 +728,22 @@
       "features": [
         "Stone construction",
         "3 independent living areas",
+        "Completely renovated",
         "Swimming pool",
-        "Completely renovated"
+        "Character property"
       ],
+      "status": "active",
       "score": 72,
       "score_breakdown": {
         "size_potential": 20,
         "pool": 15,
-        "glamping_land": 15,
+        "glamping_land": 10,
         "coast_proximity": 10,
-        "character": 8,
+        "character": 12,
         "renovation_state": 15
       },
-      "status": "active",
-      "fit_verdict": "Excellent renovation & land; 6-bed with pool & conversion potential. Central Médoc location is 20+ min to coast.",
+      "fit_verdict": "Good bones, excellent pool, strong renovation state; limited bedrooms and ~17km to coast are gaps.",
+      "image_url": "https://image.hestia.immo/p08XEyEHTEahDKdkO25RA3AeqpcNQWtzpbYhKr4kyYk/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNC0wNi9ET0MzWEdWWjdZM1kuanBn.jpg",
       "id": "auto-e8fbf7566e",
       "source": "auto",
       "site": "frenchestateagents.com (deep)",
@@ -705,6 +782,63 @@
       "source": "auto",
       "site": "lesiteimmo.com",
       "price": "€509,360"
+    },
+    {
+      "title": "Maison 9 pièces, 6 chambres, 250 m² avec terrain à vendre",
+      "location": "Gaillan-en-Médoc",
+      "commune": "Gaillan-en-Médoc",
+      "url": "https://www.seloger.com/recherche/achat/maison/piscine/nouvelle-aquitaine/lesparre-medoc-33340/ad08fr13275",
+      "price_eur": 649000,
+      "bedrooms": 6,
+      "area_m2": 250,
+      "land_m2": 6163,
+      "features": [
+        "9 pièces",
+        "6 chambres",
+        "Terrain 6163 m²",
+        "Piscine potential"
+      ],
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 8,
+        "glamping_land": 15,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 11
+      },
+      "fit_verdict": "Excellent land (6ha) & bedroom count for conversion. Unknown pool & condition status dampens score.",
+      "status": "sold",
+      "id": "auto-4e7117d020",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€649,000",
+      "sold_detected_at": "2026-05-04T09:21:33Z"
+    },
+    {
+      "title": "Maison 15 pièces 540 m²",
+      "location": "Lesparre-Médoc",
+      "commune": "Lesparre-Médoc",
+      "url": "https://www.bienici.com/recherche/achat/lesparre-medoc-33340/maisonvilla?piscine=oui",
+      "price_eur": 899500,
+      "area_m2": 540,
+      "bedrooms": 15,
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 25,
+        "pool": 15,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 4
+      },
+      "fit_verdict": "15-bed flagship with pool & solid size, but unclear condition and interior details from search results.",
+      "id": "auto-a57e9a277d",
+      "source": "auto",
+      "site": "bienici.com",
+      "status": "sold",
+      "price": "€899,500",
+      "sold_detected_at": "2026-05-04T09:21:33Z"
     },
     {
       "title": "Maison à vendre",
@@ -773,75 +907,6 @@
       "sold_detected_at": "2026-04-20T09:15:19Z"
     },
     {
-      "title": "19th-century bourgeois house with 9 rooms",
-      "location": "Lesparre-Médoc, Gironde",
-      "commune": "Lesparre-Médoc",
-      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-m%C3%A9doc-gironde-aquitaine-france",
-      "price_eur": 515000,
-      "bedrooms": 6,
-      "area_m2": 343,
-      "land_m2": 5000,
-      "status": "active",
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 18,
-        "pool": 5,
-        "glamping_land": 10,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 13
-      },
-      "fit_verdict": "Strong period bones, 6 beds + conversion attic/outbuildings, 5000m² wooded land. No pool, ~20min to coast.",
-      "features": [
-        "19th-century character",
-        "6 bedrooms",
-        "Attic conversion potential",
-        "70m² cellar",
-        "5000m² wooded grounds",
-        "Detached house"
-      ],
-      "image_url": "https://image.hestia.immo/CvmXr61Bb8Ps61ygJFAXXYZEuOQdjfHj7sM3nQXrUuc/w:800/h:600/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
-      "id": "auto-fcda2221fb",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€515,000"
-    },
-    {
-      "title": "19th-century bourgeois house with 9 rooms in Lesparre-Médoc",
-      "location": "Lesparre-Médoc, Gironde, Aquitaine (Nouvelle-Aquitaine)",
-      "commune": "Lesparre-Médoc",
-      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33",
-      "price_eur": 515000,
-      "bedrooms": 6,
-      "area_m2": 343,
-      "land_m2": 5000,
-      "status": "active",
-      "features": [
-        "19th-century charm",
-        "6 bedrooms + conversion potential",
-        "Large attic for conversion",
-        "Wooded grounds 5000m²",
-        "Adjacent 60m² outbuilding",
-        "South-West facing"
-      ],
-      "image_url": "https://image.hestia.immo/CvmXr61Bb8Ps61ygJFAXXYZEuOQdjfHj7sM3nQXrUuc/w:800/h:600/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 16,
-        "pool": 5,
-        "glamping_land": 13,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 12
-      },
-      "fit_verdict": "Strong size & land; lacks pool, ~18km to coast, solid bones but needs cosmetic work.",
-      "notes": "Built 1860, located in heart of Lesparre town centre. Separate adjoining 60m² dwelling requires renovation (could be office/workshop/gîte). Large 70m² cellar and 80m² garage+attic. No pool mentioned. Central Médoc location ~18km from coast.",
-      "id": "auto-824f79ce2b",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€515,000"
-    },
-    {
       "title": "Beautiful Provençal-style house on a large plot of land bordering a forest",
       "location": "Hourtin, Gironde",
       "commune": "Hourtin",
@@ -875,37 +940,6 @@
       "price": "€899,000"
     },
     {
-      "title": "Elegant Former Wine Estate in the Heart of Médoc",
-      "location": "Gaillan-en-Médoc",
-      "commune": "Gaillan-en-Médoc",
-      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A32772GM33/house-for-sale-gaillan-en-médoc-gironde-aquitaine-france",
-      "price_eur": 729000,
-      "bedrooms": 5,
-      "area_m2": 1000,
-      "land_m2": 5400,
-      "features": [
-        "Former wine estate",
-        "Pool",
-        "1000m² living space",
-        "Business potential"
-      ],
-      "status": "active",
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 15,
-        "pool": 15,
-        "glamping_land": 10,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 6
-      },
-      "fit_verdict": "Large 1000m² wine estate with pool and land; strong bones but only 5 beds and renovation state unclear.",
-      "id": "auto-9a2e70c4f1",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€729,000"
-    },
-    {
       "title": "19th-century bourgeois house with 9 rooms",
       "location": "Lesparre-Médoc, Gironde",
       "commune": "Lesparre-Médoc",
@@ -936,6 +970,37 @@
       "source": "auto",
       "site": "frenchestateagents.com (deep)",
       "price": "€515,000"
+    },
+    {
+      "title": "Elegant Former Wine Estate in the Heart of Médoc",
+      "location": "Gaillan-en-Médoc",
+      "commune": "Gaillan-en-Médoc",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A32772GM33/house-for-sale-gaillan-en-médoc-gironde-aquitaine-france",
+      "price_eur": 729000,
+      "bedrooms": 5,
+      "area_m2": 1000,
+      "land_m2": 5400,
+      "features": [
+        "Former wine estate",
+        "Pool",
+        "1000m² living space",
+        "Business potential"
+      ],
+      "status": "active",
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 15,
+        "pool": 15,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 12,
+        "renovation_state": 6
+      },
+      "fit_verdict": "Large 1000m² wine estate with pool and land; strong bones but only 5 beds and renovation state unclear.",
+      "id": "auto-9a2e70c4f1",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€729,000"
     },
     {
       "title": "19th-century bourgeois house in Lesparre-Médoc",
@@ -1094,31 +1159,31 @@
       "sold_detected_at": "2026-04-27T09:23:01Z"
     },
     {
-      "title": "Maison au coeur de Gaillan de Médoc",
+      "title": "Maison T4 - Gaillan-en-Médoc",
       "location": "Gaillan-en-Médoc",
       "commune": "Gaillan-en-Médoc",
       "url": "https://www.seloger.com/recherche/achat/maison/nouvelle-aquitaine/gaillan-en-medoc-33340/ad08fr13213",
+      "status": "unknown",
+      "price_eur": null,
+      "bedrooms": 3,
       "area_m2": 125,
       "land_m2": 2150,
-      "bedrooms": null,
-      "price_eur": null,
       "features": [
         "Piscine",
-        "Véranda",
-        "Salon-salle à manger"
+        "Grande véranda",
+        "Poêle"
       ],
-      "status": "unknown",
       "score": 58,
       "score_breakdown": {
-        "size_potential": 5,
+        "size_potential": 12,
         "pool": 15,
         "glamping_land": 10,
         "coast_proximity": 10,
         "character": 8,
-        "renovation_state": 10
+        "renovation_state": 3
       },
-      "fit_verdict": "Good pool & land (2150 m²), but house too small (125 m²) for 12-bed retreat expansion.",
-      "notes": "Listing text truncated; exact price and bedroom count unknown.",
+      "fit_verdict": "Pool + decent land; modest house size; unclear condition & price missing—needs full listing review.",
+      "notes": "Listing page truncated in markdown. T4 typically 3 bed. Pool is strong asset. Land suitable for glamping expansion. Central Médoc location ~18 km to coast. Description cuts off—cannot assess full condition or price range.",
       "id": "auto-336dc00621",
       "source": "auto",
       "site": "seloger.com"
@@ -1223,27 +1288,6 @@
       "sold_detected_at": "2026-04-20T09:15:19Z"
     },
     {
-      "title": "Maison de maître avec ancrage Bordelais",
-      "location": "Saint-Laurent-Médoc, Gironde",
-      "commune": "Saint-Laurent-Médoc",
-      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/saint-laurent-medoc-33112/ad08fr13453",
-      "status": "unknown",
-      "score": 48,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 9
-      },
-      "fit_verdict": "Well-located & characterful manor near coast; lacks pool, unclear bed count & land size.",
-      "notes": "25 min to beach; 30 min Bordeaux. Estimated as Bordeaux manor (character +12), no pool info, typical regional garden, 10 km coastal proximity, moderate cosmetic state. Bed count unknown.",
-      "id": "auto-80da62ce99",
-      "source": "auto",
-      "site": "seloger.com"
-    },
-    {
       "title": "Maison 5 pièces 80 m²",
       "location": "Carcans 33121 -Plage",
       "commune": "Carcans",
@@ -1269,6 +1313,27 @@
       "sold_detected_at": "2026-04-17T15:48:51Z"
     },
     {
+      "title": "Maison à rénover avec fort potentiel sur grand terrain",
+      "location": "Saint-Vivien-de-Médoc, Gironde",
+      "commune": "Saint-Vivien-de-Médoc",
+      "url": "https://www.bienici.com/recherche/achat/saint-vivien-de-medoc-33590/maisonvilla",
+      "status": "unknown",
+      "score": 28,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 0,
+        "glamping_land": 8,
+        "coast_proximity": 10,
+        "character": 3,
+        "renovation_state": 2
+      },
+      "fit_verdict": "Large land in right location, but only 2 bed, modern, poor state—needs full rebuild.",
+      "notes": "Incomplete page extract; plain-pied 2-bed structure. Renovation works appear major. Land size unknown but described as 'grand'.",
+      "id": "auto-3e98e48fa2",
+      "source": "auto",
+      "site": "bienici.com"
+    },
+    {
       "title": "Charmante Maison d'une superficie totale de 170m² dont 35 m² de combles",
       "location": "Saint-Vivien-de-Médoc",
       "commune": "Saint-Vivien-de-Médoc",
@@ -1278,7 +1343,7 @@
       "price_eur": null,
       "bedrooms": null,
       "features": [],
-      "status": "unknown",
+      "status": "sold",
       "score": 22,
       "score_breakdown": {
         "size_potential": 5,
@@ -1292,6 +1357,27 @@
       "notes": "170 m² main building + 35 m² attic. No pool, no substantial land. Limited character details. Saint-Vivien-de-Médoc is ~20 km from coast.",
       "id": "auto-703c273226",
       "source": "auto",
+      "site": "seloger.com",
+      "sold_detected_at": "2026-05-04T09:21:33Z"
+    },
+    {
+      "title": "Maison de maître prestige – Saint-Laurent-Médoc",
+      "location": "Saint-Laurent-Médoc, Gironde",
+      "commune": "Saint-Laurent-Médoc",
+      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/saint-laurent-medoc-33112/ad08fr13453",
+      "score": 0,
+      "score_breakdown": {
+        "size_potential": 0,
+        "pool": 0,
+        "glamping_land": 0,
+        "coast_proximity": 0,
+        "character": 0,
+        "renovation_state": 0
+      },
+      "fit_verdict": "Insufficient data – no property details, bedrooms, price, land size, or images available.",
+      "status": "unknown",
+      "id": "auto-80da62ce99",
+      "source": "auto",
       "site": "seloger.com"
     },
     {
@@ -1299,7 +1385,7 @@
       "location": "Lesparre-Médoc",
       "commune": "Lesparre-Médoc",
       "url": "https://www.bienici.com/recherche/achat/lesparre-medoc-33340/chateau",
-      "status": "unknown",
+      "status": "sold",
       "score": 0,
       "score_breakdown": {
         "size_potential": 0,
@@ -1313,7 +1399,8 @@
       "notes": "Page text truncated mid-sentence. No price, bedroom count, or detailed property features visible.",
       "id": "auto-91588596ef",
       "source": "auto",
-      "site": "bienici.com"
+      "site": "bienici.com",
+      "sold_detected_at": "2026-05-04T09:21:33Z"
     }
   ]
 }
