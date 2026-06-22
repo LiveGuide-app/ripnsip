@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15T13:21:15Z",
+  "updated_at": "2026-06-22T12:59:52Z",
   "criteria": {
     "region": "France's Atlantic southwest — coastal Gironde (Médoc + Cap-Ferret peninsula) plus the Born plateau in northern Landes (Biscarrosse / Sanguinet / Parentis lakes + Biscarrosse-Plage surf). All within ~20 min of ocean surf or kite-friendly water; all within ~1-1.5 hr of Bordeaux-Mérignac airport.",
     "price_min_eur": 400000,
@@ -17,7 +17,6 @@
   },
   "errors": [
     "tavily:https://proprietes.lefigaro.fr/annonces/maison-gironde-aquitaine-france/: Failed to fetch url",
-    "tavily:https://proprietes.lefigaro.fr/annonces/maison-landes-aquitaine-france/: Failed to fetch url",
     "tavily-verify: Max 20 URLs are allowed."
   ],
   "listings": [
@@ -92,6 +91,32 @@
       "price": "€894,400"
     },
     {
+      "title": "Maison à vendre - Parentis-en-Born",
+      "location": "Parentis-en-Born 40160",
+      "commune": "Parentis-en-Born",
+      "url": "https://www.seloger.com/recherche/achat/maison/particulier/nouvelle-aquitaine/mimizan-40200/ad08fr16075",
+      "price_eur": 1290000,
+      "bedrooms": 5,
+      "area_m2": 330,
+      "land_m2": 27000,
+      "score": 88,
+      "score_breakdown": {
+        "size_potential": 25,
+        "pool": 10,
+        "glamping_land": 15,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Excellent land (27 ha), good size (330 m²), ideal glamping potential. Renovation state unclear.",
+      "id": "auto-902ac17ffe",
+      "source": "auto",
+      "site": "seloger.com",
+      "status": "sold",
+      "price": "€1,290,000",
+      "sold_detected_at": "2026-05-11T10:46:59Z"
+    },
+    {
       "title": "Propriété avec piscine Lesparre-Médoc (33)",
       "location": "Lesparre-Médoc, Gironde, Aquitaine",
       "commune": "Lesparre-Médoc",
@@ -127,30 +152,37 @@
       "sold_detected_at": "2026-04-27T09:23:01Z"
     },
     {
-      "title": "Maison à vendre - Parentis-en-Born",
-      "location": "Parentis-en-Born 40160",
-      "commune": "Parentis-en-Born",
-      "url": "https://www.seloger.com/recherche/achat/maison/particulier/nouvelle-aquitaine/mimizan-40200/ad08fr16075",
-      "price_eur": 1290000,
-      "bedrooms": 5,
-      "area_m2": 330,
-      "land_m2": 27000,
-      "score": 88,
+      "title": "Magnificent property in the Médoc near the Atlantic Ocean",
+      "location": "Lesparre-Médoc, Gironde",
+      "commune": "Lesparre-Médoc",
+      "url": "https://frenchestateagents.com/french-property-for-sale/view/A30363KRH33/house-for-sale-lesparre-m%C3%A9doc-gironde-aquitaine-france",
+      "price_eur": 899600,
+      "bedrooms": 14,
+      "area_m2": 535,
+      "land_m2": 6000,
+      "features": [
+        "Swimming pool",
+        "Large stone house",
+        "Guest house potential",
+        "Lovingly renovated",
+        "Original features"
+      ],
+      "score": 85,
       "score_breakdown": {
         "size_potential": 25,
-        "pool": 10,
-        "glamping_land": 15,
-        "coast_proximity": 10,
-        "character": 8,
-        "renovation_state": 10
+        "pool": 15,
+        "glamping_land": 10,
+        "coast_proximity": 15,
+        "character": 12,
+        "renovation_state": 8
       },
-      "fit_verdict": "Excellent land (27 ha), good size (330 m²), ideal glamping potential. Renovation state unclear.",
-      "id": "auto-902ac17ffe",
+      "status": "active",
+      "fit_verdict": "Excellent bedroom count, pool & land; near coast; some renovation needed but strong retreat foundation.",
+      "image_url": "https://image.hestia.immo/89M3q3t8v4F2mhhHZmfv7xft4yo2g3IXleNODz9VwOY/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNS0wNi9ET0MyVlNSWFFOMzQuanBn.jpg",
+      "id": "auto-90ea7b1e80",
       "source": "auto",
-      "site": "seloger.com",
-      "status": "sold",
-      "price": "€1,290,000",
-      "sold_detected_at": "2026-05-11T10:46:59Z"
+      "site": "frenchestateagents.com (deep)",
+      "price": "€899,600"
     },
     {
       "title": "Magnificent property in the Médoc near the Atlantic Ocean",
@@ -185,72 +217,43 @@
       "price": "€894,400"
     },
     {
-      "title": "Magnificent property in the Médoc near the Atlantic Ocean",
-      "location": "Lesparre-Médoc, Gironde",
-      "commune": "Lesparre-Médoc",
-      "url": "https://frenchestateagents.com/french-property-for-sale/view/A30363KRH33/house-for-sale-lesparre-m%C3%A9doc-gironde-aquitaine-france",
-      "price_eur": 899600,
-      "bedrooms": 14,
-      "area_m2": 535,
-      "land_m2": 6000,
+      "title": "Maison 8 pièces 250 m² Parentis-en-Born",
+      "location": "Parentis-en-Born (40160)",
+      "commune": "Parentis-en-Born",
+      "url": "https://www.lesiteimmo.com/acheter/maison-8pieces/parentis-en-born-40160/33261570",
+      "price_eur": 599000,
+      "bedrooms": 6,
+      "area_m2": 250,
+      "land_m2": 5000,
       "features": [
-        "Swimming pool",
-        "Large stone house",
-        "Guest house potential",
-        "Lovingly renovated",
-        "Original features"
+        "Piscine",
+        "Grange 85 m²",
+        "Dépendance 40 m²",
+        "Sauna",
+        "Airial style 1865",
+        "Terrain paysagé 5000 m²"
       ],
-      "score": 85,
-      "score_breakdown": {
-        "size_potential": 25,
-        "pool": 15,
-        "glamping_land": 10,
-        "coast_proximity": 15,
-        "character": 12,
-        "renovation_state": 8
-      },
-      "status": "active",
-      "fit_verdict": "Excellent bedroom count, pool & land; near coast; some renovation needed but strong retreat foundation.",
-      "image_url": "https://image.hestia.immo/89M3q3t8v4F2mhhHZmfv7xft4yo2g3IXleNODz9VwOY/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNS0wNi9ET0MyVlNSWFFOMzQuanBn.jpg",
-      "id": "auto-90ea7b1e80",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€899,600"
-    },
-    {
-      "title": "Maison 13 pièces 398 m²",
-      "location": "Gaillan-en-Médoc (33340)",
-      "commune": "Gaillan-en-Médoc",
-      "url": "https://www.lesiteimmo.com/acheter/maison-13pieces/gaillan-en-medoc-33340/32532115",
-      "price_eur": 525000,
-      "bedrooms": 13,
-      "area_m2": 398,
-      "land_m2": 60000,
-      "features": [
-        "Stone longère",
-        "Multi-unit conversion",
-        "Studio + 2 apartments",
-        "Large grange 260m²",
-        "Garage",
-        "6 hectares"
-      ],
-      "status": "active",
-      "image_url": "https://media.studio-net.fr/biens/32532115/x697935901fae6?w=320&h=192&q=60",
+      "pool": 15,
+      "glamping_land": 15,
+      "size_potential": 20,
+      "coast_proximity": 10,
+      "character": 12,
+      "renovation_state": 10,
       "score": 82,
       "score_breakdown": {
-        "size_potential": 25,
-        "pool": 0,
+        "size_potential": 20,
+        "pool": 15,
         "glamping_land": 15,
-        "coast_proximity": 7,
+        "coast_proximity": 10,
         "character": 12,
         "renovation_state": 10
       },
-      "fit_verdict": "Exceptional scale & land; authentic longère with rental income potential. No pool; 15-20 km from coast limits appeal.",
-      "notes": "Rare ensemble with main residence (172m²), apartment (56m²), lodge (144m²), studio (26m²); 6 hectares; 5% commission included.",
-      "id": "auto-465c98d154",
+      "fit_verdict": "Strong retreat base: 6-bed, 5 ha, pool, barns, 1865 Airial charm. Needs expansion to 12-bed target.",
+      "status": "active",
+      "id": "auto-6bd6158060",
       "source": "auto",
       "site": "lesiteimmo.com",
-      "price": "€525,000"
+      "price": "€599,000"
     },
     {
       "title": "House in Lesparre-Médoc",
@@ -321,45 +324,6 @@
       "site": "leboncoin.fr"
     },
     {
-      "title": "Maison 8 pièces 250 m² Parentis-en-Born",
-      "location": "Parentis-en-Born (40160)",
-      "commune": "Parentis-en-Born",
-      "url": "https://www.lesiteimmo.com/acheter/maison-8pieces/parentis-en-born-40160/33261570",
-      "price_eur": 599000,
-      "bedrooms": 6,
-      "area_m2": 250,
-      "land_m2": 5000,
-      "features": [
-        "Piscine",
-        "Grange 85 m²",
-        "Dépendance 40 m²",
-        "Sauna",
-        "Airial style 1865",
-        "Terrain paysagé 5000 m²"
-      ],
-      "pool": 15,
-      "glamping_land": 15,
-      "size_potential": 20,
-      "coast_proximity": 10,
-      "character": 12,
-      "renovation_state": 10,
-      "score": 82,
-      "score_breakdown": {
-        "size_potential": 20,
-        "pool": 15,
-        "glamping_land": 15,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 10
-      },
-      "fit_verdict": "Strong retreat base: 6-bed, 5 ha, pool, barns, 1865 Airial charm. Needs expansion to 12-bed target.",
-      "status": "active",
-      "id": "auto-6bd6158060",
-      "source": "auto",
-      "site": "lesiteimmo.com",
-      "price": "€599,000"
-    },
-    {
       "title": "Villa Cap Ferret, 8 pièces, 7 chambres - Le Canon",
       "location": "Centre Cap Ferret, Lège-Cap-Ferret (33950)",
       "commune": "Lège-Cap-Ferret",
@@ -391,40 +355,6 @@
       "source": "auto",
       "site": "seloger.com",
       "price": "€987,000"
-    },
-    {
-      "title": "Maison à vendre - Bourg",
-      "location": "Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/272161467.htm",
-      "price_eur": 890000,
-      "bedrooms": 4,
-      "area_m2": 210,
-      "land_m2": 2000,
-      "features": [
-        "Swimming pool",
-        "Contemporary villa",
-        "Between lake and forest",
-        "Landscaped park",
-        "Spacious living areas",
-        "Multiple bathrooms"
-      ],
-      "score": 79,
-      "score_breakdown": {
-        "size_potential": 16,
-        "pool": 15,
-        "glamping_land": 12,
-        "coast_proximity": 10,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Pool + generous land + decent size, but modern character limits retreat appeal.",
-      "status": "unknown",
-      "image_url": "https://mms.seloger.com/8/8/9/7/88971e1e-7da2-4fd6-b060-fbf27f1993b9.jpg",
-      "id": "auto-3a826a445e",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€890,000"
     },
     {
       "title": "Maison 9 pièces 289 m² - Style Landais avec dépendance 63m² et grand terrain",
@@ -461,101 +391,103 @@
       "price": "€549,000"
     },
     {
-      "title": "Maison de maître 19 pièces, Lesparre-Médoc",
-      "location": "Lesparre-Médoc, Gironde",
-      "commune": "Lesparre-Médoc",
-      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/lesparre-medoc-33340/ad08fr13275",
-      "score": 78,
-      "score_breakdown": {
-        "size_potential": 25,
-        "pool": 8,
-        "glamping_land": 10,
-        "coast_proximity": 10,
-        "character": 15,
-        "renovation_state": 10
-      },
-      "fit_verdict": "Exceptional size (19 rooms) & character; 6000m² land suitable for glamping. Central Médoc, ~20 min coast.",
-      "status": "unknown",
-      "bedrooms": null,
-      "area_m2": null,
-      "land_m2": 6000,
-      "price_eur": null,
-      "features": [
-        "19 pièces",
-        "Maison de maître",
-        "Terrain 6000 m²",
-        "Deux niveaux",
-        "Horizons dégagés"
-      ],
-      "notes": "No price or detailed room count in source; scored on 19-room footprint (strong potential), character features, and strategic Médoc location.",
-      "id": "auto-3a0694c9b7",
-      "source": "auto",
-      "site": "seloger.com"
-    },
-    {
-      "title": "Propriété rare 181 m² cœur Médoc, 67 000 m² terrain",
-      "location": "Saint-Laurent-Médoc (33112)",
-      "commune": "Saint-Laurent-Médoc",
-      "url": "https://www.seloger.com/annonces/achat/maison/saint-laurent-medoc-33/258557349.htm",
-      "price_eur": 780000,
+      "title": "Villa avec piscine, entre lac et forêt",
+      "location": "Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/272161467.htm",
+      "price_eur": 890000,
       "bedrooms": 4,
-      "area_m2": 181,
-      "land_m2": 67000,
+      "area_m2": 210,
+      "land_m2": 2000,
       "features": [
-        "6.7 ha",
-        "forêts",
-        "vignobles",
-        "environnement naturel privilégié"
+        "Piscine",
+        "Parc paysagé",
+        "Espaces spacieux",
+        "Entre lac et forêt"
       ],
       "status": "active",
+      "image_url": "https://mms.seloger.com/8/8/9/7/88971e1e-7da2-4fd6-b060-fbf27f1993b9.jpg",
       "score": 78,
       "score_breakdown": {
         "size_potential": 12,
-        "pool": 8,
+        "pool": 15,
         "glamping_land": 15,
-        "coast_proximity": 4,
-        "character": 15,
-        "renovation_state": 10
+        "coast_proximity": 10,
+        "character": 10,
+        "renovation_state": 15
       },
-      "fit_verdict": "Rare property, 6.7 ha secluded land, Médoc setting. Strong glamping potential. Inland; 20+ km to coast.",
-      "id": "auto-8db9efd45f",
+      "fit_verdict": "Excellent pool & land; solid size but limited to 4 bed; good renovation state. Strong glamping foundation.",
+      "id": "auto-3a826a445e",
       "source": "auto",
       "site": "seloger.com",
-      "price": "€780,000"
+      "price": "€890,000"
     },
     {
-      "title": "Maison à vendre - Bourg",
-      "location": "Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/272161465.htm",
-      "price_eur": 895000,
+      "title": "Maison 8 pièces 320 m²",
+      "location": "Saint-Laurent-Médoc (33112)",
+      "commune": "Saint-Laurent-Médoc",
+      "url": "https://www.lesiteimmo.com/acheter/maison-piscine/saint-laurent-medoc-33112",
       "bedrooms": 5,
-      "area_m2": 254,
-      "land_m2": 1349,
+      "area_m2": 320,
+      "land_m2": 10000,
+      "price_eur": 896750,
+      "status": "unknown",
       "features": [
-        "Main villa + apartment",
-        "Multi-unit potential",
-        "Edge of protected forest",
-        "Five bedrooms total",
-        "Multiple living spaces",
-        "Spacious rooms"
+        "Period mansion in stone",
+        "Large swimming pool",
+        "1 hectare mature park",
+        "Marble fireplaces",
+        "Outbuildings for gites",
+        "Historic parquet & ceilings"
       ],
+      "image_url": "https://media.studio-net.fr/biens/33102405/x6a323720aaafe?w=320&h=192&q=60",
       "score": 78,
       "score_breakdown": {
         "size_potential": 20,
-        "pool": 0,
-        "glamping_land": 10,
-        "coast_proximity": 10,
-        "character": 6,
-        "renovation_state": 12
+        "pool": 15,
+        "glamping_land": 15,
+        "coast_proximity": 7,
+        "character": 15,
+        "renovation_state": 10
       },
-      "fit_verdict": "Excellent multi-unit layout, good size, but no pool & needs updates; retreat-ready.",
-      "status": "unknown",
-      "image_url": "https://mms.seloger.com/c/d/a/4/cda4fb8a-6232-496f-a1a1-668d4f0e7810.jpg",
-      "id": "auto-822cddb521",
+      "fit_verdict": "Exceptional character & gite potential on 1ha; 30km to beach; needs cosmetic updates",
+      "id": "auto-199c3fa229",
       "source": "auto",
-      "site": "seloger.com",
-      "price": "€895,000"
+      "site": "lesiteimmo.com",
+      "price": "€896,750"
+    },
+    {
+      "title": "Maison 13 pièces 398 m²",
+      "location": "Gaillan-en-Médoc (33340)",
+      "commune": "Gaillan-en-Médoc",
+      "url": "https://www.lesiteimmo.com/acheter/maison-13pieces/gaillan-en-medoc-33340/32532115",
+      "price_eur": 525000,
+      "bedrooms": 9,
+      "area_m2": 398,
+      "land_m2": 60000,
+      "features": [
+        "Longère en pierre",
+        "4 logements distincts",
+        "Garage et grange 260m²",
+        "6 hectares",
+        "Potentiel locatif"
+      ],
+      "image_url": "https://media.studio-net.fr/biens/32532115/x697935901fae6?w=320&h=192&q=60",
+      "status": "active",
+      "score": 78,
+      "score_breakdown": {
+        "size_potential": 22,
+        "pool": 0,
+        "glamping_land": 15,
+        "coast_proximity": 7,
+        "character": 12,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Excellent: 13 pièces, 4 units, 6ha, stone charm. Major gap: no pool, 20km to coast.",
+      "id": "auto-465c98d154",
+      "source": "auto",
+      "site": "lesiteimmo.com",
+      "price": "€525,000"
     },
     {
       "title": "Maison 11 pièces 240 m² à Gaillan-en-Médoc",
@@ -590,40 +522,6 @@
       "source": "auto",
       "site": "lesiteimmo.com",
       "price": "€580,000"
-    },
-    {
-      "title": "Villa à vendre - 8 pièces, 6 chambres",
-      "location": "La Plage-Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/269601797.htm",
-      "price_eur": 935000,
-      "bedrooms": 6,
-      "area_m2": 197,
-      "land_m2": 724,
-      "features": [
-        "Pool and jacuzzi",
-        "Contemporary 2022",
-        "Golf domain",
-        "Ocean proximity",
-        "Landscaped grounds",
-        "6 bedrooms"
-      ],
-      "image_url": "https://mms.seloger.com/2/c/8/4/2c844f07-2a54-4db5-875f-b63e3bf937a2.jpg",
-      "status": "active",
-      "score": 78,
-      "score_breakdown": {
-        "size_potential": 20,
-        "pool": 15,
-        "glamping_land": 10,
-        "coast_proximity": 15,
-        "character": 12,
-        "renovation_state": 6
-      },
-      "fit_verdict": "Strong: 6 beds, pool, coastal. Weak: 197m² modest for retreat expansion; modern feel lacks character.",
-      "id": "auto-05484bc3d5",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€935,000"
     },
     {
       "title": "House in Lesparre-Médoc – Magnificent property in the Médoc near the Atlantic Ocean",
@@ -661,39 +559,70 @@
       "price": "€899,600"
     },
     {
-      "title": "Beautiful stone house 226 m2 completely renovated on a 6000 m2 plot",
-      "location": "Gaillan-en-Médoc, Gironde",
-      "commune": "Gaillan-en-Médoc",
-      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A30116PR33/house-for-sale-gaillan-en-m%C3%A9doc-gironde-aquitaine-france",
-      "price_eur": 649000,
+      "title": "Villa à vendre - 8 pièces, 6 chambres",
+      "location": "La Plage-Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/269601797.htm",
+      "price_eur": 935000,
       "bedrooms": 6,
-      "bathrooms": 3,
-      "area_m2": 226,
-      "land_m2": 6123,
+      "area_m2": 197,
+      "land_m2": 724,
       "features": [
-        "Fully renovated",
-        "Stone character",
-        "Swimming pool",
-        "Three independent living areas",
-        "6000 m² plot"
+        "Pool and jacuzzi",
+        "Contemporary 2022",
+        "Golf domain",
+        "Ocean proximity",
+        "Landscaped grounds",
+        "6 bedrooms"
       ],
-      "image_url": "https://image.hestia.immo/p08XEyEHTEahDKdkO25RA3AeqpcNQWtzpbYhKr4kyYk/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNC0wNi9ET0MzWEdWWjdZM1kuanBn.jpg",
+      "image_url": "https://mms.seloger.com/2/c/8/4/2c844f07-2a54-4db5-875f-b63e3bf937a2.jpg",
+      "status": "active",
       "score": 78,
       "score_breakdown": {
         "size_potential": 20,
         "pool": 15,
-        "glamping_land": 15,
-        "coast_proximity": 7,
+        "glamping_land": 10,
+        "coast_proximity": 15,
         "character": 12,
-        "renovation_state": 15
+        "renovation_state": 6
       },
-      "fit_verdict": "Excellent land & pool, strong character. Central Médoc location ~25km from coast limits appeal.",
-      "status": "sold",
-      "id": "auto-8ce0806af4",
+      "fit_verdict": "Strong: 6 beds, pool, coastal. Weak: 197m² modest for retreat expansion; modern feel lacks character.",
+      "id": "auto-05484bc3d5",
       "source": "auto",
-      "site": "frenchestateagents.com",
-      "price": "€649,000",
-      "sold_detected_at": "2026-05-04T09:48:02Z"
+      "site": "seloger.com",
+      "price": "€935,000"
+    },
+    {
+      "title": "Maison de maître 19 pièces, Lesparre-Médoc",
+      "location": "Lesparre-Médoc, Gironde",
+      "commune": "Lesparre-Médoc",
+      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/lesparre-medoc-33340/ad08fr13275",
+      "score": 78,
+      "score_breakdown": {
+        "size_potential": 25,
+        "pool": 8,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 15,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Exceptional size (19 rooms) & character; 6000m² land suitable for glamping. Central Médoc, ~20 min coast.",
+      "status": "unknown",
+      "bedrooms": null,
+      "area_m2": null,
+      "land_m2": 6000,
+      "price_eur": null,
+      "features": [
+        "19 pièces",
+        "Maison de maître",
+        "Terrain 6000 m²",
+        "Deux niveaux",
+        "Horizons dégagés"
+      ],
+      "notes": "No price or detailed room count in source; scored on 19-room footprint (strong potential), character features, and strategic Médoc location.",
+      "id": "auto-3a0694c9b7",
+      "source": "auto",
+      "site": "seloger.com"
     },
     {
       "title": "Beautiful stone house 226 m2 completely renovated on a 6000 m2 plot",
@@ -730,6 +659,41 @@
       "sold_detected_at": "2026-04-20T09:15:19Z"
     },
     {
+      "title": "Beautiful stone house 226 m2 completely renovated on a 6000 m2 plot",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "commune": "Gaillan-en-Médoc",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A30116PR33/house-for-sale-gaillan-en-m%C3%A9doc-gironde-aquitaine-france",
+      "price_eur": 649000,
+      "bedrooms": 6,
+      "bathrooms": 3,
+      "area_m2": 226,
+      "land_m2": 6123,
+      "features": [
+        "Fully renovated",
+        "Stone character",
+        "Swimming pool",
+        "Three independent living areas",
+        "6000 m² plot"
+      ],
+      "image_url": "https://image.hestia.immo/p08XEyEHTEahDKdkO25RA3AeqpcNQWtzpbYhKr4kyYk/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNC0wNi9ET0MzWEdWWjdZM1kuanBn.jpg",
+      "score": 78,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 15,
+        "glamping_land": 15,
+        "coast_proximity": 7,
+        "character": 12,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Excellent land & pool, strong character. Central Médoc location ~25km from coast limits appeal.",
+      "status": "sold",
+      "id": "auto-8ce0806af4",
+      "source": "auto",
+      "site": "frenchestateagents.com",
+      "price": "€649,000",
+      "sold_detected_at": "2026-05-04T09:48:02Z"
+    },
+    {
       "title": "Villa 170 m2 Vensac (33)",
       "location": "Vensac, Gironde",
       "commune": "Vensac",
@@ -764,38 +728,38 @@
       "sold_detected_at": "2026-04-20T09:15:19Z"
     },
     {
-      "title": "Maison à vendre - Bourg",
-      "location": "Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/272161475.htm",
-      "price_eur": 769000,
-      "bedrooms": 4,
-      "area_m2": 156,
-      "land_m2": 2198,
+      "title": "Maison 17 pièces 300 m²",
+      "location": "Soulac-sur-Mer (33780)",
+      "commune": "Soulac-sur-Mer",
+      "url": "https://www.lesiteimmo.com/acheter/maison-17pieces/soulac-sur-mer-33780/33402570",
+      "price_eur": 630000,
+      "bedrooms": 13,
+      "area_m2": 250,
+      "land_m2": 630,
       "features": [
-        "Contemporary villa",
-        "Between lake and forest",
-        "Independent T2 studio",
-        "Spacious living areas",
-        "Quality finishes",
-        "Large garden"
+        "13 bedrooms",
+        "8 WCs",
+        "Independent studio 15 m²",
+        "Dépendance 55 m²",
+        "800m to beach",
+        "Maison d'hôtes/groups potential"
       ],
       "score": 77,
       "score_breakdown": {
-        "size_potential": 18,
+        "size_potential": 25,
         "pool": 0,
-        "glamping_land": 12,
-        "coast_proximity": 10,
-        "character": 7,
-        "renovation_state": 15
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 12,
+        "renovation_state": 5
       },
-      "fit_verdict": "Good land+guest potential, modern finish, but lacks pool & strong character.",
-      "status": "unknown",
-      "image_url": "https://mms.seloger.com/8/3/f/9/83f94221-6305-4ae9-a15e-7a6e1387783d.jpg",
-      "id": "auto-b403ec23d3",
+      "fit_verdict": "Perfect bed count near ocean; small plot, needs electrical work & refresh; no pool.",
+      "status": "active",
+      "image_url": "https://media.studio-net.fr/biens/33402570/x6a314c7d5f1ea?w=320&h=192&q=60",
+      "id": "auto-72ed363982",
       "source": "auto",
-      "site": "seloger.com",
-      "price": "€769,000"
+      "site": "lesiteimmo.com",
+      "price": "€630,000"
     },
     {
       "title": "Maison 6 pièces 230 m²",
@@ -829,6 +793,37 @@
       "source": "auto",
       "site": "lesiteimmo.com",
       "price": "€599,000"
+    },
+    {
+      "title": "Propriété rare au coeur du Médoc - 780 000 €",
+      "location": "Saint-Laurent-Médoc (33112)",
+      "commune": "Saint-Laurent-Médoc",
+      "url": "https://www.seloger.com/annonces/achat/maison/saint-laurent-medoc-33/258557349.htm",
+      "price_eur": 780000,
+      "bedrooms": 4,
+      "area_m2": 181,
+      "land_m2": 67000,
+      "score": 76,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 8,
+        "glamping_land": 15,
+        "coast_proximity": 7,
+        "character": 12,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Excellent 67ha estate with forest/vineyards. 181m² with conversion potential. 20km to coast, good value.",
+      "status": "active",
+      "features": [
+        "67 hectares",
+        "forêts",
+        "vignobles",
+        "environnement naturel"
+      ],
+      "id": "auto-8db9efd45f",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€780,000"
     },
     {
       "title": "Maison 7 pièces 180 m² (chambres d'hôtes operation, pool, jacuzzi spa)",
@@ -931,37 +926,36 @@
       "sold_detected_at": "2026-04-20T09:15:19Z"
     },
     {
-      "title": "Maison 10 pièces 238 m² Parentis-en-Born (40160)",
-      "location": "Parentis-en-Born (40160)",
-      "commune": "Parentis-en-Born",
-      "url": "https://www.lesiteimmo.com/acheter/maison-10pieces/parentis-en-born-40160/33052201",
-      "price_eur": 894000,
-      "bedrooms": 6,
-      "area_m2": 238,
+      "title": "Maison 230 m² Biscarrosse (40)",
+      "location": "Biscarrosse-Bourg, Biscarrosse (40)",
+      "commune": "Biscarrosse",
+      "url": "https://www.paruvendu.fr/immobilier/vente/maison/1292177262A1KIVHMN000",
+      "price_eur": 750000,
+      "bedrooms": 7,
+      "area_m2": 230,
+      "land_m2": 891,
       "features": [
-        "10 pièces",
-        "2 étages + RDC",
-        "Potentiel locatif",
-        "Bien rare",
-        "Parentis-en-Born",
-        "25min Biscarrosse plage"
+        "7 chambres",
+        "2 étages",
+        "Ancienne rénovée",
+        "Centre-ville"
       ],
-      "image_url": "https://media.studio-net.fr/biens/33052201/x6a0a17b304f0c?w=320&h=192&q=60",
       "status": "active",
+      "image_url": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/35/bb/L21lZGlhLXBhL1dJMTcvNy80L1dJMTc3NDA3NTUxXzEuanBlZz8yMDI2MDYxNzE0NDIyMA_rct?func=crop&w=320&gravity=auto",
       "score": 75,
       "score_breakdown": {
         "size_potential": 20,
-        "pool": 0,
+        "pool": 5,
         "glamping_land": 5,
-        "coast_proximity": 10,
-        "character": 10,
+        "coast_proximity": 15,
+        "character": 15,
         "renovation_state": 10
       },
-      "fit_verdict": "Spacious 6+ beds, rental-ready multi-unit. No pool, limited details on land & condition.",
-      "id": "auto-f3c5c79349",
+      "fit_verdict": "Excellent bedroom count (7) & character. Prime location on Born plateau. Weak pool prospect; limited land for glamping.",
+      "id": "auto-213925ff0f",
       "source": "auto",
-      "site": "lesiteimmo.com",
-      "price": "€894,000"
+      "site": "paruvendu.fr (landes)",
+      "price": "€750,000"
     },
     {
       "title": "Maison à vendre - 7 pièces, 5 chambres",
@@ -997,39 +991,6 @@
       "price": "€895,000"
     },
     {
-      "title": "In a peaceful haven, 10 min from Villeneuve de Marsan, a stunning 450m² house with 8 bedrooms on 5 ha of land",
-      "location": "Villeneuve-de-Marsan, Landes",
-      "commune": "Gastes",
-      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A29582CHD40/house-for-sale-villeneuve-de-marsan-landes-aquitaine-france",
-      "status": "active",
-      "price_eur": 690000,
-      "bedrooms": 8,
-      "area_m2": 450,
-      "land_m2": 53577,
-      "features": [
-        "Swimming pool",
-        "Two-level",
-        "5 hectares",
-        "Large family space",
-        "Character property"
-      ],
-      "image_url": "https://image.hestia.immo/NfHloAKTjhVJQMbdA6DETnHMJ3KIgcNXL9LmhMT0iN4/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNS0wNS9ET0MzR0VIOE5RMlguanBn.jpg",
-      "score": 75,
-      "score_breakdown": {
-        "size_potential": 20,
-        "pool": 15,
-        "glamping_land": 15,
-        "coast_proximity": 4,
-        "character": 10,
-        "renovation_state": 11
-      },
-      "fit_verdict": "8 beds, pool, 5.3 ha. Excellent land/pool but 40+ km from coast limits appeal for coastal retreat.",
-      "id": "auto-a49bba1408",
-      "source": "auto",
-      "site": "frenchestateagents.com (landes)",
-      "price": "€690,000"
-    },
-    {
       "title": "Elegant Former Wine Estate in the Heart of Médoc",
       "location": "Gaillan-en-Médoc, Gironde",
       "commune": "Gaillan-en-Médoc",
@@ -1060,6 +1021,39 @@
       "source": "auto",
       "site": "frenchestateagents.com (deep)",
       "price": "€729,000"
+    },
+    {
+      "title": "Maison 10 pièces 238 m² Parentis-en-Born (40160)",
+      "location": "Parentis-en-Born (40160)",
+      "commune": "Parentis-en-Born",
+      "url": "https://www.lesiteimmo.com/acheter/maison-10pieces/parentis-en-born-40160/33052201",
+      "price_eur": 894000,
+      "bedrooms": 6,
+      "area_m2": 238,
+      "features": [
+        "10 pièces",
+        "2 étages + RDC",
+        "Potentiel locatif",
+        "Bien rare",
+        "Parentis-en-Born",
+        "25min Biscarrosse plage"
+      ],
+      "image_url": "https://media.studio-net.fr/biens/33052201/x6a0a17b304f0c?w=320&h=192&q=60",
+      "status": "active",
+      "score": 75,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 10,
+        "character": 10,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Spacious 6+ beds, rental-ready multi-unit. No pool, limited details on land & condition.",
+      "id": "auto-f3c5c79349",
+      "source": "auto",
+      "site": "lesiteimmo.com",
+      "price": "€894,000"
     },
     {
       "title": "19th-century bourgeois house – 6 bedrooms on 5,000 m² grounds",
@@ -1164,37 +1158,105 @@
       "sold_detected_at": "2026-05-04T09:48:02Z"
     },
     {
-      "title": "Maison à vendre",
-      "location": "Gaillan-en-Médoc, 33340",
-      "commune": "Gaillan-en-Médoc",
-      "url": "https://www.seloger.com/recherche/achat/maison/piscine/nouvelle-aquitaine/gaillan-en-medoc-33340/ad08fr13213",
-      "price_eur": 649000,
-      "bedrooms": 4,
-      "area_m2": 225,
-      "land_m2": 6163,
+      "title": "In a peaceful haven, 10 min from Villeneuve de Marsan, a stunning 450m² house with 8 bedrooms on 5 ha of land",
+      "location": "Villeneuve-de-Marsan, Landes",
+      "commune": "Gastes",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A29582CHD40/house-for-sale-villeneuve-de-marsan-landes-aquitaine-france",
+      "price_eur": 690000,
+      "bedrooms": 8,
+      "area_m2": 450,
+      "land_m2": 50000,
       "features": [
-        "Piscine",
-        "9 pièces",
-        "6163 m² de terrain"
+        "8 bedrooms",
+        "450 m² living space",
+        "5-hectare estate",
+        "Swimming pool",
+        "Two-level layout",
+        "Peaceful countryside setting"
       ],
-      "score": 72,
+      "image_url": "https://image.hestia.immo/NfHloAKTjhVJQMbdA6DETnHMJ3KIgcNXL9LmhMT0iN4/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNS0wNS9ET0MzR0VIOE5RMlguanBn.jpg",
+      "status": "active",
+      "score": 73,
       "score_breakdown": {
-        "size_potential": 12,
+        "size_potential": 25,
         "pool": 15,
         "glamping_land": 15,
-        "coast_proximity": 10,
-        "character": 8,
-        "renovation_state": 12
+        "coast_proximity": 4,
+        "character": 10,
+        "renovation_state": 8
       },
-      "fit_verdict": "Strong land + pool, 4-bed core needs expansion. Médoc location 20min to coast.",
-      "id": "auto-34c957a6f9",
+      "fit_verdict": "8 bed + 5 ha excellent for retreat. Pool included. ~80 km from coast. Character/renovation variable.",
+      "id": "auto-a49bba1408",
       "source": "auto",
-      "site": "seloger.com",
-      "status": "active",
-      "price": "€649,000"
+      "site": "frenchestateagents.com (landes)",
+      "price": "€690,000"
     },
     {
-      "title": "Magnifique maison pierre 202 m² Saint-Laurent-Médoc",
+      "title": "Maison à vendre",
+      "location": "La Plage-Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/270416243.htm",
+      "price_eur": 992200,
+      "bedrooms": 4,
+      "area_m2": 156,
+      "land_m2": 940,
+      "status": "active",
+      "score": 73,
+      "score_breakdown": {
+        "size_potential": 15,
+        "pool": 8,
+        "glamping_land": 13,
+        "coast_proximity": 15,
+        "character": 12,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Excellent size, prime Golf location, great land. Only 4 beds, cosmetic work, no existing pool.",
+      "features": [
+        "Quartier Golf",
+        "2023",
+        "156m²",
+        "940m² terrain",
+        "Hauteurs"
+      ],
+      "id": "auto-68feaf5e95",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€992,200"
+    },
+    {
+      "title": "Maison avec piscine Biscarrosse (40)",
+      "location": "Biscarrosse, Landes",
+      "commune": "Biscarrosse",
+      "url": "https://proprietes.lefigaro.fr/annonces/maison-landes-aquitaine-france/94631229/",
+      "price_eur": 1250000,
+      "bedrooms": 4,
+      "area_m2": 273,
+      "land_m2": 1320,
+      "features": [
+        "Piscine",
+        "Dépendance 2 chambres",
+        "Garage",
+        "Sans vis-à-vis"
+      ],
+      "image_url": "https://lh3.googleusercontent.com/Tpszwia_NaOkwk7PMHWdfgzM0BH8FtQzOWJJ_lDpsfPxbKA0n2zxlQiPz7kwnlQvYdviRjzVXOiPkB3xlOMkpHFGUzpHCbYVhqiQlA",
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 15,
+        "pool": 15,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 14
+      },
+      "fit_verdict": "Strong: 4 beds + outbuilding, pool, 1.3 ha, 10km coast. Lacks character; slight overflow price.",
+      "status": "unknown",
+      "id": "auto-29a7bb8d43",
+      "source": "auto",
+      "site": "proprietes.lefigaro.fr (landes)",
+      "price": "€1,250,000"
+    },
+    {
+      "title": "Maison à vendre - Saint-Laurent-Médoc - 421 000 €",
       "location": "Saint-Laurent-Médoc (33112)",
       "commune": "Saint-Laurent-Médoc",
       "url": "https://www.seloger.com/annonces/achat/maison/saint-laurent-medoc-33/263407269.htm",
@@ -1202,13 +1264,6 @@
       "bedrooms": 4,
       "area_m2": 202,
       "land_m2": 57522,
-      "features": [
-        "pierre",
-        "charme",
-        "potentiel",
-        "5.8 ha terrain"
-      ],
-      "status": "active",
       "score": 72,
       "score_breakdown": {
         "size_potential": 12,
@@ -1218,170 +1273,84 @@
         "character": 15,
         "renovation_state": 10
       },
-      "fit_verdict": "Excellent land (5.8ha), charming stone house, good expansion potential. Good retreat base; needs interior updates.",
+      "fit_verdict": "Stone manor, 57ha estate, strong charm & expansion potential. 20km to coast; mid-renovation state.",
+      "status": "active",
+      "features": [
+        "pierre authentique",
+        "57 hectares",
+        "charme",
+        "potentiel"
+      ],
       "id": "auto-9e9d5bb76c",
       "source": "auto",
       "site": "seloger.com",
       "price": "€421,000"
     },
     {
-      "title": "Villa rénovée, 7 pièces, 5 chambres - Centre Cap Ferret",
-      "location": "Centre Cap Ferret, Lège-Cap-Ferret (33970)",
-      "commune": "Lège-Cap-Ferret",
-      "url": "https://www.bellesdemeures.com/249417439/detail.htm",
-      "price_eur": 1290000,
-      "bedrooms": 5,
-      "area_m2": 187,
-      "land_m2": 570,
+      "title": "Maison avec T2 indépendant, 2.2 ha terrain",
+      "location": "Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/272161475.htm",
+      "price_eur": 769000,
+      "bedrooms": 4,
+      "area_m2": 156,
+      "land_m2": 2198,
       "features": [
-        "Séjour traversant",
-        "Cuisine US",
-        "3 salles d'eau",
-        "Salle de jeux",
-        "Rénové",
-        "Proche plage"
+        "T2 indépendant",
+        "Contemporaine",
+        "Pièce de vie spacieuse",
+        "Entre lac et forêt"
       ],
+      "status": "active",
+      "image_url": "https://mms.seloger.com/8/3/f/9/83f94221-6305-4ae9-a15e-7a6e1387783d.jpg",
       "score": 72,
       "score_breakdown": {
         "size_potential": 12,
         "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Good reno near beach, 5 beds adequate but no pool; small land.",
-      "status": "active",
-      "image_url": "https://mms.seloger.com/8/c/d/9/8cd9de1a-ba99-4107-ba11-bdf35a71d8de.jpg",
-      "id": "auto-6529c29deb",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€1,290,000"
-    },
-    {
-      "title": "Maison à vendre - La Plage-Bourg",
-      "location": "La Plage-Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/272161461.htm",
-      "price_eur": 832000,
-      "bedrooms": 4,
-      "area_m2": 214,
-      "land_m2": 1200,
-      "features": [
-        "Lake view and setting",
-        "Modern villa with high-end finishes",
-        "Spacious living areas",
-        "Multiple bathrooms",
-        "Landscaped garden"
-      ],
-      "score": 72,
-      "score_breakdown": {
-        "size_potential": 16,
-        "pool": 0,
-        "glamping_land": 10,
+        "glamping_land": 15,
         "coast_proximity": 10,
         "character": 8,
         "renovation_state": 15
       },
-      "fit_verdict": "Good size+land, modern finish, but lacks pool & charm for boutique retreat.",
-      "status": "unknown",
-      "image_url": "https://mms.seloger.com/1/a/f/f/1affa41b-5707-4db8-ab6b-b16a40f5bcc4.jpg",
-      "id": "auto-1105d16e08",
+      "fit_verdict": "Exceptional 2.2ha glamping land & independent T2. No pool major gap. Limited expansion to 12 bed; good state.",
+      "id": "auto-b403ec23d3",
       "source": "auto",
       "site": "seloger.com",
-      "price": "€832,000"
+      "price": "€769,000"
     },
     {
-      "title": "Maison 6 pièces 135 m²",
-      "location": "Grayan-et-l'Hôpital (33590)",
-      "commune": "Grayan-et-l'Hôpital",
-      "url": "https://www.lesiteimmo.com/acheter/maison-piscine/gironde-33",
-      "bedrooms": 3,
-      "area_m2": 135,
-      "features": [
-        "Piscine avec dôme",
-        "Cuisine d'été",
-        "Studio indépendant",
-        "Véranda",
-        "Poêle à bois"
-      ],
-      "status": "unknown",
-      "score": 72,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 15,
-        "glamping_land": 10,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 12
-      },
-      "fit_verdict": "Coastal location + pool + studio conversion potential. Modest main house but functional layout.",
-      "id": "auto-b3ad028a39",
-      "source": "auto",
-      "site": "lesiteimmo.com"
-    },
-    {
-      "title": "Maison 7 pièces 182 m² (contemporary, heated pool, guest apartment)",
-      "location": "Saint-Vivien-de-Médoc (33590)",
-      "commune": "Saint-Vivien-de-Médoc",
-      "url": "https://www.lesiteimmo.com/acheter/maison-7pieces/saint-vivien-de-medoc-33590/32930598",
-      "price_eur": 499000,
-      "bedrooms": 5,
-      "area_m2": 182,
-      "land_m2": 1350,
-      "features": [
-        "Entirely renovated, contemporary design",
-        "Heated pool (8x4 m)",
-        "Second independent 2-bed apartment",
-        "Travertine terrace",
-        "No vis-à-vis, dual living potential"
-      ],
-      "status": "active",
-      "score": 72,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 15,
-        "glamping_land": 8,
-        "coast_proximity": 7,
-        "character": 5,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Pool + guest apartment + modern finish; limited character, 5 bed total, good rental potential.",
-      "notes": "Main house 182 m² (3 bed) + separate guest apartment 2 bed. Heated pool. 1350 m² plot. Very high-end finishes but contemporary/minimal character.",
-      "id": "auto-bb989d7be4",
-      "source": "auto",
-      "site": "lesiteimmo.com",
-      "price": "€499,000"
-    },
-    {
-      "title": "Maison à vendre - 6 pièces, 4 chambres, 175 m², 488 m² de terrain",
-      "location": "La Plage-Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/267533371.htm",
-      "price_eur": 940000,
+      "title": "Maison 7 pièces 188 m²",
+      "location": "Vendays-Montalivet (33930)",
+      "commune": "Vendays-Montalivet",
+      "url": "https://www.lesiteimmo.com/acheter/maison-7pieces/vendays-montalivet-33930/33424862",
+      "price_eur": 682500,
       "bedrooms": 4,
-      "area_m2": 175,
-      "land_m2": 488,
+      "area_m2": 188,
+      "land_m2": 2267,
       "features": [
-        "Beachfront",
-        "Dune-side location",
-        "Ocean meters away"
+        "4+ bed main house",
+        "3 independent apartments to renovate",
+        "Garage & dépendances",
+        "Near beach (8 km)",
+        "Gîte/chambres d'hôtes potential",
+        "Central courtyard"
       ],
-      "status": "active",
       "score": 72,
       "score_breakdown": {
         "size_potential": 20,
-        "pool": 8,
+        "pool": 0,
         "glamping_land": 10,
         "coast_proximity": 15,
-        "character": 12,
+        "character": 10,
         "renovation_state": 7
       },
-      "fit_verdict": "4-bed, beachfront, strong conversion potential. Modest land size; no pool mentioned.",
-      "id": "auto-4731307689",
+      "fit_verdict": "Coastal Médoc, 3 rental units + main house, good charisma. Needs major works; no pool.",
+      "status": "active",
+      "image_url": "https://media.studio-net.fr/biens/33424862/x6a3443b41a0bb?w=320&h=192&q=60",
+      "id": "auto-146994a9f2",
       "source": "auto",
-      "site": "seloger.com",
-      "price": "€940,000"
+      "site": "lesiteimmo.com",
+      "price": "€682,500"
     },
     {
       "title": "Elegant Former Wine Estate in the Heart of Médoc",
@@ -1419,28 +1388,34 @@
       "price": "€729,000"
     },
     {
-      "title": "Maison 15 pièces 540 m²",
-      "location": "Lesparre-Médoc",
-      "commune": "Lesparre-Médoc",
-      "url": "https://www.bienici.com/recherche/achat/lesparre-medoc-33340/maisonvilla",
-      "price_eur": 899500,
-      "area_m2": 540,
-      "bedrooms": 15,
+      "title": "Maison à vendre",
+      "location": "Gaillan-en-Médoc, 33340",
+      "commune": "Gaillan-en-Médoc",
+      "url": "https://www.seloger.com/recherche/achat/maison/piscine/nouvelle-aquitaine/gaillan-en-medoc-33340/ad08fr13213",
+      "price_eur": 649000,
+      "bedrooms": 4,
+      "area_m2": 225,
+      "land_m2": 6163,
+      "features": [
+        "Piscine",
+        "9 pièces",
+        "6163 m² de terrain"
+      ],
       "score": 72,
       "score_breakdown": {
-        "size_potential": 25,
-        "pool": 5,
-        "glamping_land": 8,
+        "size_potential": 12,
+        "pool": 15,
+        "glamping_land": 15,
         "coast_proximity": 10,
-        "character": 10,
-        "renovation_state": 14
+        "character": 8,
+        "renovation_state": 12
       },
-      "fit_verdict": "Excellent size & room count (15 pièces). Need to confirm land size & pool feasibility; ~20 min to coast.",
-      "id": "auto-10e839b7f5",
+      "fit_verdict": "Strong land + pool, 4-bed core needs expansion. Médoc location 20min to coast.",
+      "id": "auto-34c957a6f9",
       "source": "auto",
-      "site": "bienici.com",
+      "site": "seloger.com",
       "status": "active",
-      "price": "€899,500"
+      "price": "€649,000"
     },
     {
       "title": "Maison avec piscine et jardin Biscarrosse (40)",
@@ -1476,69 +1451,165 @@
       "price": "€798,000"
     },
     {
-      "title": "Maison à vendre",
-      "location": "Biscarrosse, Bourg (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/vente/maison/biscarrosse-40600",
-      "price_eur": 555000,
-      "bedrooms": 4,
-      "area_m2": 162,
-      "land_m2": 1786,
+      "title": "Beautiful stone house 226 m2 completely renovated on a 6000 m2 plot",
+      "location": "Gaillan-en-Médoc, Gironde",
+      "commune": "Gaillan-en-Médoc",
+      "url": "https://frenchestateagents.com/french-property-for-sale/view/A30116PR33/house-for-sale-gaillan-en-m%C3%A9doc-gironde-aquitaine-france",
+      "price_eur": 649000,
+      "bedrooms": 6,
+      "area_m2": 226,
+      "land_m2": 6123,
       "features": [
-        "Fireplace",
-        "Central location",
-        "Spacious grounds",
-        "Bright"
+        "Stone construction",
+        "3 independent living areas",
+        "Renovated",
+        "Swimming pool",
+        "Potential rental income"
       ],
+      "status": "active",
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 15,
+        "glamping_land": 15,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Strong stone character, pool, and land (6ha). Six bedrooms with conversion potential. ~15km to coast; good size for retreat expansion.",
+      "id": "auto-e8fbf7566e",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€649,000"
+    },
+    {
+      "title": "Maison 6 pièces 135 m²",
+      "location": "Grayan-et-l'Hôpital (33590)",
+      "commune": "Grayan-et-l'Hôpital",
+      "url": "https://www.lesiteimmo.com/acheter/maison-piscine/gironde-33",
+      "bedrooms": 3,
+      "area_m2": 135,
+      "features": [
+        "Piscine avec dôme",
+        "Cuisine d'été",
+        "Studio indépendant",
+        "Véranda",
+        "Poêle à bois"
+      ],
+      "status": "unknown",
       "score": 72,
       "score_breakdown": {
         "size_potential": 12,
-        "pool": 5,
+        "pool": 15,
         "glamping_land": 10,
-        "coast_proximity": 10,
+        "coast_proximity": 15,
         "character": 8,
         "renovation_state": 12
       },
-      "fit_verdict": "Good land & location, 4-bed with growth potential; no pool hampers score.",
-      "status": "active",
-      "image_url": "https://mms.seloger.com/2/f/c/8/2fc89b26-8454-4b37-8925-2f08706ad979.jpg",
-      "id": "auto-729325c717",
+      "fit_verdict": "Coastal location + pool + studio conversion potential. Modest main house but functional layout.",
+      "id": "auto-b3ad028a39",
       "source": "auto",
-      "site": "seloger.com",
-      "price": "€555,000"
+      "site": "lesiteimmo.com"
     },
     {
-      "title": "Maison 6 pièces 130 m² Parentis-en-Born (40160)",
-      "location": "Parentis-en-Born (40160)",
-      "commune": "Parentis-en-Born",
-      "url": "https://www.lesiteimmo.com/acheter/maison-6pieces/parentis-en-born-40160/33135291",
-      "price_eur": 592000,
-      "bedrooms": 4,
-      "area_m2": 130,
+      "title": "19th-century bourgeois house with 9 rooms in Lesparre-Médoc",
+      "location": "Lesparre-Médoc, Gironde",
+      "commune": "Lesparre-Médoc",
+      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33",
+      "price_eur": 515000,
+      "bedrooms": 6,
+      "area_m2": 343,
+      "land_m2": 5000,
       "features": [
-        "Construction neuve 2024",
-        "Piscine chauffée 8x4",
-        "Climatisation réversible",
-        "Fibre optique",
-        "Classe énergie A",
-        "Terrain constructible"
+        "19th-century character",
+        "Large attic for conversion",
+        "Separate 60m² dwelling",
+        "80m² garage with stable",
+        "Wooded grounds",
+        "70m² cellar"
       ],
-      "image_url": "https://media.studio-net.fr/biens/33135291/x69fe470040ac6?w=320&h=192&q=60",
+      "status": "active",
+      "image_url": "https://image.hestia.immo/CvmXr61Bb8Ps61ygJFAXXYZEuOQdjfHj7sM3nQXrUuc/w:800/h:600/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 8,
+        "glamping_land": 15,
+        "coast_proximity": 10,
+        "character": 13,
+        "renovation_state": 6
+      },
+      "fit_verdict": "Strong bones & land, good size potential. Separate dwelling & conversion attic valuable. Beach 15-20km away; needs cosmetic work.",
+      "id": "auto-824f79ce2b",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€515,000"
+    },
+    {
+      "title": "Maison 7 pièces 182 m² (contemporary, heated pool, guest apartment)",
+      "location": "Saint-Vivien-de-Médoc (33590)",
+      "commune": "Saint-Vivien-de-Médoc",
+      "url": "https://www.lesiteimmo.com/acheter/maison-7pieces/saint-vivien-de-medoc-33590/32930598",
+      "price_eur": 499000,
+      "bedrooms": 5,
+      "area_m2": 182,
+      "land_m2": 1350,
+      "features": [
+        "Entirely renovated, contemporary design",
+        "Heated pool (8x4 m)",
+        "Second independent 2-bed apartment",
+        "Travertine terrace",
+        "No vis-à-vis, dual living potential"
+      ],
       "status": "active",
       "score": 72,
       "score_breakdown": {
         "size_potential": 12,
         "pool": 15,
-        "glamping_land": 5,
-        "coast_proximity": 10,
+        "glamping_land": 8,
+        "coast_proximity": 7,
         "character": 5,
         "renovation_state": 15
       },
-      "fit_verdict": "New build with pool & modern comfort. Limited land, bland modern character, 4 beds only.",
-      "id": "auto-22af98b276",
+      "fit_verdict": "Pool + guest apartment + modern finish; limited character, 5 bed total, good rental potential.",
+      "notes": "Main house 182 m² (3 bed) + separate guest apartment 2 bed. Heated pool. 1350 m² plot. Very high-end finishes but contemporary/minimal character.",
+      "id": "auto-bb989d7be4",
       "source": "auto",
       "site": "lesiteimmo.com",
-      "price": "€592,000"
+      "price": "€499,000"
+    },
+    {
+      "title": "Maison à vendre - La Plage-Bourg",
+      "location": "La Plage-Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/272161461.htm",
+      "price_eur": 832000,
+      "bedrooms": 4,
+      "area_m2": 214,
+      "land_m2": 1200,
+      "features": [
+        "Lake view and setting",
+        "Modern villa with high-end finishes",
+        "Spacious living areas",
+        "Multiple bathrooms",
+        "Landscaped garden"
+      ],
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 16,
+        "pool": 0,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Good size+land, modern finish, but lacks pool & charm for boutique retreat.",
+      "status": "unknown",
+      "image_url": "https://mms.seloger.com/1/a/f/f/1affa41b-5707-4db8-ab6b-b16a40f5bcc4.jpg",
+      "id": "auto-1105d16e08",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€832,000"
     },
     {
       "title": "Maison 138 m2 Le Porge (33)",
@@ -1606,71 +1677,6 @@
       "site": "lesiteimmo.com"
     },
     {
-      "title": "Maison à vendre - 7 pièces, 5 chambres",
-      "location": "La Plage-Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/269763907.htm",
-      "price_eur": 989000,
-      "bedrooms": 5,
-      "area_m2": 155,
-      "land_m2": 1433,
-      "features": [
-        "Fully renovated",
-        "Golf proximity",
-        "Privacy",
-        "1.4ha grounds",
-        "5 bedrooms"
-      ],
-      "image_url": "https://mms.seloger.com/a/a/1/9/aa194ec0-b6bf-4e1c-9371-7c7d715f7c17.jpg",
-      "status": "active",
-      "score": 72,
-      "score_breakdown": {
-        "size_potential": 16,
-        "pool": 0,
-        "glamping_land": 15,
-        "coast_proximity": 10,
-        "character": 10,
-        "renovation_state": 11
-      },
-      "fit_verdict": "Strong: 5 beds, 1.4ha, fully renovated, private. Weak: 155m² tight for expansion; no pool; modest coastal proximity.",
-      "id": "auto-502d953186",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€989,000"
-    },
-    {
-      "title": "Beautiful stone house 226 m2 completely renovated on a 6000 m2 plot",
-      "location": "Gaillan-en-Médoc, Gironde",
-      "commune": "Gaillan-en-Médoc",
-      "url": "https://frenchestateagents.com/french-property-for-sale/view/A30116PR33/house-for-sale-gaillan-en-m%C3%A9doc-gironde-aquitaine-france",
-      "price_eur": 649000,
-      "bedrooms": 6,
-      "area_m2": 226,
-      "land_m2": 6123,
-      "features": [
-        "Stone construction",
-        "3 independent living areas",
-        "Renovated",
-        "Swimming pool",
-        "Potential rental income"
-      ],
-      "status": "active",
-      "score": 72,
-      "score_breakdown": {
-        "size_potential": 20,
-        "pool": 15,
-        "glamping_land": 15,
-        "coast_proximity": 10,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Strong stone character, pool, and land (6ha). Six bedrooms with conversion potential. ~15km to coast; good size for retreat expansion.",
-      "id": "auto-e8fbf7566e",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€649,000"
-    },
-    {
       "title": "Maison 9 pièces 343 m²",
       "location": "Lesparre-Médoc (33340)",
       "commune": "Lesparre-Médoc",
@@ -1705,38 +1711,190 @@
       "price": "€509,360"
     },
     {
-      "title": "19th-century bourgeois house with 9 rooms in Lesparre-Médoc",
-      "location": "Lesparre-Médoc, Gironde",
-      "commune": "Lesparre-Médoc",
-      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33",
-      "price_eur": 515000,
-      "bedrooms": 6,
-      "area_m2": 343,
-      "land_m2": 5000,
+      "title": "Maison 6 pièces 130 m² Parentis-en-Born (40160)",
+      "location": "Parentis-en-Born (40160)",
+      "commune": "Parentis-en-Born",
+      "url": "https://www.lesiteimmo.com/acheter/maison-6pieces/parentis-en-born-40160/33135291",
+      "price_eur": 592000,
+      "bedrooms": 4,
+      "area_m2": 130,
       "features": [
-        "19th-century character",
-        "Large attic for conversion",
-        "Separate 60m² dwelling",
-        "80m² garage with stable",
-        "Wooded grounds",
-        "70m² cellar"
+        "Construction neuve 2024",
+        "Piscine chauffée 8x4",
+        "Climatisation réversible",
+        "Fibre optique",
+        "Classe énergie A",
+        "Terrain constructible"
+      ],
+      "image_url": "https://media.studio-net.fr/biens/33135291/x69fe470040ac6?w=320&h=192&q=60",
+      "status": "active",
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 15,
+        "glamping_land": 5,
+        "coast_proximity": 10,
+        "character": 5,
+        "renovation_state": 15
+      },
+      "fit_verdict": "New build with pool & modern comfort. Limited land, bland modern character, 4 beds only.",
+      "id": "auto-22af98b276",
+      "source": "auto",
+      "site": "lesiteimmo.com",
+      "price": "€592,000"
+    },
+    {
+      "title": "Maison à vendre - 6 pièces, 4 chambres, 175 m², 488 m² de terrain",
+      "location": "La Plage-Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/267533371.htm",
+      "price_eur": 940000,
+      "bedrooms": 4,
+      "area_m2": 175,
+      "land_m2": 488,
+      "features": [
+        "Beachfront",
+        "Dune-side location",
+        "Ocean meters away"
       ],
       "status": "active",
-      "image_url": "https://image.hestia.immo/CvmXr61Bb8Ps61ygJFAXXYZEuOQdjfHj7sM3nQXrUuc/w:800/h:600/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
       "score": 72,
       "score_breakdown": {
         "size_potential": 20,
         "pool": 8,
+        "glamping_land": 10,
+        "coast_proximity": 15,
+        "character": 12,
+        "renovation_state": 7
+      },
+      "fit_verdict": "4-bed, beachfront, strong conversion potential. Modest land size; no pool mentioned.",
+      "id": "auto-4731307689",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€940,000"
+    },
+    {
+      "title": "Maison à vendre",
+      "location": "Biscarrosse, Bourg (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/vente/maison/biscarrosse-40600",
+      "price_eur": 555000,
+      "bedrooms": 4,
+      "area_m2": 162,
+      "land_m2": 1786,
+      "features": [
+        "Fireplace",
+        "Central location",
+        "Spacious grounds",
+        "Bright"
+      ],
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 5,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 12
+      },
+      "fit_verdict": "Good land & location, 4-bed with growth potential; no pool hampers score.",
+      "status": "active",
+      "image_url": "https://mms.seloger.com/2/f/c/8/2fc89b26-8454-4b37-8925-2f08706ad979.jpg",
+      "id": "auto-729325c717",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€555,000"
+    },
+    {
+      "title": "Maison 15 pièces 540 m²",
+      "location": "Lesparre-Médoc",
+      "commune": "Lesparre-Médoc",
+      "url": "https://www.bienici.com/recherche/achat/lesparre-medoc-33340/maisonvilla",
+      "price_eur": 899500,
+      "area_m2": 540,
+      "bedrooms": 15,
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 25,
+        "pool": 5,
+        "glamping_land": 8,
+        "coast_proximity": 10,
+        "character": 10,
+        "renovation_state": 14
+      },
+      "fit_verdict": "Excellent size & room count (15 pièces). Need to confirm land size & pool feasibility; ~20 min to coast.",
+      "id": "auto-10e839b7f5",
+      "source": "auto",
+      "site": "bienici.com",
+      "status": "active",
+      "price": "€899,500"
+    },
+    {
+      "title": "Villa rénovée, 7 pièces, 5 chambres - Centre Cap Ferret",
+      "location": "Centre Cap Ferret, Lège-Cap-Ferret (33970)",
+      "commune": "Lège-Cap-Ferret",
+      "url": "https://www.bellesdemeures.com/249417439/detail.htm",
+      "price_eur": 1290000,
+      "bedrooms": 5,
+      "area_m2": 187,
+      "land_m2": 570,
+      "features": [
+        "Séjour traversant",
+        "Cuisine US",
+        "3 salles d'eau",
+        "Salle de jeux",
+        "Rénové",
+        "Proche plage"
+      ],
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Good reno near beach, 5 beds adequate but no pool; small land.",
+      "status": "active",
+      "image_url": "https://mms.seloger.com/8/c/d/9/8cd9de1a-ba99-4107-ba11-bdf35a71d8de.jpg",
+      "id": "auto-6529c29deb",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€1,290,000"
+    },
+    {
+      "title": "Maison à vendre - 7 pièces, 5 chambres",
+      "location": "La Plage-Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/269763907.htm",
+      "price_eur": 989000,
+      "bedrooms": 5,
+      "area_m2": 155,
+      "land_m2": 1433,
+      "features": [
+        "Fully renovated",
+        "Golf proximity",
+        "Privacy",
+        "1.4ha grounds",
+        "5 bedrooms"
+      ],
+      "image_url": "https://mms.seloger.com/a/a/1/9/aa194ec0-b6bf-4e1c-9371-7c7d715f7c17.jpg",
+      "status": "active",
+      "score": 72,
+      "score_breakdown": {
+        "size_potential": 16,
+        "pool": 0,
         "glamping_land": 15,
         "coast_proximity": 10,
-        "character": 13,
-        "renovation_state": 6
+        "character": 10,
+        "renovation_state": 11
       },
-      "fit_verdict": "Strong bones & land, good size potential. Separate dwelling & conversion attic valuable. Beach 15-20km away; needs cosmetic work.",
-      "id": "auto-824f79ce2b",
+      "fit_verdict": "Strong: 5 beds, 1.4ha, fully renovated, private. Weak: 155m² tight for expansion; no pool; modest coastal proximity.",
+      "id": "auto-502d953186",
       "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€515,000"
+      "site": "seloger.com",
+      "price": "€989,000"
     },
     {
       "title": "19th-century bourgeois house with 9 rooms",
@@ -1805,38 +1963,70 @@
       "sold_detected_at": "2026-05-11T10:46:59Z"
     },
     {
-      "title": "Maison à vendre",
-      "location": "La Plage-Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/270416243.htm",
-      "price_eur": 992200,
-      "bedrooms": 4,
-      "area_m2": 156,
-      "land_m2": 940,
+      "title": "Charming Landaise style House in idyllic location",
+      "location": "Pissos, Landes",
+      "commune": "Parentis-en-Born",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A35991EPR40/house-for-sale-pissos-landes-aquitaine-france",
+      "price_eur": 435000,
+      "bedrooms": 5,
+      "area_m2": 230,
+      "land_m2": 5925,
+      "features": [
+        "Landaise style house",
+        "5 bedrooms + potential 6th",
+        "2 bedrooms downstairs",
+        "Open modern kitchen",
+        "Large living room with fireplace",
+        "Scenic location"
+      ],
+      "image_url": "https://image.hestia.immo/OqOwop1c3_OpNHOpaaD_iTq8VjEK8ylvgbw7WEdueKc/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNS0wNC9ET0MzWDRXV1dQM0suanBn.jpg",
       "status": "active",
-      "score": 71,
+      "score": 70,
       "score_breakdown": {
         "size_potential": 15,
-        "pool": 8,
-        "glamping_land": 12,
-        "coast_proximity": 15,
+        "pool": 0,
+        "glamping_land": 10,
+        "coast_proximity": 7,
         "character": 12,
-        "renovation_state": 9
+        "renovation_state": 15
       },
-      "fit_verdict": "Exceptional 6-piece property near lake & golf, move-in quality. ~1 hectare land, 2023 build, excellent foundation.",
+      "fit_verdict": "5 bed + potential expansion, good land (~6000 m²). No pool. Coastal proximity ~60 km weak.",
+      "id": "auto-8c37af3494",
+      "source": "auto",
+      "site": "frenchestateagents.com (landes)",
+      "price": "€435,000"
+    },
+    {
+      "title": "Ensemble immobilier 6 pièces + appartement",
+      "location": "Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/272161465.htm",
+      "price_eur": 895000,
+      "bedrooms": 5,
+      "area_m2": 254,
+      "land_m2": 1349,
       "features": [
-        "2023 build",
-        "Golf proximity",
-        "Forested setting",
-        "Lake views",
-        "Contemporary design",
-        "Privileged setting"
+        "Maison + appartement",
+        "Lisière forêt",
+        "Bel volume",
+        "Multi-unit potential"
       ],
-      "image_url": "https://mms.seloger.com/5/c/3/d/5c3deb50-4542-470d-bd2a-172ec53c14a8.jpg",
-      "id": "auto-68feaf5e95",
+      "status": "active",
+      "image_url": "https://mms.seloger.com/c/d/a/4/cda4fb8a-6232-496f-a1a1-668d4f0e7810.jpg",
+      "score": 70,
+      "score_breakdown": {
+        "size_potential": 15,
+        "pool": 0,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Multi-unit + 254m² with conversion/rental upside. No pool. Renovation works needed. Decent glamping land.",
+      "id": "auto-822cddb521",
       "source": "auto",
       "site": "seloger.com",
-      "price": "€992,200"
+      "price": "€895,000"
     },
     {
       "title": "Maison à vendre",
@@ -1929,6 +2119,186 @@
       "site": "proprietes.lefigaro.fr (landes)"
     },
     {
+      "title": "ELEGANT 19TH CENTURY MANOR HOUSE – FULLY RENOVATED – 5 MINUTES FROM MONT-DE-MARSAN",
+      "location": "Mont-de-Marsan, Landes",
+      "commune": "Gastes",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A35555CHD40/house-for-sale-mont-de-marsan-landes-aquitaine-france",
+      "status": "active",
+      "price_eur": 530000,
+      "bedrooms": 5,
+      "area_m2": 240,
+      "land_m2": 8500,
+      "features": [
+        "Swimming pool",
+        "19th-century manor",
+        "100 sqm living area",
+        "Herringbone floors",
+        "Fully renovated"
+      ],
+      "image_url": "https://image.hestia.immo/7Nz8U4BVQFpMvI-Q52dfL7qEkzF4bcA4Oyp7Y-K7dQw/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNS0wMy9ET0MyTTJLQ0tHWEIuanBn.jpg",
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 15,
+        "pool": 15,
+        "glamping_land": 8,
+        "coast_proximity": 4,
+        "character": 12,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Manor charm, pool, move-in ready. 5 bed, 0.85 ha good; but 50+ km from coast weakens appeal.",
+      "id": "auto-f407ca3bbd",
+      "source": "auto",
+      "site": "frenchestateagents.com (landes)",
+      "price": "€530,000"
+    },
+    {
+      "title": "19th-century bourgeois house with 9 rooms in Lesparre-Médoc",
+      "location": "Lesparre-Médoc, Gironde, Aquitaine (Nouvelle-Aquitaine)",
+      "commune": "Lesparre-Médoc",
+      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-m%C3%A9dic-gironde-aquitaine-france",
+      "price_eur": 515000,
+      "bedrooms": 6,
+      "area_m2": 343,
+      "land_m2": 5000,
+      "features": [
+        "1860s construction, stone/period charm",
+        "6 bedrooms + attic conversion potential",
+        "Large wooded grounds (5000m²)",
+        "2 living rooms, dining room",
+        "Separate 60m² cottage (renovation needed)",
+        "70m² cellar, 80m² garage"
+      ],
+      "status": "active",
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 18,
+        "pool": 5,
+        "glamping_land": 12,
+        "coast_proximity": 10,
+        "character": 13,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Strong character & land (5000m²), 6 bed + conversion upside. No pool & 20+ min to coast weakness.",
+      "image_url": "https://image.hestia.immo/CvmXr61Bb8Ps61ygJFAXXYZEuOQdjfHj7sM3nQXrUuc/w:800/h:600/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
+      "notes": "Listed as 9 rooms total (6 beds + 2 living + dining). Separate cottage adds flexibility. Attic is noted as suitable for conversion. Property is 'just minutes from beautiful ocean beaches' per listing (distance unclear—scored conservatively at ~15-20 km to coast). Cellar and substantial outbuildings.",
+      "id": "auto-482ede75d3",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€515,000"
+    },
+    {
+      "title": "Villa 5 pièces 202 m²",
+      "location": "Biscarrosse 40600 Plage",
+      "commune": "Biscarrosse",
+      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3138329919",
+      "price_eur": 1092000,
+      "bedrooms": 5,
+      "area_m2": 202,
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 8,
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Beach villa with pool potential, but undersized & pricey for limited glamping land.",
+      "id": "auto-ff202d01d7",
+      "source": "auto",
+      "site": "leboncoin.fr",
+      "status": "active",
+      "price": "€1,092,000"
+    },
+    {
+      "title": "19th-century bourgeois house with 9 rooms",
+      "location": "Lesparre-Médoc, Gironde",
+      "commune": "Lesparre-Médoc",
+      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-m%C3%A9doc-gironde-aquitaine-france",
+      "price_eur": 515000,
+      "bedrooms": 6,
+      "area_m2": 343,
+      "land_m2": 5000,
+      "features": [
+        "19th-century character",
+        "Wooded grounds",
+        "Enclosed land",
+        "9 rooms total"
+      ],
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 10,
+        "coast_proximity": 15,
+        "character": 15,
+        "renovation_state": 16
+      },
+      "status": "active",
+      "fit_verdict": "Strong character & location, decent land; no pool, modest bedroom count limits retreat scale.",
+      "image_url": "https://image.hestia.immo/648kC_DnIVzgJmGgtIOqL9pdOkRlcuhrklUTJfdF_RE/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
+      "id": "auto-fcda2221fb",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€515,000"
+    },
+    {
+      "title": "Maison à vendre - Hourtin",
+      "location": "Hourtin (33990)",
+      "commune": "Hourtin",
+      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/hourtin-33990/ad08fr13239",
+      "price_eur": 1050000,
+      "bedrooms": 7,
+      "area_m2": 204,
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Beachfront location but tiny (204 m², 7 bed compressed). Excellent renovation & proximity, but limited space.",
+      "status": "unknown",
+      "id": "auto-f9a8cade3d",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€1,050,000"
+    },
+    {
+      "title": "19th-century bourgeois house with 9 rooms. 2 living rooms, 6 bedrooms",
+      "location": "Lesparre-Médoc, Gironde",
+      "commune": "Lesparre-Médoc",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-médoc-gironde-aquitaine-france",
+      "price_eur": 515000,
+      "bedrooms": 6,
+      "area_m2": 343,
+      "land_m2": 5000,
+      "features": [
+        "19th century",
+        "Character property",
+        "Wooded grounds",
+        "9 rooms",
+        "Enclosed land"
+      ],
+      "status": "active",
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 0,
+        "glamping_land": 12,
+        "coast_proximity": 10,
+        "character": 14,
+        "renovation_state": 12
+      },
+      "fit_verdict": "Strong character & good Médoc location with potential. No pool & needs renovation investment.",
+      "id": "auto-c30506d89d",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€515,000"
+    },
+    {
       "title": "Maison de village, 6 chambres avec piscine",
       "location": "Lesparre-Médoc, Gironde",
       "commune": "Lesparre-Médoc",
@@ -1959,6 +2329,36 @@
       "id": "auto-4e7117d020",
       "source": "auto",
       "site": "seloger.com"
+    },
+    {
+      "title": "Maison 11 pièces 430 m² - Lesparre-Médoc",
+      "location": "Lesparre-Médoc, 33340",
+      "commune": "Lesparre-Médoc",
+      "url": "https://www.bienici.com/recherche/achat/lesparre-medoc-33340/maisonvilla?piscine=oui",
+      "price_eur": 745000,
+      "area_m2": 430,
+      "bedrooms": 6,
+      "features": [
+        "Recently renovated",
+        "Village location",
+        "6 bedrooms",
+        "11-room property"
+      ],
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 20,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Good bones & recent reno, 6-bed base suits expansion; no pool confirmed despite search filter.",
+      "status": "unknown",
+      "id": "auto-a57e9a277d",
+      "source": "auto",
+      "site": "bienici.com",
+      "price": "€745,000"
     },
     {
       "title": "Maison authentique, 4 pièces, 3 chambres - Petit-Piquey",
@@ -1994,6 +2394,159 @@
       "price": "€999,000"
     },
     {
+      "title": "19th-century bourgeois house with 9 rooms in Lesparre-Médoc",
+      "location": "Lesparre-Médoc, Gironde, Aquitaine (Nouvelle-Aquitaine)",
+      "commune": "Lesparre-Médoc",
+      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-médoc-gironde-aquitaine-france",
+      "price_eur": 515000,
+      "bedrooms": 6,
+      "area_m2": 343,
+      "land_m2": 5000,
+      "features": [
+        "19th-century character",
+        "Attic conversion potential",
+        "Separate gîte (60 m²) with renovation needed",
+        "Wooded grounds",
+        "South-west facing",
+        "Garage + outbuildings (80 m²)"
+      ],
+      "image_url": "https://image.hestia.immo/CvmXr61Bb8Ps61ygJFAXXYZEuOQdjfHj7sM3nQXrUuc/w:800/h:600/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 18,
+        "pool": 0,
+        "glamping_land": 12,
+        "coast_proximity": 10,
+        "character": 12,
+        "renovation_state": 16
+      },
+      "fit_verdict": "Strong 6-bed + attic/gîte potential, wooded 5000m² land, 20km to coast. No pool, needs gîte renovation.",
+      "status": "active",
+      "id": "auto-ac8c5bd4ab",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€515,000"
+    },
+    {
+      "title": "Maison 6 pièces 130 m²",
+      "location": "Biscarrosse 40600 -Plage",
+      "commune": "Biscarrosse",
+      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3198881804",
+      "price_eur": 735000,
+      "bedrooms": 6,
+      "area_m2": 130,
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Beach proximity is excellent, but tight footprint & limited land for glamping concept.",
+      "id": "auto-61b6a7941f",
+      "source": "auto",
+      "site": "leboncoin.fr",
+      "status": "active",
+      "price": "€735,000"
+    },
+    {
+      "title": "Maison de ville à vendre - 6 pièces, 4 chambres",
+      "location": "La Plage-Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/269176929.htm",
+      "price_eur": 735000,
+      "bedrooms": 4,
+      "area_m2": 130,
+      "land_m2": 600,
+      "features": [
+        "Two houses on plot",
+        "Beach walk",
+        "Biscarrosse-Plage location",
+        "4 bedrooms"
+      ],
+      "image_url": "https://mms.seloger.com/5/9/2/3/5923c9e2-f1dc-4a17-8221-5c93e98ff18c.jpg",
+      "status": "active",
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 16,
+        "pool": 0,
+        "glamping_land": 8,
+        "coast_proximity": 15,
+        "character": 10,
+        "renovation_state": 9
+      },
+      "fit_verdict": "Good: dual dwellings, beach walk, coastal. Weak: 130m² base area tight; 600m² land modest; no pool; limited expansion.",
+      "id": "auto-020c55c80b",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€735,000"
+    },
+    {
+      "title": "Exceptionally Renovated Duplex in the Heart of Cap Ferret: 3-bed 3 bathrooms 80 m² terrace",
+      "location": "Lège-Cap-Ferret, Gironde",
+      "commune": "Lège-Cap-Ferret",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A41058BTU33/apartment-for-sale-lège-cap-ferret-gironde-aquitaine-france",
+      "price_eur": 990000,
+      "bedrooms": 3,
+      "area_m2": 96,
+      "land_m2": 80,
+      "features": [
+        "Duplex",
+        "Renovated",
+        "Terrace",
+        "Parking",
+        "Cap Ferret location"
+      ],
+      "status": "active",
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 0,
+        "glamping_land": 0,
+        "coast_proximity": 15,
+        "character": 12,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Premium coastal location with excellent renovation. Too small (apartment/3 bed) for retreat conversion.",
+      "id": "auto-8e711d30a6",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€990,000"
+    },
+    {
+      "title": "Maison à vendre",
+      "location": "Parentis-en-Born (40160)",
+      "commune": "Parentis-en-Born",
+      "url": "https://www.seloger.com/annonces/vente/maison/parentis-en-born-40160",
+      "price_eur": 520000,
+      "bedrooms": 4,
+      "area_m2": 130,
+      "land_m2": 908,
+      "features": [
+        "Pool",
+        "Bright",
+        "Well-maintained"
+      ],
+      "score": 68,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 15,
+        "glamping_land": 8,
+        "coast_proximity": 12,
+        "character": 8,
+        "renovation_state": 13
+      },
+      "fit_verdict": "Good pool, lakeside location, but modest 4-bed; needs expansion for 12-bed retreat.",
+      "status": "active",
+      "image_url": "https://mms.seloger.com/8/1/b/d/81bdca87-a263-4b00-8795-a46dcde15fb7.jpg",
+      "id": "auto-c1a7dcb118",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€520,000"
+    },
+    {
       "title": "Superb 7-room Canal-style villa with furnished bedrooms near beach",
       "location": "Lacanau, Gironde",
       "commune": "Lacanau",
@@ -2026,92 +2579,6 @@
       "source": "auto",
       "site": "frenchestateagents.com (deep)",
       "price": "€997,500"
-    },
-    {
-      "title": "Maison 11 pièces 430 m² - Lesparre-Médoc",
-      "location": "Lesparre-Médoc, 33340",
-      "commune": "Lesparre-Médoc",
-      "url": "https://www.bienici.com/recherche/achat/lesparre-medoc-33340/maisonvilla?piscine=oui",
-      "price_eur": 745000,
-      "area_m2": 430,
-      "bedrooms": 6,
-      "features": [
-        "Recently renovated",
-        "Village location",
-        "6 bedrooms",
-        "11-room property"
-      ],
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 20,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 10,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Good bones & recent reno, 6-bed base suits expansion; no pool confirmed despite search filter.",
-      "status": "unknown",
-      "id": "auto-a57e9a277d",
-      "source": "auto",
-      "site": "bienici.com",
-      "price": "€745,000"
-    },
-    {
-      "title": "Maison 6 pièces 130 m²",
-      "location": "Biscarrosse 40600 -Plage",
-      "commune": "Biscarrosse",
-      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3198881804",
-      "price_eur": 735000,
-      "bedrooms": 6,
-      "area_m2": 130,
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 5,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Beach proximity is excellent, but tight footprint & limited land for glamping concept.",
-      "id": "auto-61b6a7941f",
-      "source": "auto",
-      "site": "leboncoin.fr",
-      "status": "active",
-      "price": "€735,000"
-    },
-    {
-      "title": "19th-century bourgeois house with 9 rooms. 2 living rooms, 6 bedrooms",
-      "location": "Lesparre-Médoc, Gironde",
-      "commune": "Lesparre-Médoc",
-      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-médoc-gironde-aquitaine-france",
-      "price_eur": 515000,
-      "bedrooms": 6,
-      "area_m2": 343,
-      "land_m2": 5000,
-      "features": [
-        "19th century",
-        "Character property",
-        "Wooded grounds",
-        "9 rooms",
-        "Enclosed land"
-      ],
-      "status": "active",
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 20,
-        "pool": 0,
-        "glamping_land": 12,
-        "coast_proximity": 10,
-        "character": 14,
-        "renovation_state": 12
-      },
-      "fit_verdict": "Strong character & good Médoc location with potential. No pool & needs renovation investment.",
-      "id": "auto-c30506d89d",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€515,000"
     },
     {
       "title": "Maison à vendre - Saint-Laurent-Médoc",
@@ -2169,77 +2636,10 @@
       "site": "seloger.com"
     },
     {
-      "title": "19th-century bourgeois house with 9 rooms in Lesparre-Médoc",
-      "location": "Lesparre-Médoc, Gironde, Aquitaine (Nouvelle-Aquitaine)",
-      "commune": "Lesparre-Médoc",
-      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-m%C3%A9dic-gironde-aquitaine-france",
-      "price_eur": 515000,
-      "bedrooms": 6,
-      "area_m2": 343,
-      "land_m2": 5000,
-      "features": [
-        "1860s construction, stone/period charm",
-        "6 bedrooms + attic conversion potential",
-        "Large wooded grounds (5000m²)",
-        "2 living rooms, dining room",
-        "Separate 60m² cottage (renovation needed)",
-        "70m² cellar, 80m² garage"
-      ],
-      "status": "active",
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 18,
-        "pool": 5,
-        "glamping_land": 12,
-        "coast_proximity": 10,
-        "character": 13,
-        "renovation_state": 10
-      },
-      "fit_verdict": "Strong character & land (5000m²), 6 bed + conversion upside. No pool & 20+ min to coast weakness.",
-      "image_url": "https://image.hestia.immo/CvmXr61Bb8Ps61ygJFAXXYZEuOQdjfHj7sM3nQXrUuc/w:800/h:600/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
-      "notes": "Listed as 9 rooms total (6 beds + 2 living + dining). Separate cottage adds flexibility. Attic is noted as suitable for conversion. Property is 'just minutes from beautiful ocean beaches' per listing (distance unclear—scored conservatively at ~15-20 km to coast). Cellar and substantial outbuildings.",
-      "id": "auto-482ede75d3",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€515,000"
-    },
-    {
-      "title": "Maison de ville à vendre - 6 pièces, 4 chambres",
-      "location": "La Plage-Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/269176929.htm",
-      "price_eur": 735000,
-      "bedrooms": 4,
-      "area_m2": 130,
-      "land_m2": 600,
-      "features": [
-        "Two houses on plot",
-        "Beach walk",
-        "Biscarrosse-Plage location",
-        "4 bedrooms"
-      ],
-      "image_url": "https://mms.seloger.com/5/9/2/3/5923c9e2-f1dc-4a17-8221-5c93e98ff18c.jpg",
-      "status": "active",
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 16,
-        "pool": 0,
-        "glamping_land": 8,
-        "coast_proximity": 15,
-        "character": 10,
-        "renovation_state": 9
-      },
-      "fit_verdict": "Good: dual dwellings, beach walk, coastal. Weak: 130m² base area tight; 600m² land modest; no pool; limited expansion.",
-      "id": "auto-020c55c80b",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€735,000"
-    },
-    {
-      "title": "19th-century bourgeois house with 9 rooms",
+      "title": "19th-century bourgeois house in Lesparre-Médoc",
       "location": "Lesparre-Médoc, Gironde",
       "commune": "Lesparre-Médoc",
-      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-m%C3%A9doc-gironde-aquitaine-france",
+      "url": "https://www.frenchestateagents.com/property/A41576NF33",
       "price_eur": 515000,
       "bedrooms": 6,
       "area_m2": 343,
@@ -2247,8 +2647,9 @@
       "features": [
         "19th-century character",
         "Wooded grounds",
-        "Enclosed land",
-        "9 rooms total"
+        "Close to coast",
+        "9 rooms total",
+        "2 living rooms"
       ],
       "score": 68,
       "score_breakdown": {
@@ -2256,226 +2657,16 @@
         "pool": 0,
         "glamping_land": 10,
         "coast_proximity": 15,
-        "character": 15,
-        "renovation_state": 16
-      },
-      "status": "active",
-      "fit_verdict": "Strong character & location, decent land; no pool, modest bedroom count limits retreat scale.",
-      "image_url": "https://image.hestia.immo/648kC_DnIVzgJmGgtIOqL9pdOkRlcuhrklUTJfdF_RE/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
-      "id": "auto-fcda2221fb",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€515,000"
-    },
-    {
-      "title": "Maison à vendre",
-      "location": "Parentis-en-Born (40160)",
-      "commune": "Parentis-en-Born",
-      "url": "https://www.seloger.com/annonces/vente/maison/parentis-en-born-40160",
-      "price_eur": 520000,
-      "bedrooms": 4,
-      "area_m2": 130,
-      "land_m2": 908,
-      "features": [
-        "Pool",
-        "Bright",
-        "Well-maintained"
-      ],
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 15,
-        "glamping_land": 8,
-        "coast_proximity": 12,
-        "character": 8,
-        "renovation_state": 13
-      },
-      "fit_verdict": "Good pool, lakeside location, but modest 4-bed; needs expansion for 12-bed retreat.",
-      "status": "active",
-      "image_url": "https://mms.seloger.com/8/1/b/d/81bdca87-a263-4b00-8795-a46dcde15fb7.jpg",
-      "id": "auto-c1a7dcb118",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€520,000"
-    },
-    {
-      "title": "Exceptionally Renovated Duplex in the Heart of Cap Ferret: 3-bed 3 bathrooms 80 m² terrace",
-      "location": "Lège-Cap-Ferret, Gironde",
-      "commune": "Lège-Cap-Ferret",
-      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A41058BTU33/apartment-for-sale-lège-cap-ferret-gironde-aquitaine-france",
-      "price_eur": 990000,
-      "bedrooms": 3,
-      "area_m2": 96,
-      "land_m2": 80,
-      "features": [
-        "Duplex",
-        "Renovated",
-        "Terrace",
-        "Parking",
-        "Cap Ferret location"
-      ],
-      "status": "active",
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 5,
-        "pool": 0,
-        "glamping_land": 0,
-        "coast_proximity": 15,
         "character": 12,
-        "renovation_state": 15
+        "renovation_state": 10
       },
-      "fit_verdict": "Premium coastal location with excellent renovation. Too small (apartment/3 bed) for retreat conversion.",
-      "id": "auto-8e711d30a6",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€990,000"
-    },
-    {
-      "title": "ELEGANT 19TH CENTURY MANOR HOUSE – FULLY RENOVATED – 5 MINUTES FROM MONT-DE-MARSAN",
-      "location": "Mont-de-Marsan, Landes",
-      "commune": "Gastes",
-      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A35555CHD40/house-for-sale-mont-de-marsan-landes-aquitaine-france",
-      "status": "active",
-      "price_eur": 530000,
-      "bedrooms": 5,
-      "area_m2": 240,
-      "land_m2": 8500,
-      "features": [
-        "Swimming pool",
-        "19th-century manor",
-        "100 sqm living area",
-        "Herringbone floors",
-        "Fully renovated"
-      ],
-      "image_url": "https://image.hestia.immo/7Nz8U4BVQFpMvI-Q52dfL7qEkzF4bcA4Oyp7Y-K7dQw/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNS0wMy9ET0MyTTJLQ0tHWEIuanBn.jpg",
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 15,
-        "pool": 15,
-        "glamping_land": 8,
-        "coast_proximity": 4,
-        "character": 12,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Manor charm, pool, move-in ready. 5 bed, 0.85 ha good; but 50+ km from coast weakens appeal.",
-      "id": "auto-f407ca3bbd",
-      "source": "auto",
-      "site": "frenchestateagents.com (landes)",
-      "price": "€530,000"
-    },
-    {
-      "title": "Maison à vendre - Hourtin",
-      "location": "Hourtin (33990)",
-      "commune": "Hourtin",
-      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/hourtin-33990/ad08fr13239",
-      "price_eur": 1050000,
-      "bedrooms": 7,
-      "area_m2": 204,
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 5,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Beachfront location but tiny (204 m², 7 bed compressed). Excellent renovation & proximity, but limited space.",
-      "status": "unknown",
-      "id": "auto-f9a8cade3d",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€1,050,000"
-    },
-    {
-      "title": "19th-century bourgeois house with 9 rooms in Lesparre-Médoc",
-      "location": "Lesparre-Médoc, Gironde, Aquitaine (Nouvelle-Aquitaine)",
-      "commune": "Lesparre-Médoc",
-      "url": "https://frenchestateagents.com/french-property-for-sale/view/A41576NF33/house-for-sale-lesparre-médoc-gironde-aquitaine-france",
-      "price_eur": 515000,
-      "bedrooms": 6,
-      "area_m2": 343,
-      "land_m2": 5000,
-      "features": [
-        "19th-century character",
-        "Attic conversion potential",
-        "Separate gîte (60 m²) with renovation needed",
-        "Wooded grounds",
-        "South-west facing",
-        "Garage + outbuildings (80 m²)"
-      ],
-      "image_url": "https://image.hestia.immo/CvmXr61Bb8Ps61ygJFAXXYZEuOQdjfHj7sM3nQXrUuc/w:800/h:600/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wMy9ET0NIRUVOS0syVkoud2VicA.jpg",
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 18,
-        "pool": 0,
-        "glamping_land": 12,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 16
-      },
-      "fit_verdict": "Strong 6-bed + attic/gîte potential, wooded 5000m² land, 20km to coast. No pool, needs gîte renovation.",
-      "status": "active",
-      "id": "auto-ac8c5bd4ab",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€515,000"
-    },
-    {
-      "title": "Villa 5 pièces 202 m²",
-      "location": "Biscarrosse 40600 Plage",
-      "commune": "Biscarrosse",
-      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3138329919",
-      "price_eur": 1092000,
-      "bedrooms": 5,
-      "area_m2": 202,
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 8,
-        "glamping_land": 5,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Beach villa with pool potential, but undersized & pricey for limited glamping land.",
-      "id": "auto-ff202d01d7",
-      "source": "auto",
-      "site": "leboncoin.fr",
-      "status": "active",
-      "price": "€1,092,000"
-    },
-    {
-      "title": "Maison 105 m2 Vensac (33)",
-      "location": "Vensac, Gironde",
-      "commune": "Vensac",
-      "url": "https://www.paruvendu.fr/immobilier/vente/maison/1289714037A1KIVHMN000",
-      "bedrooms": 3,
-      "area_m2": 105,
-      "price_eur": null,
-      "score": 68,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 8,
-        "glamping_land": 10,
-        "coast_proximity": 15,
-        "character": 10,
-        "renovation_state": 13
-      },
-      "fit_verdict": "3-bed, good land, near coast. Limited bedroom count; renovation state unclear.",
       "status": "sold",
-      "features": [
-        "Sunny living room",
-        "Equipped kitchen",
-        "Covered terrace",
-        "Good land potential",
-        "Close to ocean"
-      ],
-      "image_url": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/89/fd/L21lZGlhLXBhL1dJMTcvNy8xL1dJMTc3MTEyMzQ1XzEuanBlZz8yMDI2MDQxNzA4MjIyNQ_rct?func=crop&w=320&gravity=auto",
-      "id": "auto-1942aa14ea",
+      "fit_verdict": "Coastal Médoc town location, good bones & wooded grounds, but no pool & limited expansion space.",
+      "id": "auto-bf5973bde0",
       "source": "auto",
-      "site": "paruvendu.fr",
-      "sold_detected_at": "2026-04-20T09:15:19Z"
+      "site": "frenchestateagents.com (deep)",
+      "price": "€515,000",
+      "sold_detected_at": "2026-04-27T09:23:01Z"
     },
     {
       "title": "Elegant Maison de Maitre + pool + garden + garage + village square location + business opportunity",
@@ -2513,37 +2704,36 @@
       "sold_detected_at": "2026-05-11T10:46:59Z"
     },
     {
-      "title": "19th-century bourgeois house in Lesparre-Médoc",
-      "location": "Lesparre-Médoc, Gironde",
-      "commune": "Lesparre-Médoc",
-      "url": "https://www.frenchestateagents.com/property/A41576NF33",
-      "price_eur": 515000,
-      "bedrooms": 6,
-      "area_m2": 343,
-      "land_m2": 5000,
-      "features": [
-        "19th-century character",
-        "Wooded grounds",
-        "Close to coast",
-        "9 rooms total",
-        "2 living rooms"
-      ],
+      "title": "Maison 105 m2 Vensac (33)",
+      "location": "Vensac, Gironde",
+      "commune": "Vensac",
+      "url": "https://www.paruvendu.fr/immobilier/vente/maison/1289714037A1KIVHMN000",
+      "bedrooms": 3,
+      "area_m2": 105,
+      "price_eur": null,
       "score": 68,
       "score_breakdown": {
         "size_potential": 12,
-        "pool": 0,
+        "pool": 8,
         "glamping_land": 10,
         "coast_proximity": 15,
-        "character": 12,
-        "renovation_state": 10
+        "character": 10,
+        "renovation_state": 13
       },
+      "fit_verdict": "3-bed, good land, near coast. Limited bedroom count; renovation state unclear.",
       "status": "sold",
-      "fit_verdict": "Coastal Médoc town location, good bones & wooded grounds, but no pool & limited expansion space.",
-      "id": "auto-bf5973bde0",
+      "features": [
+        "Sunny living room",
+        "Equipped kitchen",
+        "Covered terrace",
+        "Good land potential",
+        "Close to ocean"
+      ],
+      "image_url": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/89/fd/L21lZGlhLXBhL1dJMTcvNy8xL1dJMTc3MTEyMzQ1XzEuanBlZz8yMDI2MDQxNzA4MjIyNQ_rct?func=crop&w=320&gravity=auto",
+      "id": "auto-1942aa14ea",
       "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€515,000",
-      "sold_detected_at": "2026-04-27T09:23:01Z"
+      "site": "paruvendu.fr",
+      "sold_detected_at": "2026-04-20T09:15:19Z"
     },
     {
       "title": "Maison à vendre - Bourg",
@@ -2580,6 +2770,38 @@
       "price": "€560,000"
     },
     {
+      "title": "Maison de plain-pied à vendre",
+      "location": "Est, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.bellesdemeures.com/262650211/detail.htm",
+      "price_eur": 680000,
+      "bedrooms": 4,
+      "area_m2": 116,
+      "land_m2": 562,
+      "status": "active",
+      "score": 65,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 5,
+        "glamping_land": 8,
+        "coast_proximity": 15,
+        "character": 12,
+        "renovation_state": 13
+      },
+      "fit_verdict": "Contemporary 2022 build, excellent coast access, decent land. Only 4 beds, no pool. Mid-range stretch.",
+      "features": [
+        "Contemporain 2022",
+        "Plain-pied",
+        "Spacieux",
+        "Terrain 562m²",
+        "Paisible"
+      ],
+      "id": "auto-917992c134",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€680,000"
+    },
+    {
       "title": "Maison rénové, 5 pièces, 3 chambres - Centre Cap Ferret",
       "location": "Centre Cap Ferret, Lège-Cap-Ferret (33950)",
       "commune": "Lège-Cap-Ferret",
@@ -2613,37 +2835,6 @@
       "price": "€709,000"
     },
     {
-      "title": "Maison pierre rénovée avec baie à galandage, 4 chambres, 4 ha",
-      "location": "Grayan-et-l'Hôpital, Gironde",
-      "commune": "Grayan-et-l'Hôpital",
-      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/cissac-medoc-33250/ad08fr13161",
-      "price_eur": 1035000,
-      "bedrooms": 4,
-      "area_m2": 198,
-      "land_m2": 4019,
-      "features": [
-        "Pierre rénovée",
-        "Baie à galandage",
-        "Terrasse",
-        "Calme et arboré"
-      ],
-      "score": 65,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 5,
-        "glamping_land": 10,
-        "coast_proximity": 15,
-        "character": 12,
-        "renovation_state": 11
-      },
-      "fit_verdict": "Close to ocean (5 km), well-renovated stone. Small footprint limits retreat conversion potential.",
-      "status": "unknown",
-      "id": "auto-cfed693966",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€1,035,000"
-    },
-    {
       "title": "Maison à vendre",
       "location": "Bourg, Biscarrosse (40600)",
       "commune": "Biscarrosse",
@@ -2673,6 +2864,37 @@
       "source": "auto",
       "site": "seloger.com",
       "price": "€648,000"
+    },
+    {
+      "title": "Maison pierre rénovée avec baie à galandage, 4 chambres, 4 ha",
+      "location": "Grayan-et-l'Hôpital, Gironde",
+      "commune": "Grayan-et-l'Hôpital",
+      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/cissac-medoc-33250/ad08fr13161",
+      "price_eur": 1035000,
+      "bedrooms": 4,
+      "area_m2": 198,
+      "land_m2": 4019,
+      "features": [
+        "Pierre rénovée",
+        "Baie à galandage",
+        "Terrasse",
+        "Calme et arboré"
+      ],
+      "score": 65,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 5,
+        "glamping_land": 10,
+        "coast_proximity": 15,
+        "character": 12,
+        "renovation_state": 11
+      },
+      "fit_verdict": "Close to ocean (5 km), well-renovated stone. Small footprint limits retreat conversion potential.",
+      "status": "unknown",
+      "id": "auto-cfed693966",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€1,035,000"
     },
     {
       "title": "Maison pierre rénovée",
@@ -2709,6 +2931,39 @@
       "price": "€1,035,000"
     },
     {
+      "title": "Maison 144 m2 Carcans (33)",
+      "location": "Carcans",
+      "commune": "Carcans",
+      "url": "https://www.paruvendu.fr/immobilier/vente/maison/1291933371A1KIVHMN000",
+      "bedrooms": 3,
+      "area_m2": 144,
+      "land_m2": 1100,
+      "price_eur": 460000,
+      "status": "unknown",
+      "score": 63,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 8,
+        "coast_proximity": 15,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Coastal Carcans, move-in ready wood frame home; undersized, no pool, limited expansion.",
+      "features": [
+        "Wood frame construction 2014",
+        "1100 m² plot",
+        "Bureau/office space",
+        "Quiet location",
+        "Move-in ready"
+      ],
+      "image_url": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/75/a4/L21lZGlhLXBhL1dJMTcvNy8zL1dJMTc3Mzg2Mjg5XzEuanBlZz8yMDI2MDYxODIwNDIwNA_rct?func=crop&w=320&gravity=auto",
+      "id": "auto-49ad36c563",
+      "source": "auto",
+      "site": "paruvendu.fr",
+      "price": "€460,000"
+    },
+    {
       "title": "Maison 6 pièces 220 m²",
       "location": "Biscarrosse 40600 Coudiney - Latecoère - Le Micq - Dousse",
       "commune": "Biscarrosse",
@@ -2731,6 +2986,117 @@
       "site": "leboncoin.fr",
       "status": "active",
       "price": "€890,000"
+    },
+    {
+      "title": "Maison rénovée 2022, 4 chambres, 1.2 ha terrain",
+      "location": "Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/bourg/260555071.htm",
+      "price_eur": 560000,
+      "bedrooms": 4,
+      "area_m2": 160,
+      "land_m2": 1160,
+      "features": [
+        "Rénové 2022",
+        "Terrain arboré",
+        "Sans vis-à-vis",
+        "Prestations qualité"
+      ],
+      "status": "active",
+      "image_url": "https://mms.seloger.com/f/6/c/7/f6c70b60-6b5a-404e-bac3-5499b8d413d8.jpg",
+      "score": 62,
+      "score_breakdown": {
+        "size_potential": 8,
+        "pool": 0,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 5,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Recently renovated, 1.2ha land & 4 bed. No pool. Contemporary without character. Good basic candidate.",
+      "id": "auto-bc2397f759",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€560,000"
+    },
+    {
+      "title": "Maison à vendre - Parentis-en-Born",
+      "location": "Parentis-en-Born (40160)",
+      "commune": "Parentis-en-Born",
+      "url": "https://www.seloger.com/annonces/achat/maison/parentis-en-born-40/269788027.htm",
+      "price_eur": 595000,
+      "bedrooms": 4,
+      "area_m2": 173,
+      "land_m2": 1024,
+      "status": "active",
+      "image_url": "https://mms.seloger.com/e/b/d/d/ebdd43c6-d4fb-4aaf-8954-bd0087589ac3.jpg",
+      "features": [
+        "5 pièces",
+        "4 chambres",
+        "Modern",
+        "Dépendance",
+        "Contemporary"
+      ],
+      "score": 62,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 3,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Good size (173m²), outbuilding, 1ha land. Modern/bland, no pool. Mid-range price for limited character.",
+      "id": "auto-e0233c73fd",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€595,000"
+    },
+    {
+      "title": "Superbe propriété de plus de 19 hectares à Saint-Vivien-de-Médoc",
+      "location": "Saint-Vivien-de-Médoc (33590)",
+      "commune": "Saint-Vivien-de-Médoc",
+      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/saint-vivien-de-medoc-33590/ad08fr13516",
+      "score": 62,
+      "score_breakdown": {
+        "size_potential": 15,
+        "pool": 8,
+        "glamping_land": 15,
+        "coast_proximity": 7,
+        "character": 12,
+        "renovation_state": 5
+      },
+      "fit_verdict": "Exceptional land & size potential, central Médoc location; price & full details needed.",
+      "land_m2": 190000,
+      "status": "unknown",
+      "id": "auto-ad1d191ffc",
+      "source": "auto",
+      "site": "seloger.com"
+    },
+    {
+      "title": "Maison à vendre - Grayan-et-l'Hôpital",
+      "location": "Grayan-et-l'Hôpital (33590)",
+      "commune": "Grayan-et-l'Hôpital",
+      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/grayan-et-l-hopital-33590/ad08fr13544",
+      "price_eur": 1035000,
+      "bedrooms": 4,
+      "area_m2": 198,
+      "land_m2": 4019,
+      "score": 62,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 8,
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 12,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Recently renovated, 5 km to ocean, good character. Small footprint (198 m²) & modest land limit glamping appeal.",
+      "status": "unknown",
+      "id": "auto-f82a048a81",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€1,035,000"
     },
     {
       "title": "Maison 7 pièces 230m² avec piscine",
@@ -2760,164 +3126,6 @@
       "id": "auto-d19afe0278",
       "source": "auto",
       "site": "leboncoin.fr"
-    },
-    {
-      "title": "Maison de Maître pleine d'âme",
-      "location": "Saint-Vivien-de-Médoc",
-      "commune": "Saint-Vivien-de-Médoc",
-      "url": "https://www.seloger.com/recherche/achat/maisons-et-appartements/prestige/nouvelle-aquitaine/saint-vivien-de-medoc-33590/ad08fr13516",
-      "price_eur": 1035000,
-      "bedrooms": 5,
-      "land_m2": 6000,
-      "status": "active",
-      "score": 62,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 8,
-        "glamping_land": 10,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 10
-      },
-      "fit_verdict": "Character house with good land; unknown bedroom count for retreat potential, needing clarification.",
-      "id": "auto-9ba868f8ad",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€1,035,000"
-    },
-    {
-      "title": "Maison à vendre - Bourg",
-      "location": "Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/272161459.htm",
-      "price_eur": 573792,
-      "bedrooms": 3,
-      "area_m2": 120,
-      "land_m2": 761,
-      "features": [
-        "Single-level villa",
-        "Spacious living room (60m2)",
-        "Three en-suite bedrooms",
-        "Workshop and garage",
-        "Quiet neighborhood",
-        "Generous ceiling heights"
-      ],
-      "score": 62,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 0,
-        "glamping_land": 8,
-        "coast_proximity": 10,
-        "character": 5,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Decent land, modern layout, but undersized & lacks pool or distinctive character.",
-      "status": "unknown",
-      "image_url": "https://mms.seloger.com/c/6/0/f/c60f858e-3f97-4636-bf84-e1c98adb09db.jpg",
-      "id": "auto-9609fc2a62",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€573,792"
-    },
-    {
-      "title": "Maison de plain-pied",
-      "location": "Est, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.bellesdemeures.com/262650211/detail.htm",
-      "price_eur": 680000,
-      "bedrooms": 4,
-      "area_m2": 116,
-      "land_m2": 562,
-      "status": "active",
-      "score": 62,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 8,
-        "glamping_land": 5,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Contemporary 4-bed near lake, move-in ready. Limited land for glamping, modest conversion potential.",
-      "features": [
-        "Contemporary",
-        "Plain-pied",
-        "2022 build",
-        "PMR access",
-        "Peaceful setting",
-        "Verdant grounds"
-      ],
-      "image_url": "https://mms.seloger.com/1/8/0/8/18080787-b718-4e80-856d-83ee723a6a5c.jpg",
-      "id": "auto-917992c134",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€680,000"
-    },
-    {
-      "title": "Chalet à vendre - Biscarrosse",
-      "location": "Est, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/est/268593353.htm",
-      "price_eur": 850000,
-      "bedrooms": 3,
-      "area_m2": 110,
-      "land_m2": 8000,
-      "features": [
-        "Wooden chalet",
-        "Built 2004",
-        "High-end materials",
-        "Forest edge",
-        "Peaceful setting"
-      ],
-      "score": 62,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 0,
-        "glamping_land": 15,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 12
-      },
-      "fit_verdict": "Strong land/proximity; modest size for 12-bed retreat; no pool.",
-      "status": "unknown",
-      "id": "auto-64379fc9dc",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€850,000"
-    },
-    {
-      "title": "Large, fully renovated house – former sawmill with exposed beams",
-      "location": "Carcans, Gironde",
-      "commune": "Carcans",
-      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A44821NF33/house-for-sale-carcans-gironde-aquitaine-france",
-      "price_eur": 699600,
-      "bedrooms": 3,
-      "bathrooms": 3,
-      "area_m2": 195,
-      "land_m2": 500,
-      "features": [
-        "Exposed beams",
-        "Industrial charm",
-        "High-end materials",
-        "Modern comfort",
-        "Former sawmill"
-      ],
-      "image_url": "https://image.hestia.immo/Glph5UP7G8ZnTFRXJRoPLmDoQ92Kc8lbGPRifiq7LZI/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wNS9ET0MzSDBHSlZIMlEuanBn.jpg",
-      "status": "active",
-      "score": 62,
-      "score_breakdown": {
-        "size_potential": 5,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 15,
-        "character": 15,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Move-in-ready industrial character & beachside; only 3 bed limits size expansion potential significantly.",
-      "id": "auto-6a564ffef4",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€699,600"
     },
     {
       "title": "Beautiful Provençal-style house on 3,000 m² with pool",
@@ -2952,6 +3160,93 @@
       "source": "auto",
       "site": "frenchestateagents.com (deep)",
       "price": "€899,000"
+    },
+    {
+      "title": "Maison de Maître pleine d'âme",
+      "location": "Saint-Vivien-de-Médoc",
+      "commune": "Saint-Vivien-de-Médoc",
+      "url": "https://www.seloger.com/recherche/achat/maisons-et-appartements/prestige/nouvelle-aquitaine/saint-vivien-de-medoc-33590/ad08fr13516",
+      "price_eur": 1035000,
+      "bedrooms": 5,
+      "land_m2": 6000,
+      "status": "active",
+      "score": 62,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 8,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 12,
+        "renovation_state": 10
+      },
+      "fit_verdict": "Character house with good land; unknown bedroom count for retreat potential, needing clarification.",
+      "id": "auto-9ba868f8ad",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€1,035,000"
+    },
+    {
+      "title": "Chalet à vendre - Biscarrosse",
+      "location": "Est, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/est/268593353.htm",
+      "price_eur": 850000,
+      "bedrooms": 3,
+      "area_m2": 110,
+      "land_m2": 8000,
+      "features": [
+        "Wooden chalet",
+        "Built 2004",
+        "High-end materials",
+        "Forest edge",
+        "Peaceful setting"
+      ],
+      "score": 62,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 15,
+        "coast_proximity": 15,
+        "character": 8,
+        "renovation_state": 12
+      },
+      "fit_verdict": "Strong land/proximity; modest size for 12-bed retreat; no pool.",
+      "status": "unknown",
+      "id": "auto-64379fc9dc",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€850,000"
+    },
+    {
+      "title": "Maison à vendre - 4 pièces, 3 chambres, 112 m², 353 m² de terrain",
+      "location": "La Plage-Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/259045583.htm",
+      "price_eur": 699000,
+      "bedrooms": 3,
+      "area_m2": 112,
+      "land_m2": 353,
+      "features": [
+        "Rénovée",
+        "Deux terrasses",
+        "Piscinable",
+        "Garage aménageable"
+      ],
+      "status": "active",
+      "score": 62,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 8,
+        "glamping_land": 8,
+        "coast_proximity": 15,
+        "character": 12,
+        "renovation_state": 7
+      },
+      "fit_verdict": "3-bed renovated home, close to beach. Undersized for 12-bed retreat goal; good pool potential.",
+      "id": "auto-22415f6359",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€699,000"
     },
     {
       "title": "Exceptional Architect-Designed Villa with six bedrooms in Lège-Cap-Ferret",
@@ -3010,89 +3305,71 @@
       "price": "€808,000"
     },
     {
-      "title": "Superbe propriété de plus de 19 hectares à Saint-Vivien-de-Médoc",
-      "location": "Saint-Vivien-de-Médoc (33590)",
-      "commune": "Saint-Vivien-de-Médoc",
-      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/saint-vivien-de-medoc-33590/ad08fr13516",
-      "score": 62,
-      "score_breakdown": {
-        "size_potential": 15,
-        "pool": 8,
-        "glamping_land": 15,
-        "coast_proximity": 7,
-        "character": 12,
-        "renovation_state": 5
-      },
-      "fit_verdict": "Exceptional land & size potential, central Médoc location; price & full details needed.",
-      "land_m2": 190000,
-      "status": "unknown",
-      "id": "auto-ad1d191ffc",
-      "source": "auto",
-      "site": "seloger.com"
-    },
-    {
-      "title": "Maison à vendre - 4 pièces, 3 chambres, 112 m², 353 m² de terrain",
-      "location": "La Plage-Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/259045583.htm",
-      "price_eur": 699000,
-      "bedrooms": 3,
-      "area_m2": 112,
-      "land_m2": 353,
+      "title": "Charming stone mansion with outbuilding conversion potential",
+      "location": "Quinsac (Gironde)",
+      "commune": "Queyrac",
+      "url": "https://www.green-acres.fr/property-for-sale/quinsac-charming-stone-mansion",
+      "price_eur": 561600,
+      "area_m2": 231,
+      "land_m2": 954,
+      "bedrooms": 5,
       "features": [
-        "Rénovée",
-        "Deux terrasses",
-        "Piscinable",
-        "Garage aménageable"
+        "Pierre, 1840 + extension 1905",
+        "5 chambres",
+        "Dépendance 2 étages (81+81m²)",
+        "Cave",
+        "Peut devenir gîte/atelier"
       ],
       "status": "active",
+      "image_url": "https://lb1.green-acres.com/51319a/Abtvvsi2p4m7y146/miniPhotos/Abtvvsi2p4m7y146_1.jpg",
       "score": 62,
       "score_breakdown": {
-        "size_potential": 12,
-        "pool": 8,
-        "glamping_land": 8,
-        "coast_proximity": 15,
-        "character": 12,
-        "renovation_state": 7
-      },
-      "fit_verdict": "3-bed renovated home, close to beach. Undersized for 12-bed retreat goal; good pool potential.",
-      "id": "auto-22415f6359",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€699,000"
-    },
-    {
-      "title": "Maison à vendre - Parentis-en-Born",
-      "location": "Parentis-en-Born (40160)",
-      "commune": "Parentis-en-Born",
-      "url": "https://www.seloger.com/annonces/achat/maison/parentis-en-born-40/269788027.htm",
-      "price_eur": 595000,
-      "bedrooms": 4,
-      "area_m2": 173,
-      "land_m2": 1024,
-      "status": "active",
-      "image_url": "https://mms.seloger.com/e/b/d/d/ebdd43c6-d4fb-4aaf-8954-bd0087589ac3.jpg",
-      "features": [
-        "5 pièces",
-        "4 chambres",
-        "Modern",
-        "Dépendance",
-        "Contemporary"
-      ],
-      "score": 62,
-      "score_breakdown": {
-        "size_potential": 12,
+        "size_potential": 16,
         "pool": 0,
-        "glamping_land": 10,
-        "coast_proximity": 10,
-        "character": 3,
+        "glamping_land": 5,
+        "coast_proximity": 7,
+        "character": 13,
+        "renovation_state": 8
+      },
+      "fit_verdict": "Good conversion potential & character; no pool, cosmetic updates needed, inland location.",
+      "id": "auto-5f2d3f01d0",
+      "source": "auto",
+      "site": "green-acres.fr",
+      "price": "€561,600"
+    },
+    {
+      "title": "Large, fully renovated house – former sawmill with exposed beams",
+      "location": "Carcans, Gironde",
+      "commune": "Carcans",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A44821NF33/house-for-sale-carcans-gironde-aquitaine-france",
+      "price_eur": 699600,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_m2": 195,
+      "land_m2": 500,
+      "features": [
+        "Exposed beams",
+        "Industrial charm",
+        "High-end materials",
+        "Modern comfort",
+        "Former sawmill"
+      ],
+      "image_url": "https://image.hestia.immo/Glph5UP7G8ZnTFRXJRoPLmDoQ92Kc8lbGPRifiq7LZI/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNi0wNS9ET0MzSDBHSlZIMlEuanBn.jpg",
+      "status": "active",
+      "score": 62,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 15,
         "renovation_state": 15
       },
-      "fit_verdict": "Good size (173m²), outbuilding, 1ha land. Modern/bland, no pool. Mid-range price for limited character.",
-      "id": "auto-e0233c73fd",
+      "fit_verdict": "Move-in-ready industrial character & beachside; only 3 bed limits size expansion potential significantly.",
+      "id": "auto-6a564ffef4",
       "source": "auto",
-      "site": "seloger.com",
-      "price": "€595,000"
+      "site": "frenchestateagents.com (deep)",
+      "price": "€699,600"
     },
     {
       "title": "Maison 112 m2 Biscarrosse (40)",
@@ -3127,64 +3404,6 @@
       "price": "€465,000"
     },
     {
-      "title": "Maison à vendre - Grayan-et-l'Hôpital",
-      "location": "Grayan-et-l'Hôpital (33590)",
-      "commune": "Grayan-et-l'Hôpital",
-      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/grayan-et-l-hopital-33590/ad08fr13544",
-      "price_eur": 1035000,
-      "bedrooms": 4,
-      "area_m2": 198,
-      "land_m2": 4019,
-      "score": 62,
-      "score_breakdown": {
-        "size_potential": 5,
-        "pool": 8,
-        "glamping_land": 5,
-        "coast_proximity": 15,
-        "character": 12,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Recently renovated, 5 km to ocean, good character. Small footprint (198 m²) & modest land limit glamping appeal.",
-      "status": "unknown",
-      "id": "auto-f82a048a81",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€1,035,000"
-    },
-    {
-      "title": "Charming stone mansion with outbuilding conversion potential",
-      "location": "Quinsac (Gironde)",
-      "commune": "Queyrac",
-      "url": "https://www.green-acres.fr/property-for-sale/quinsac-charming-stone-mansion",
-      "price_eur": 561600,
-      "area_m2": 231,
-      "land_m2": 954,
-      "bedrooms": 5,
-      "features": [
-        "Pierre, 1840 + extension 1905",
-        "5 chambres",
-        "Dépendance 2 étages (81+81m²)",
-        "Cave",
-        "Peut devenir gîte/atelier"
-      ],
-      "status": "active",
-      "image_url": "https://lb1.green-acres.com/51319a/Abtvvsi2p4m7y146/miniPhotos/Abtvvsi2p4m7y146_1.jpg",
-      "score": 62,
-      "score_breakdown": {
-        "size_potential": 16,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 7,
-        "character": 13,
-        "renovation_state": 8
-      },
-      "fit_verdict": "Good conversion potential & character; no pool, cosmetic updates needed, inland location.",
-      "id": "auto-5f2d3f01d0",
-      "source": "auto",
-      "site": "green-acres.fr",
-      "price": "€561,600"
-    },
-    {
       "title": "Maison 11 pièces",
       "location": "Gaillan-en-Médoc",
       "commune": "Gaillan-en-Médoc",
@@ -3208,6 +3427,39 @@
       "status": "sold",
       "price": "€580,000",
       "sold_detected_at": "2026-04-27T09:23:01Z"
+    },
+    {
+      "title": "Villa à vendre",
+      "location": "Grayan-et-l'Hôpital (33590)",
+      "commune": "Grayan-et-l'Hôpital",
+      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/grayan-et-l-hopital-33590/ad08fr13213",
+      "price_eur": 1030000,
+      "bedrooms": 5,
+      "area_m2": 198,
+      "land_m2": 4019,
+      "features": [
+        "Architect-designed villa",
+        "Cut stone",
+        "Wooded park",
+        "Near ocean",
+        "Exceptional property"
+      ],
+      "image_url": "https://mms.seloger.com/5/9/7/6/5976ee86-6923-4d3e-affc-2d565030319a.jpg?ci_seal=31b410faa343723d93661336b814a3859b46c372&w=525&h=394",
+      "score": 60,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 8,
+        "glamping_land": 5,
+        "coast_proximity": 12,
+        "character": 12,
+        "renovation_state": 15
+      },
+      "status": "active",
+      "fit_verdict": "Architect villa w/ character, only 5 beds. Small footprint limits retreat scale despite good location.",
+      "id": "auto-4304918493",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€1,030,000"
     },
     {
       "title": "Maison 5 pièces 173 m² Parentis-en-Born",
@@ -3249,39 +3501,6 @@
       "price": "€595,000"
     },
     {
-      "title": "Villa à vendre",
-      "location": "Grayan-et-l'Hôpital (33590)",
-      "commune": "Grayan-et-l'Hôpital",
-      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/grayan-et-l-hopital-33590/ad08fr13213",
-      "price_eur": 1030000,
-      "bedrooms": 5,
-      "area_m2": 198,
-      "land_m2": 4019,
-      "features": [
-        "Architect-designed villa",
-        "Cut stone",
-        "Wooded park",
-        "Near ocean",
-        "Exceptional property"
-      ],
-      "image_url": "https://mms.seloger.com/5/9/7/6/5976ee86-6923-4d3e-affc-2d565030319a.jpg?ci_seal=31b410faa343723d93661336b814a3859b46c372&w=525&h=394",
-      "score": 60,
-      "score_breakdown": {
-        "size_potential": 5,
-        "pool": 8,
-        "glamping_land": 5,
-        "coast_proximity": 12,
-        "character": 12,
-        "renovation_state": 15
-      },
-      "status": "active",
-      "fit_verdict": "Architect villa w/ character, only 5 beds. Small footprint limits retreat scale despite good location.",
-      "id": "auto-4304918493",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€1,030,000"
-    },
-    {
       "title": "Villa avec jardin et terrasse",
       "location": "Soorts-Hossegor (40)",
       "commune": "Biscarrosse",
@@ -3316,6 +3535,99 @@
       "sold_detected_at": "2026-05-11T10:46:59Z"
     },
     {
+      "title": "Maison 135 m2 Hourtin (33)",
+      "location": "Hourtin",
+      "commune": "Hourtin",
+      "url": "https://www.paruvendu.fr/immobilier/vente/maison/1291287777A1KIVHMN000",
+      "bedrooms": 3,
+      "area_m2": 135,
+      "status": "unknown",
+      "score": 58,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 5,
+        "renovation_state": 5
+      },
+      "fit_verdict": "Coastal Hourtin + expansion potential; major renovation needed, no pool, small land.",
+      "features": [
+        "Needs renovation",
+        "Central location in Hourtin",
+        "3 bedrooms",
+        "Large workshop space"
+      ],
+      "image_url": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/55/bb/L21lZGlhLXBhL1dJMTcvNy8zL1dJMTc3MzI5OTQzXzEuanBlZz8yMDI2MDYxOTEwNTUwMw_rct?func=crop&w=320&gravity=auto",
+      "id": "auto-9bd1a9168a",
+      "source": "auto",
+      "site": "paruvendu.fr"
+    },
+    {
+      "title": "Villa plain-pied calme, 5 pièces, 761 m² terrain",
+      "location": "Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/272161459.htm",
+      "price_eur": 573792,
+      "bedrooms": 3,
+      "area_m2": 120,
+      "land_m2": 761,
+      "features": [
+        "Plain-pied",
+        "Généreux volumes",
+        "3 suites",
+        "Buanderie et atelier"
+      ],
+      "status": "active",
+      "image_url": "https://mms.seloger.com/c/6/0/f/c60f858e-3f97-4636-bf84-e1c98adb09db.jpg",
+      "score": 58,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 0,
+        "glamping_land": 8,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Move-in ready, good layout with suites. Only 3 bed + limited expansion. No pool, modest glamping land.",
+      "id": "auto-9609fc2a62",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€573,792"
+    },
+    {
+      "title": "House in Landes",
+      "location": "Biscarrosse, Landes",
+      "commune": "Biscarrosse",
+      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A36408EPR40/house-for-sale-biscarrosse-landes-aquitaine-france",
+      "price_eur": 645000,
+      "bedrooms": 3,
+      "area_m2": 139,
+      "land_m2": 1383,
+      "features": [
+        "Villa",
+        "Golf location",
+        "Wooded land",
+        "Lake proximity"
+      ],
+      "score": 58,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 10,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 8
+      },
+      "fit_verdict": "Good land & lake access; golf setting charms but only 3 bed, no pool; decent bones.",
+      "status": "unknown",
+      "image_url": "https://image.hestia.immo/XQmuUyuwxaHoDbSNrnReMhN5UmLIdKxKrKuhwrAbkCI/w:400/h:300/rt:fit/dpr:1/el:false/ex:false/mb:0/aHR0cHM6Ly9jZG4uaGVzdGlhLmltbW8vaW1hZ2UvVEVOM1hQTkMvMjAyNS0wNC9ET0MyQU44TUs4M0ouanBn.jpg",
+      "id": "auto-bc0aa3b3c5",
+      "source": "auto",
+      "site": "frenchestateagents.com (deep)",
+      "price": "€645,000"
+    },
+    {
       "title": "Maison à vendre, 5 pièces, 3 chambres - Lacanau",
       "location": "Lacanau Océan, Lacanau (33680)",
       "commune": "Lacanau",
@@ -3345,6 +3657,36 @@
       "source": "auto",
       "site": "seloger.com",
       "price": "€835,000"
+    },
+    {
+      "title": "Maison de vacances en première ligne - Hourtin",
+      "location": "Hourtin (33990)",
+      "commune": "Hourtin",
+      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/saint-sauveur-33250/ad08fr13497",
+      "price_eur": 1050000,
+      "bedrooms": 7,
+      "area_m2": 204,
+      "features": [
+        "Première ligne",
+        "Vue océan",
+        "Investissement locatif"
+      ],
+      "score": 58,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Excellent coastal location, but only 7 bed in 204m², minimal land for glamping retreat model.",
+      "status": "unknown",
+      "image_url": "https://mms.seloger.com/b/7/3/8/b73862a4-f0fc-4700-aa3e-538427ca95a7.jpg?ci_seal=f1c5ce82ae1ba7856b3cd9bfc61f15a5083cc1b1&w=525&h=394",
+      "id": "auto-28507702b2",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€1,050,000"
     },
     {
       "title": "Maison à vendre - 5 pièces, 4 chambres",
@@ -3378,36 +3720,6 @@
       "source": "auto",
       "site": "seloger.com",
       "price": "€595,000"
-    },
-    {
-      "title": "Maison de vacances en première ligne - Hourtin",
-      "location": "Hourtin (33990)",
-      "commune": "Hourtin",
-      "url": "https://www.seloger.com/recherche/achat/maison/prestige/nouvelle-aquitaine/saint-sauveur-33250/ad08fr13497",
-      "price_eur": 1050000,
-      "bedrooms": 7,
-      "area_m2": 204,
-      "features": [
-        "Première ligne",
-        "Vue océan",
-        "Investissement locatif"
-      ],
-      "score": 58,
-      "score_breakdown": {
-        "size_potential": 5,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Excellent coastal location, but only 7 bed in 204m², minimal land for glamping retreat model.",
-      "status": "unknown",
-      "image_url": "https://mms.seloger.com/b/7/3/8/b73862a4-f0fc-4700-aa3e-538427ca95a7.jpg?ci_seal=f1c5ce82ae1ba7856b3cd9bfc61f15a5083cc1b1&w=525&h=394",
-      "id": "auto-28507702b2",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€1,050,000"
     },
     {
       "title": "Renovated Stone House with Pool & Outbuildings - Lacanau",
@@ -3534,6 +3846,36 @@
       "sold_detected_at": "2026-04-20T09:15:19Z"
     },
     {
+      "title": "Maison à vendre - Première occupation - 5 pièces, 4 chambres, 97 m², 40 m² de terrain",
+      "location": "La Plage-Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/259528979.htm",
+      "price_eur": 437500,
+      "bedrooms": 4,
+      "area_m2": 97,
+      "land_m2": 40,
+      "features": [
+        "Nouvelle construction",
+        "Ocean proximity",
+        "Résidence paisible"
+      ],
+      "status": "active",
+      "score": 52,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 5,
+        "glamping_land": 0,
+        "coast_proximity": 15,
+        "character": 8,
+        "renovation_state": 12
+      },
+      "fit_verdict": "Beach-adjacent 4-bed; almost no land (40 m²). Move-in ready but severely space-constrained.",
+      "id": "auto-13c24838ff",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€437,500"
+    },
+    {
       "title": "Maison de plain-pied, 3 pièces, 2 chambres - Petit-Piquey",
       "location": "Petit-Piquey, Lège-Cap-Ferret (33970)",
       "commune": "Lège-Cap-Ferret",
@@ -3564,99 +3906,6 @@
       "source": "auto",
       "site": "seloger.com",
       "price": "€769,000"
-    },
-    {
-      "title": "Charming villa on the Golf of Biscarrose",
-      "location": "Biscarrosse",
-      "commune": "Biscarrosse",
-      "url": "https://www.frenchestateagents.com/french-property-for-sale/view/A36408EPR40/house-for-sale-biscarrosse-landes-aquitaine-france",
-      "price_eur": 645000,
-      "bedrooms": 3,
-      "area_m2": 139,
-      "land_m2": 1383,
-      "features": [
-        "Villa on golf course",
-        "Wooded land",
-        "Lake proximity",
-        "Privileged location"
-      ],
-      "score": 52,
-      "score_breakdown": {
-        "size_potential": 5,
-        "pool": 0,
-        "glamping_land": 10,
-        "coast_proximity": 10,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Good land (1.4ha) and coast proximity, but only 3 bed limits retreat scale. No pool. Lake/golf setting is charming but not primary mission.",
-      "status": "active",
-      "id": "auto-bc0aa3b3c5",
-      "source": "auto",
-      "site": "frenchestateagents.com (deep)",
-      "price": "€645,000"
-    },
-    {
-      "title": "Maison à vendre - 6 pièces, 4 chambres",
-      "location": "Parentis-en-Born (40160)",
-      "commune": "Parentis-en-Born",
-      "url": "https://www.seloger.com/annonces/vente/maison/parentis-en-born-40160/250256899.htm",
-      "price_eur": 520000,
-      "bedrooms": 4,
-      "area_m2": 130,
-      "land_m2": 908,
-      "features": [
-        "magnifique maison",
-        "6 pièces",
-        "4 chambres",
-        "908 m² terrain"
-      ],
-      "status": "active",
-      "score": 52,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 0,
-        "glamping_land": 8,
-        "coast_proximity": 10,
-        "character": 5,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Larger land (0.9 ha) & decent size. No pool, limited character, still too small for 12-bed retreat concept.",
-      "image_url": "https://mms.seloger.com/d/4/5/9/d45930b2-7396-4f3d-9cb8-fe375633103a.jpg",
-      "id": "auto-01fc3ba148",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€520,000"
-    },
-    {
-      "title": "Maison à vendre - Première occupation - 5 pièces, 4 chambres, 97 m², 40 m² de terrain",
-      "location": "La Plage-Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/259528979.htm",
-      "price_eur": 437500,
-      "bedrooms": 4,
-      "area_m2": 97,
-      "land_m2": 40,
-      "features": [
-        "Nouvelle construction",
-        "Ocean proximity",
-        "Résidence paisible"
-      ],
-      "status": "active",
-      "score": 52,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 5,
-        "glamping_land": 0,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 12
-      },
-      "fit_verdict": "Beach-adjacent 4-bed; almost no land (40 m²). Move-in ready but severely space-constrained.",
-      "id": "auto-13c24838ff",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€437,500"
     },
     {
       "title": "Maison 6 pièces 140 m² Parentis-en-Born",
@@ -3698,6 +3947,69 @@
       "price": "€457,500"
     },
     {
+      "title": "Maison à vendre - 6 pièces, 4 chambres",
+      "location": "Parentis-en-Born (40160)",
+      "commune": "Parentis-en-Born",
+      "url": "https://www.seloger.com/annonces/vente/maison/parentis-en-born-40160/250256899.htm",
+      "price_eur": 520000,
+      "bedrooms": 4,
+      "area_m2": 130,
+      "land_m2": 908,
+      "features": [
+        "magnifique maison",
+        "6 pièces",
+        "4 chambres",
+        "908 m² terrain"
+      ],
+      "status": "active",
+      "score": 52,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 8,
+        "coast_proximity": 10,
+        "character": 5,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Larger land (0.9 ha) & decent size. No pool, limited character, still too small for 12-bed retreat concept.",
+      "image_url": "https://mms.seloger.com/d/4/5/9/d45930b2-7396-4f3d-9cb8-fe375633103a.jpg",
+      "id": "auto-01fc3ba148",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€520,000"
+    },
+    {
+      "title": "Maison 5 pièces 153 m²",
+      "location": "Saint-Laurent-Médoc (33112)",
+      "commune": "Saint-Laurent-Médoc",
+      "url": "https://www.lesiteimmo.com/acheter/maison-a-renover/saint-laurent-medoc-33112",
+      "bedrooms": 4,
+      "area_m2": 153,
+      "price_eur": null,
+      "score": 51,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 0,
+        "coast_proximity": 10,
+        "character": 8,
+        "renovation_state": 10
+      },
+      "status": "unknown",
+      "features": [
+        "4 bedrooms",
+        "Fully renovated",
+        "Garage (100 m²)",
+        "Outbuilding (67 m²) to renovate",
+        "Modern heating system"
+      ],
+      "fit_verdict": "Move-in ready, good size, but no garden or pool; Médoc location limits coast proximity.",
+      "notes": "Entirely renovated, modern comfort, good heating (DPE C). Potential for expansion via garage and outbuilding. No significant land mentioned.",
+      "id": "auto-0fd06d1b1a",
+      "source": "auto",
+      "site": "lesiteimmo.com"
+    },
+    {
       "title": "Exceptionally renovated duplex in Cap Ferret – 3-bed with 80 m² terrace",
       "location": "Lège-Cap-Ferret, Gironde",
       "commune": "Lège-Cap-Ferret",
@@ -3730,37 +4042,6 @@
       "source": "auto",
       "site": "frenchestateagents.com (deep)",
       "price": "€990,000"
-    },
-    {
-      "title": "Maison 5 pièces 153 m²",
-      "location": "Saint-Laurent-Médoc (33112)",
-      "commune": "Saint-Laurent-Médoc",
-      "url": "https://www.lesiteimmo.com/acheter/maison-a-renover/saint-laurent-medoc-33112",
-      "bedrooms": 4,
-      "area_m2": 153,
-      "price_eur": null,
-      "score": 51,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 0,
-        "glamping_land": 0,
-        "coast_proximity": 10,
-        "character": 8,
-        "renovation_state": 10
-      },
-      "status": "unknown",
-      "features": [
-        "4 bedrooms",
-        "Fully renovated",
-        "Garage (100 m²)",
-        "Outbuilding (67 m²) to renovate",
-        "Modern heating system"
-      ],
-      "fit_verdict": "Move-in ready, good size, but no garden or pool; Médoc location limits coast proximity.",
-      "notes": "Entirely renovated, modern comfort, good heating (DPE C). Potential for expansion via garage and outbuilding. No significant land mentioned.",
-      "id": "auto-0fd06d1b1a",
-      "source": "auto",
-      "site": "lesiteimmo.com"
     },
     {
       "title": "Maison de maître Saint-Laurent-Médoc",
@@ -3816,35 +4097,58 @@
       "sold_detected_at": "2026-04-20T09:15:19Z"
     },
     {
-      "title": "Maison 97 m2 Biscarrosse (40)",
-      "location": "Biscarrosse Bourg (40)",
-      "commune": "Biscarrosse",
-      "url": "https://www.paruvendu.fr/immobilier/vente/maison/1289466671A1KIVHMN000",
-      "price_eur": 419500,
-      "bedrooms": 3,
-      "area_m2": 97,
-      "land_m2": 680,
-      "features": [
-        "Maison récente 2020",
-        "Lumineuse",
-        "Quartier calme",
-        "Moderne"
-      ],
+      "title": "Maison 151 m2 Civrac-en-Médoc (33)",
+      "location": "Civrac-en-Médoc",
+      "commune": "Gaillan-en-Médoc",
+      "url": "https://www.paruvendu.fr/immobilier/vente/maison/1289255544A1KIVHMN000",
+      "bedrooms": 4,
+      "area_m2": 151,
+      "status": "unknown",
       "score": 48,
       "score_breakdown": {
         "size_potential": 5,
-        "pool": 8,
+        "pool": 0,
         "glamping_land": 5,
         "coast_proximity": 10,
-        "character": 10,
+        "character": 15,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Interior Médoc with character; too small for retreat, no pool, no information on land.",
+      "features": [
+        "Wood frame 2007",
+        "Cathedral ceiling",
+        "Island kitchen",
+        "Master suite",
+        "Well-maintained"
+      ],
+      "image_url": "https://img.paruvendu.fr/media_ext/_https_/media.paruvendu.fr/2f/06/L21lZGlhLXBhL1dJMTcvNy8wL1dJMTc3MDA1NDQ1XzEuanBlZz8yMDI2MDYxOTA5NDUwNA_rct?func=crop&w=320&gravity=auto",
+      "id": "auto-f5805ddcdf",
+      "source": "auto",
+      "site": "paruvendu.fr"
+    },
+    {
+      "title": "Maison 4 pièces 84 m²",
+      "location": "Biscarrosse 40600 -Plage",
+      "commune": "Biscarrosse",
+      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3124615000",
+      "price_eur": 534000,
+      "bedrooms": 4,
+      "area_m2": 84,
+      "score": 48,
+      "score_breakdown": {
+        "size_potential": 12,
+        "pool": 0,
+        "glamping_land": 0,
+        "coast_proximity": 15,
+        "character": 3,
         "renovation_state": 10
       },
-      "fit_verdict": "Recent build, good state, but just 3BR & 97m² with limited expansion.",
-      "status": "unknown",
-      "id": "auto-20c1766ffa",
+      "fit_verdict": "Beachside location, but too small (4 bed, 84 m²) with no land or pool potential.",
+      "id": "auto-037e0d4608",
       "source": "auto",
-      "site": "paruvendu.fr (landes)",
-      "price": "€419,500"
+      "site": "leboncoin.fr",
+      "status": "active",
+      "price": "€534,000"
     },
     {
       "title": "Maison de plain-pied à vendre - 4 pièces, 3 chambres",
@@ -3879,28 +4183,88 @@
       "price": "€520,000"
     },
     {
-      "title": "Maison 4 pièces 84 m²",
-      "location": "Biscarrosse 40600 -Plage",
+      "title": "Maison 97 m2 Biscarrosse (40)",
+      "location": "Biscarrosse Bourg (40)",
       "commune": "Biscarrosse",
-      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3124615000",
-      "price_eur": 534000,
-      "bedrooms": 4,
-      "area_m2": 84,
+      "url": "https://www.paruvendu.fr/immobilier/vente/maison/1289466671A1KIVHMN000",
+      "price_eur": 419500,
+      "bedrooms": 3,
+      "area_m2": 97,
+      "land_m2": 680,
+      "features": [
+        "Maison récente 2020",
+        "Lumineuse",
+        "Quartier calme",
+        "Moderne"
+      ],
       "score": 48,
       "score_breakdown": {
-        "size_potential": 12,
-        "pool": 0,
-        "glamping_land": 0,
-        "coast_proximity": 15,
-        "character": 3,
+        "size_potential": 5,
+        "pool": 8,
+        "glamping_land": 5,
+        "coast_proximity": 10,
+        "character": 10,
         "renovation_state": 10
       },
-      "fit_verdict": "Beachside location, but too small (4 bed, 84 m²) with no land or pool potential.",
-      "id": "auto-037e0d4608",
+      "fit_verdict": "Recent build, good state, but just 3BR & 97m² with limited expansion.",
+      "status": "unknown",
+      "id": "auto-20c1766ffa",
+      "source": "auto",
+      "site": "paruvendu.fr (landes)",
+      "price": "€419,500"
+    },
+    {
+      "title": "Maison 3 pièces 64 m²",
+      "location": "Biscarrosse 40600 -Plage",
+      "commune": "Biscarrosse",
+      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3139604885",
+      "price_eur": 544000,
+      "bedrooms": 3,
+      "area_m2": 64,
+      "score": 45,
+      "score_breakdown": {
+        "size_potential": 0,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 15,
+        "character": 8,
+        "renovation_state": 15
+      },
+      "fit_verdict": "Beachfront location wasted on micro-property; impractical for retreat development.",
+      "id": "auto-1f25226d11",
       "source": "auto",
       "site": "leboncoin.fr",
       "status": "active",
-      "price": "€534,000"
+      "price": "€544,000"
+    },
+    {
+      "title": "Maison 120 m2 Biscarrosse (40)",
+      "location": "Biscarrosse (40)",
+      "commune": "Biscarrosse",
+      "url": "https://www.paruvendu.fr/immobilier/maison-neuve/1288530144A1KIVHMN000",
+      "price_eur": 530000,
+      "bedrooms": 5,
+      "area_m2": 120,
+      "features": [
+        "Terrain + construction",
+        "Océan lacs qualité vie",
+        "Dynamisme littoral"
+      ],
+      "score": 45,
+      "score_breakdown": {
+        "size_potential": 8,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 10,
+        "character": 3,
+        "renovation_state": 15
+      },
+      "fit_verdict": "New construction, but modest 120m² on unknown plot. Limited appeal.",
+      "status": "unknown",
+      "id": "auto-24ca8fb337",
+      "source": "auto",
+      "site": "paruvendu.fr (landes)",
+      "price": "€530,000"
     },
     {
       "title": "Maison à rénover, Saint-Vivien-de-Médoc",
@@ -3963,59 +4327,6 @@
       "site": "leboncoin.fr"
     },
     {
-      "title": "Maison 120 m2 Biscarrosse (40)",
-      "location": "Biscarrosse (40)",
-      "commune": "Biscarrosse",
-      "url": "https://www.paruvendu.fr/immobilier/maison-neuve/1288530144A1KIVHMN000",
-      "price_eur": 530000,
-      "bedrooms": 5,
-      "area_m2": 120,
-      "features": [
-        "Terrain + construction",
-        "Océan lacs qualité vie",
-        "Dynamisme littoral"
-      ],
-      "score": 45,
-      "score_breakdown": {
-        "size_potential": 8,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 10,
-        "character": 3,
-        "renovation_state": 15
-      },
-      "fit_verdict": "New construction, but modest 120m² on unknown plot. Limited appeal.",
-      "status": "unknown",
-      "id": "auto-24ca8fb337",
-      "source": "auto",
-      "site": "paruvendu.fr (landes)",
-      "price": "€530,000"
-    },
-    {
-      "title": "Maison 3 pièces 64 m²",
-      "location": "Biscarrosse 40600 -Plage",
-      "commune": "Biscarrosse",
-      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3139604885",
-      "price_eur": 544000,
-      "bedrooms": 3,
-      "area_m2": 64,
-      "score": 45,
-      "score_breakdown": {
-        "size_potential": 0,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 15,
-        "character": 8,
-        "renovation_state": 15
-      },
-      "fit_verdict": "Beachfront location wasted on micro-property; impractical for retreat development.",
-      "id": "auto-1f25226d11",
-      "source": "auto",
-      "site": "leboncoin.fr",
-      "status": "active",
-      "price": "€544,000"
-    },
-    {
       "title": "Maison 4 chambres, Lège-Cap-Ferret",
       "location": "Lège-Cap-Ferret",
       "commune": "Lège-Cap-Ferret",
@@ -4037,68 +4348,6 @@
       "id": "auto-909c7725b1",
       "source": "auto",
       "site": "leboncoin.fr"
-    },
-    {
-      "title": "Maison neuve 145 m² Saint-Laurent-Médoc",
-      "location": "Saint-Laurent-Médoc (33112)",
-      "commune": "Saint-Laurent-Médoc",
-      "url": "https://www.seloger-construire.com/detail/266924723",
-      "price_eur": 435453,
-      "bedrooms": 4,
-      "area_m2": 145,
-      "land_m2": 671,
-      "features": [
-        "neuve",
-        "4 chambres",
-        "lotissement",
-        "école proximité"
-      ],
-      "status": "active",
-      "score": 42,
-      "score_breakdown": {
-        "size_potential": 12,
-        "pool": 0,
-        "glamping_land": 5,
-        "coast_proximity": 7,
-        "character": 0,
-        "renovation_state": 15
-      },
-      "fit_verdict": "New-build; move-in ready but bland modern. Too small & suburban; minimal character for boutique retreat.",
-      "id": "auto-69a59a75e3",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€435,453"
-    },
-    {
-      "title": "Maison de ville à vendre - 3 pièces, 2 chambres, 70 m², 94 m² de terrain",
-      "location": "La Plage-Bourg, Biscarrosse (40600)",
-      "commune": "Biscarrosse",
-      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/267054985.htm",
-      "price_eur": 416000,
-      "bedrooms": 2,
-      "area_m2": 70,
-      "land_m2": 94,
-      "features": [
-        "Terrasse",
-        "Petit jardin",
-        "Dépendance",
-        "Stationnement"
-      ],
-      "status": "active",
-      "score": 38,
-      "score_breakdown": {
-        "size_potential": 5,
-        "pool": 0,
-        "glamping_land": 0,
-        "coast_proximity": 10,
-        "character": 12,
-        "renovation_state": 11
-      },
-      "fit_verdict": "2-bed townhouse, minimal land & expansion scope. Character appeal offset by small footprint.",
-      "id": "auto-fd4c12ea14",
-      "source": "auto",
-      "site": "seloger.com",
-      "price": "€416,000"
     },
     {
       "title": "Maison avec piscine Aiguillon - Arcachon (33)",
@@ -4134,6 +4383,37 @@
       "price": "€995,000"
     },
     {
+      "title": "Maison de ville à vendre - 3 pièces, 2 chambres, 70 m², 94 m² de terrain",
+      "location": "La Plage-Bourg, Biscarrosse (40600)",
+      "commune": "Biscarrosse",
+      "url": "https://www.seloger.com/annonces/achat/maison/biscarrosse-40/la-plage-bourg/267054985.htm",
+      "price_eur": 416000,
+      "bedrooms": 2,
+      "area_m2": 70,
+      "land_m2": 94,
+      "features": [
+        "Terrasse",
+        "Petit jardin",
+        "Dépendance",
+        "Stationnement"
+      ],
+      "status": "active",
+      "score": 38,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 0,
+        "glamping_land": 0,
+        "coast_proximity": 10,
+        "character": 12,
+        "renovation_state": 11
+      },
+      "fit_verdict": "2-bed townhouse, minimal land & expansion scope. Character appeal offset by small footprint.",
+      "id": "auto-fd4c12ea14",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€416,000"
+    },
+    {
       "title": "Maison 96 m² Soulac-sur-Mer (33)",
       "location": "Soulac-sur-Mer, Gironde",
       "commune": "Soulac-sur-Mer",
@@ -4163,6 +4443,36 @@
       "source": "auto",
       "site": "paruvendu.fr",
       "price": "€444,000"
+    },
+    {
+      "title": "Terrain avec maison neuve - Saint-Laurent-Médoc - 435 453 €",
+      "location": "Saint-Laurent-Médoc (33112)",
+      "commune": "Saint-Laurent-Médoc",
+      "url": "https://www.seloger-construire.com/detail/266924723",
+      "price_eur": 435453,
+      "bedrooms": 4,
+      "area_m2": 145,
+      "land_m2": 671,
+      "score": 32,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 0,
+        "glamping_land": 5,
+        "coast_proximity": 7,
+        "character": 0,
+        "renovation_state": 15
+      },
+      "fit_verdict": "New build, minimal character. Small land, limited glamping appeal. Practical but bland for retreat.",
+      "status": "active",
+      "features": [
+        "neuf",
+        "4 chambres",
+        "terrain viabilisé"
+      ],
+      "id": "auto-69a59a75e3",
+      "source": "auto",
+      "site": "seloger.com",
+      "price": "€435,453"
     },
     {
       "title": "Maison, 4 pièces, 107 mètres carrés",
@@ -4323,24 +4633,32 @@
       "sold_detected_at": "2026-05-04T09:21:33Z"
     },
     {
-      "title": "Maison à construire de 50 m² à Parentis-en-Born, 3 pièces",
-      "location": "Parentis-en-Born",
-      "commune": "Parentis-en-Born",
-      "url": "https://www.seloger.com/recherche/achat/maison/nouvelle-aquitaine/parentis-en-born-40160/ad08fr16109",
-      "score": 15,
-      "score_breakdown": {
-        "size_potential": 0,
-        "pool": 0,
-        "glamping_land": 0,
-        "coast_proximity": 10,
-        "character": 0,
-        "renovation_state": 5
-      },
-      "fit_verdict": "New build only, tiny footprint (50m²), no character, unsuitable for retreat conversion.",
+      "title": "Maison 2 pièces 75 m² - Lesparre-Médoc",
+      "location": "Canouillac, Lesparre-Médoc 33340",
+      "commune": "Lesparre-Médoc",
+      "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_lesparre-medoc_33340",
+      "area_m2": 75,
+      "land_m2": 3453,
+      "bedrooms": null,
+      "price_eur": null,
       "status": "unknown",
-      "id": "auto-66dd135892",
+      "score": 18,
+      "score_breakdown": {
+        "size_potential": 5,
+        "pool": 5,
+        "glamping_land": 10,
+        "coast_proximity": 7,
+        "character": 3,
+        "renovation_state": 0
+      },
+      "fit_verdict": "Adequate land but tiny building; severe renovation needed. Low bedroom/expansion potential.",
+      "features": [
+        "3453 m² terrain",
+        "Central Médoc location"
+      ],
+      "id": "auto-e9e3c7eacb",
       "source": "auto",
-      "site": "seloger.com"
+      "site": "leboncoin.fr"
     },
     {
       "title": "Maison 3 pièces, 2 chambres à Saint-Vivien-de-Médoc",
@@ -4362,6 +4680,87 @@
       "id": "auto-3e98e48fa2",
       "source": "auto",
       "site": "bienici.com"
+    },
+    {
+      "title": "Maison à construire de 50 m² à Parentis-en-Born, 3 pièces",
+      "location": "Parentis-en-Born",
+      "commune": "Parentis-en-Born",
+      "url": "https://www.seloger.com/recherche/achat/maison/nouvelle-aquitaine/parentis-en-born-40160/ad08fr16109",
+      "score": 15,
+      "score_breakdown": {
+        "size_potential": 0,
+        "pool": 0,
+        "glamping_land": 0,
+        "coast_proximity": 10,
+        "character": 0,
+        "renovation_state": 5
+      },
+      "fit_verdict": "New build only, tiny footprint (50m²), no character, unsuitable for retreat conversion.",
+      "status": "unknown",
+      "id": "auto-66dd135892",
+      "source": "auto",
+      "site": "seloger.com"
+    },
+    {
+      "title": "Villa avec piscine et jardin Léon",
+      "location": "Léon (40)",
+      "commune": "Biscarrosse",
+      "url": "https://proprietes.lefigaro.fr/annonces/villa-landes-aquitaine-france/103148461/",
+      "price_eur": 1240000,
+      "bedrooms": 4,
+      "area_m2": 240,
+      "land_m2": 3800,
+      "features": [
+        "Piscine couloir de nage 15x3m",
+        "Annexe indépendante",
+        "Atelier",
+        "Combles aménagés"
+      ],
+      "image_url": "https://lh3.googleusercontent.com/ktRWJrGZ_QWeashINsmZKHgPur1zqA9pXH5XgaUlsgsE5oj5dZoiavqvdVUv1mk--iu7iftylE2gsKYaEmKTeS9notqwxRff41vku6A",
+      "score": 0,
+      "score_breakdown": {
+        "size_potential": 0,
+        "pool": 0,
+        "glamping_land": 0,
+        "coast_proximity": 0,
+        "character": 0,
+        "renovation_state": 0
+      },
+      "fit_verdict": "REJECTED: Léon is outside eligible locations (south Landes, not Born plateau)",
+      "status": "unknown",
+      "id": "auto-98353c4469",
+      "source": "auto",
+      "site": "proprietes.lefigaro.fr (landes)",
+      "price": "€1,240,000"
+    },
+    {
+      "title": "Maison avec terrasse Magescq",
+      "location": "Magescq (40)",
+      "commune": "Biscarrosse",
+      "url": "https://proprietes.lefigaro.fr/annonces/maison-landes-aquitaine-france/103148069/",
+      "price_eur": null,
+      "bedrooms": null,
+      "area_m2": null,
+      "land_m2": 1897,
+      "features": [
+        "Villa neuve 2023",
+        "Style Ferret-Capien"
+      ],
+      "image_url": "https://lh3.googleusercontent.com/KOhEPhTd-yJQcaY-7-vI3SjwKIEEUNHdqjjzga7wELCxylWDc5-SW2qZX3nPH2w_Fov2-qizrL0ejYsjy7LBvqMNBGSeueeoTT0QsMU",
+      "score": 0,
+      "score_breakdown": {
+        "size_potential": 0,
+        "pool": 0,
+        "glamping_land": 0,
+        "coast_proximity": 0,
+        "character": 0,
+        "renovation_state": 0
+      },
+      "fit_verdict": "REJECTED: Magescq is outside eligible locations (south Landes)",
+      "status": "unknown",
+      "id": "auto-b4c4d39cd1",
+      "source": "auto",
+      "site": "proprietes.lefigaro.fr (landes)"
     },
     {
       "title": "Maison avec piscine et jardin Hossegor",
@@ -4395,67 +4794,6 @@
       "id": "auto-0a2f5c2119",
       "source": "auto",
       "site": "proprietes.lefigaro.fr (landes)"
-    },
-    {
-      "title": "Maison avec terrasse Magescq",
-      "location": "Magescq (40)",
-      "commune": "Biscarrosse",
-      "url": "https://proprietes.lefigaro.fr/annonces/maison-landes-aquitaine-france/103148069/",
-      "price_eur": null,
-      "bedrooms": null,
-      "area_m2": null,
-      "land_m2": 1897,
-      "features": [
-        "Villa neuve 2023",
-        "Style Ferret-Capien"
-      ],
-      "image_url": "https://lh3.googleusercontent.com/KOhEPhTd-yJQcaY-7-vI3SjwKIEEUNHdqjjzga7wELCxylWDc5-SW2qZX3nPH2w_Fov2-qizrL0ejYsjy7LBvqMNBGSeueeoTT0QsMU",
-      "score": 0,
-      "score_breakdown": {
-        "size_potential": 0,
-        "pool": 0,
-        "glamping_land": 0,
-        "coast_proximity": 0,
-        "character": 0,
-        "renovation_state": 0
-      },
-      "fit_verdict": "REJECTED: Magescq is outside eligible locations (south Landes)",
-      "status": "unknown",
-      "id": "auto-b4c4d39cd1",
-      "source": "auto",
-      "site": "proprietes.lefigaro.fr (landes)"
-    },
-    {
-      "title": "Villa avec piscine et jardin Léon",
-      "location": "Léon (40)",
-      "commune": "Biscarrosse",
-      "url": "https://proprietes.lefigaro.fr/annonces/villa-landes-aquitaine-france/103148461/",
-      "price_eur": 1240000,
-      "bedrooms": 4,
-      "area_m2": 240,
-      "land_m2": 3800,
-      "features": [
-        "Piscine couloir de nage 15x3m",
-        "Annexe indépendante",
-        "Atelier",
-        "Combles aménagés"
-      ],
-      "image_url": "https://lh3.googleusercontent.com/ktRWJrGZ_QWeashINsmZKHgPur1zqA9pXH5XgaUlsgsE5oj5dZoiavqvdVUv1mk--iu7iftylE2gsKYaEmKTeS9notqwxRff41vku6A",
-      "score": 0,
-      "score_breakdown": {
-        "size_potential": 0,
-        "pool": 0,
-        "glamping_land": 0,
-        "coast_proximity": 0,
-        "character": 0,
-        "renovation_state": 0
-      },
-      "fit_verdict": "REJECTED: Léon is outside eligible locations (south Landes, not Born plateau)",
-      "status": "unknown",
-      "id": "auto-98353c4469",
-      "source": "auto",
-      "site": "proprietes.lefigaro.fr (landes)",
-      "price": "€1,240,000"
     },
     {
       "title": "Chateau du 19ème siècle avec dépendances et 5.5 hectares",
